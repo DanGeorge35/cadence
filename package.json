@@ -1,0 +1,25 @@
+{
+  "name": "cadence",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "if-env TYPE=server && (cd server && nodemon cadence.js) || (cd client && react-scripts start)",
+    "start": "if-env TYPE=server && (cd server && node cadence.js) || (cd client && react-scripts start)",
+    "server": "node ./server/cadence.js",
+    "client": "cd client && npm start",
+    "build-client": "cd client && npm install && react-scripts build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanGeorge35/cadence.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanGeorge35/cadence/issues"
+  },
+  "homepage": "https://github.com/DanGeorge35/cadence#readme",
+  "dependencies": {
+    "if-env": "^1.0.4"
+  }
+}
