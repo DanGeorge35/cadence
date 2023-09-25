@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/DanGeorge35/cadence#readme",
   "dependencies": {
-    "if-env": "^1.0.4",
-    "react-router-dom": "^6.16.0"
+    "if-env": "^1.0.4"
   }
 }

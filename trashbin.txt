@@ -1,3 +1,171 @@
+navbar
+ 
+border-bottom
+ 
+warning
+ 
+alt="Cadence" 
+ 
+ bg-black
+ 
+opacity-75 
+ 
+            
+            
+ 
+order-subtle
+ 
+<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+
+ 
+    <div className="collapse navbar-collapse" id="navbarText">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Features</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Pricing</a>
+        </li>
+      </ul>
+      <span className="navbar-text">
+        Navbar text with an inline element
+      </span>
+    </div>
+ 
+width="30" height="24"
+ 
+ <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarScroll">
+      <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" >
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Link</a>
+        </li>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Link
+          </a>
+          <ul className="dropdown-menu">
+            <li><a className="dropdown-item" href="#">Action</a></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
+            <li><hr className="dropdown-divider"/></li>
+            <li><a className="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link disabled" aria-disabled="true">Link</a>
+        </li>
+      </ul>
+      <form className="d-flex" role="search">
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button className="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+ 
+g-dark bg-opacity-70
+ 
+style="--bs-scroll-height: 100px;"
+ 
+
+      </div>
+    </nav>
+ 
+bg-opacity-100
+ 
+ bg-body-tertiary
+ 
+ bg-body-tertiary
+ 
+danger
+ 
+<!-- Button trigger modal -->
+ 
+<!-- Modal -->
+ 
+import Header from "../components/header"
+ 
+            
+ 
+<Header/>
+ 
+his is NoPage
+ 
+    
+ 
+"reactstrap": "^9.2.0"
+ 
+"react": "^18.2.0",
+ 
+    
+ 
+"if-env": "^1.0.4",
+ 
+    
+ 
+"bootstrap": "^5.3.2",
+ 
+    "bootstrap": "^5.3.2",
+ 
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
+    "reactstrap": "^9.2.0"
+ 
+state = {  } 
+ 
+export default ;
+const App = () => {
+  
+};
+
+ 
+import React from "react";
+ 
+  <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+ 
+state = {  } 
+ 
+const Header = () => {
+  return <div>This is Header</div>;
+};
+
+export default Header;
+
+ 
+  
+ 
+state = {  } 
+ 
+ 
+export default ;
+const Auth = () => {
+  return <div></div>;
+};
+ 
+homePage
+ 
+import { Home, Contact } from "./pages";
+ 
+"format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+ 
+import boostrap from
+ 
+Home Page
+ 
     
  
 state = {  } 
