@@ -1,3 +1,305 @@
+https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+ 
+);
+ 
+let
+ 
+import "./slidder/css/my-slider.css";
+import "./slidder/js/ism-2.2.min.js";
+ 
+my-slidder.css
+ 
+./src/components/slidder
+ 
+</React.StrictMode>
+ 
+    <link rel="stylesheet" href="ism/css/my-slider.css" />
+    <script src="ism/js/ism-2.2.min.js"></script>
+ 
+sm
+ 
+block
+ 
+-lg=none d-block-md
+ 
+none
+ 
+sm
+ 
+d-none-xs
+ 
+sm
+ 
+        type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+ 
+  className="navbar-toggler d-none d-none-md d-block-lg"
+ 
+
+            <span
+              className="navbar-toggler d-none d-none-md d-block-lg"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="material-symbols-outlined">lunch_dining</span>
+            </span>
+ 
+animate__fadeOut d-none 
+ 
+alert(222);
+ 
+    
+ 
+alert(222);
+ 
+<button onClick={this.toggleSideMenu}> click</button>
+ 
+import React,  from "react";
+ 
+              
+ 
+// eslint-disable-next-line react/prop-types
+ 
+toggleSidebar
+ 
+// eslint-disable-next-line react/prop-types
+ 
+            
+ 
+ { Component }
+ 
+  }
+}
+
+ 
+  
+ 
+render() {
+ 
+props
+ 
+import SideMenu from "./sideMenu";
+ 
+        
+ 
+<SideMenu />
+ 
+  constructor() {
+    super();
+    this.state = {
+      isOpen: true, // Initially, the sidebar is closed
+    };
+  }
+
+ 
+SideMenu
+ 
+  openMenu = () => {
+    // this.toggleSidebar();
+  };
+
+ 
+const NewSide = new SideMenu();
+ 
+ () => {
+      
+    }
+ 
+ prop || 
+ 
+prop
+ 
+prop
+ 
+sOpen={this.state.isOpen} 
+ 
+ prop || 
+ 
+prop
+ 
+prop
+ 
+    super(prop);
+ 
+this.se
+ 
+.state = {
+      isOpen: prop || false, // Initially, the sidebar is closed
+    };
+    
+ 
+SideMenu.tog;
+ 
+toggleSidebar
+ 
+setState
+ 
+first
+ 
+animate__fadeIn
+ 
+animate__animated animate__faster
+ 
+props
+ 
+prop
+ 
+        
+ 
+<SideMenu />
+ 
+<SideMenu />
+ 
+  CloseSide = (e) => {
+    console.log(e);
+  };
+ 
+props
+ 
+props
+ 
+{" "}
+ 
+              
+ 
+{" "}
+ 
+outline
+ 
+block
+ 
+</div>
+ 
+<div className="py-3">
+ 
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+ 
+    <li
+              className="nav-item"
+              style={{ paddingLeft: "80px", paddingTop: "30px" }}
+            ></li>
+ 
+   <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+ 
+  
+ 
+width: 100vw;
+ 
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+ 
+  background-color: #000000b0;
+ 
+border-bottom border-warning border-2
+ 
+         
+ 
+ style={{
+            backgroundColor
+            height: "99.8vh",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "bottom",
+
+          }}
+ 
+backgroundImage: "url(food4.jpeg)",
+ 
+fluid
+ 
+ alignContent: "right" 
+ 
+right
+ 
+Us
+ 
+ float
+ 
+pe-4 px-4
+ 
+border-top border-bottom 
+ 
+<i>menu</i
+ 
+<span className="material-symbols-outlined">menu</span>
+ 
+  
+ 
+font-size: 30px;
+ 
+</button>
+ 
+<button
+
+            >
+ 
+span
+ 
+span
+ 
+display=swap");
+@import url('https://fonts.googleapis.com/css2?
+ 
+</style>
+ 
+<style>
+ 
+.nav-link:hover {
+  color: #eabc88 !important;
+  font-weight: 700;
+  font-size: large;
+}
+
+ {
+
+ 
+active
+ 
+justify-content-center
+ 
+amily=Kanit:wght@100;200;400&
+ 
+ <li>
+                      <a className="dropdown-item" href="#">
+                        Another action
+                      </a>
+                    </li>
+ 
+ <li>
+                      <hr className="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        Something else here
+                      </a>
+                    </li>
+ 
+me-auto
+ 
+ms-auto 
+ 
+large
+ 
+              
+ 
 navbar
  
 border-bottom
