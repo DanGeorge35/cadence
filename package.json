@@ -7,7 +7,7 @@
     "start": "if-env TYPE=server && (cd server && node cadence.js) || (cd client && react-scripts start)",
     "server": "node ./server/cadence.js",
     "client": "cd client && npm start",
-    "build-client": "cd client && npm install && react-scripts build"
+    "build-client": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",

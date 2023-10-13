@@ -1,3 +1,691 @@
+color: "#b88a74"
+ 
+ed9c40
+ 
+</img>
+ 
+text-white
+ 
+outline
+ 
+flex
+ 
+ d-md-none d-none  d-lg-block
+ 
+onClick={this.props.toggleSideMenu}
+ 
+container
+ 
+container
+ 
+state = {};
+ 
+infoCard
+ 
+.ext3 
+ 
+.aboutContent {
+  color: rgb(152, 152, 152);
+  padding-top: 30px;
+}
+ 
+font-size: 19px;
+ 
+background-color: #061117a7 !important; /*#001119; */
+ 
+order-left border-3
+ 
+ px-4
+ 
+font-style: italic;
+ 
+text-align: center;
+ 
+   style={{ backgroundColor: "#001908f9" }}
+ 
+background-color: #001119f9; /*#001119; */
+ 
+
+.ext3 {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+.ext3 .aboutInfo {
+  background-color: #06171e !important; /*#001119; */
+}
+ 
+background-image: url("../public/plate3.png");
+ 
+background-image: url("../public/ext3.jpg") !important;
+ 
+background-color: #06171e !important; /*#001119; */
+ 
+background-color: #061117a7 !important; /*#001119; */
+ 
+box-shadow: 0px 0px 10px #ddd;
+ 
+rounded
+ 
+border border-3  border-warning
+ 
+         <br></br>
+ 
+     <br></br>
+            <br></br>
+ 
+pt-5 
+ 
+eee3cf
+ 
+ <br></br>
+ 
+        <br></br>
+ 
+<br></br>
+ 
+borderRadius: "15px",
+ 
+border border-3  border-warning
+ 
+        <br></br>
+ 
+f7e6d1
+ 
+</div>
+ 
+<div className="col-lg-6 ">
+ 
+row
+ 
+        </div>
+ 
+    <div className="row">
+            <div className="col-lg-6 ">
+ 
+ />
+ 
+<InfoCard
+                title=""
+                content=" 
+ 
+</div>
+ 
+</div>
+ 
+</div>
+ 
+</div>
+ 
+</div>
+ 
+What Awaits You
+ 
+
+              <div
+                className="col-lg-6  pe-3 px-3 pb-4 "
+                style={{ fontSize: "20px" }}
+              >
+                <div
+                  style={{
+                    padding: "30px",
+                    backgroundColor: "white",
+                    borderRadius: "20px",
+                  }}
+                >
+                  <b style={{ color: "#b88a74", fontSize: "25px" }}>:</b>
+                  <br></br>
+                </div>
+              </div>
+ 
+<br></br>
+ 
+</img>
+ 
+                    
+ 
+textAlign: "center",
+ 
+  </div>
+ 
+pt-5
+ 
+<p
+                className=" pt-5"
+                style={{
+                  fontFamily: "Nanum Myeongjo",
+                  fontSize: "35px",
+                  fontWeight: "700",
+                  color: "rgb(251 202 14)",
+                  textAlign: "justify",
+                }}
+              >
+                Enjoyment & Entertainment
+              </p>
+ 
+fontFamily: "Nanum Myeongjo",
+ 
+start border-end
+ 
+radius
+ 
+7
+ 
+fw-bold 
+ 
+pe-5
+ 
+border
+ 
+right
+ 
+left
+ 
+fontFamily: "Nanum Myeongjo",
+ 
+height: ;
+ 
+<img src="ext3.jpg" style={{ width: "80%" }} />
+ 
+g-light
+ 
+      <label className="aboutContent pt-0">
+
+            </label>
+ 
+ A Brief History of Cadence Cadence is more than just a restaurant
+              and bar; it&apos;s a testament to a journey fueled by passion,
+              creativity, and a deep love for providing unforgettable
+              experiences. Our story began when Cadence took over an existing
+              restaurant nestled on New Eleyele Road in Ibadan. Recognizing the
+              untapped potential of this space, we embarked on a mission to
+              transform it into something truly extraordinary. We envisioned a
+              place where people could come together, savor exquisite cuisine,
+              enjoy signature cocktails, and create timeless memories.
+ 
+  <p className="pt-5">
+              <b style={{ color: "#b88a74" }}></b>
+            </p>
+ 
+</img>
+ 
+</div>
+ 
+</div>
+ 
+</div>
+ 
+ The
+              Transformation Our journey was marked by relentless dedication and
+              a commitment to excellence. We embarked on a massive renovation
+              project, meticulously designing every corner to exude elegance and
+              sophistication. Our vision extended beyond the confines of the
+              restaurant as we set out to build an outdoor bar space that would
+              redefine leisure and entertainment.
+ 
+style={{ color: "#999" }}
+ 
+                  style={{  }}
+ 
+              
+ 
+position: "relative",
+ 
+marginTop: "-50px",
+ 
+                paddingTop: "60px",
+                  borderRadius: "0px 0px 80px 80px",
+ 
+                  height: "250px",
+                  width: "300px",
+ 
+backgroundColor: "Black",
+ 
+rotate(2deg);
+ 
+/*
+font-family: "Cormorant Garamond", serif;
+font-family: "Dancing Script", cursive;
+font-family: "Nanum Myeongjo", serif; 
+*/
+ 
+font-family: "Nanum Myeongjo", serif; 
+ 
+font-weight: 200;
+ 
+font
+ 
+ borderRadius: "20px" 
+ 
+ paddingTop: "100px" 
+ 
+bg-dark
+ 
+pt-5   pb-5 
+ 
+margin-bottom: 20px;
+ 
+font-weight: 700;
+ 
+  
+ 
+color: #c49106;
+ 
+font-family: "Nanum Myeongjo", serif;
+ 
+g-primary
+ 
+<p style={{ paddingTop: "50px" }}></p>
+ 
+fluid
+ 
+Web site created using create-react-app
+ 
+    const { isSideMenuOpen } = this.state;
+
+ 
+  toggleSideMenu = () => {
+    this.setState((prevState) => ({
+      isSideMenuOpen: !prevState.isSideMenuOpen,
+    }));
+  };
+ 
+ constructor() {
+    super();
+    this.state = {
+      isSideMenuOpen: false,
+    };
+  }
+
+ 
+import Navs from "./navs";
+import SideMenu from "./sideMenu";
+
+ 
+pb-5
+ 
+  
+ 
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+ 
+border: 2px solid #fbca0e;
+ 
+border-1 border 
+ 
+object-fit: cover;
+ 
+filter: grayscale(50%);
+ 
+.bgimg & > div:hover {
+  border: 1px dashed #999;
+}
+
+ 
+ 
+ 
+otate(5deg)
+ 
+public
+ 
+  
+ 
+border-primary
+ 
+ <div
+              className=" border-1 border border-primary bg-dark"
+              style={{ height: "400px" }}
+            ></div>
+ 
+
+          </div>
+ 
+   <div className="row ">
+              <div className="col-lg-6 pt-4">
+                <div
+                  className=" border-1 border border-primary bg-dark"
+                  style={{ height: "400px" }}
+                ></div>
+              </div>
+              <div className="col-lg-6 pt-4">
+                <div
+                  className=" border-1 border border-primary bg-dark"
+                  style={{ height: "400px" }}
+                ></div>
+              </div>
+            </div>
+ 
+<div className="row ">
+              <div className="col-lg-3 pt-4">
+                <div
+                  className=" border-1 border border-primary bg-dark"
+                  style={{ height: "400px" }}
+                ></div>
+              </div>
+           
+ 
+   <div className="col-lg-3 pt-4">
+                <div
+                  className=" border-1 border border-primary bg-dark"
+                  style={{ height: "400px" }}
+                ></div>
+              </div>
+              <div className="col-lg-3 pt-4">
+                <div
+                  className=" border-1 border border-primary bg-dark"
+                  style={{ height: "400px" }}
+                ></div>
+              </div>
+              <div className="col-lg-3 pt-4">
+                <div
+                  className=" border-1 border border-primary bg-dark"
+                  style={{ height: "400px" }}
+                ></div>
+              </div>
+            </div>
+ 
+   <span style={{ position: "absolute", right: "55px" }}>
+                <span className="material-symbols-outlined animate__animated animate__infinite animate__slideInRight">
+                  chevron_right
+                </span>
+              </span>
+ 
+ d-flex
+ 
+text-center
+ 
+ style={{ width: "100%" }
+ 
+Sign In / Sign up
+ 
+
+            
+ 
+
+              
+ 
+ border-1 border border-primary"
+              style={{ height: "400px" }}
+ 
+SOME
+ 
+                
+ 
+color: "rgb(251 202 14)",
+ 
+text-white
+ 
+ext-white
+ 
+ <img
+                  src="./food4.jpeg"
+                  style={{ width: "80%", borderRadius: "20px" }}
+                />
+ 
+</div>
+ 
+<div className="pt-1 aboutInfo location container-fluid ">
+ 
+</div>
+ 
+</div>
+ 
+<div className="pt-5 aboutInfo location container-fluid ">
+ 
+</div>
+ 
+<div className="col-lg-6"></div>
+ 
+<br></br>
+ 
+</br>
+ 
+Fuel for Work or Play
+ 
+pe-3 px-3
+ 
+bg-danger
+ 
+</div>
+ 
+background-color: #fff;
+ 
+background-color: #ffffff38;
+ 
+background-repeat: 
+ 
+ bg-black
+ 
+ bg-black
+ 
+    width: 100%;
+ 
+margin: 0 auto;
+ 
+  width: 70%;
+    margin: 0 auto;
+    {
+ 
+ style={}
+ 
+[Your Name]
+ 
+If you have any further questions or concerns, please feel free to reach out.
+
+ 
+ as quickly as possible.
+ 
+and our team is 
+ 
+stated
+ 
+interest in our
+ 
+project
+ 
+              
+ 
+fontFamily: "Cormorant Garamondo",
+ 
+5
+ 
+className=""
+ 
+ext-whit
+ 
+border-2 border-top border-warning
+ 
+container
+ 
+780px) and (max-width:
+ 
+@media (min-width: 993px) {
+ 
+ed9c40
+ 
+ <span
+                      style={{ width: "30px", verticalAlign: "middle" }}
+                      className="material-symbols-outlined animate__animated animate__infinite animate__slideInRight"
+                    >
+                      chevron_right
+                    </span>
+ 
+outline
+ 
+left: 15px;
+  margin-right: 15px;
+ 
+Slidedetails
+ 
+ style={{ minWidth: "150px" }}
+ 
+  d-md-none d-none  d-lg-block
+ 
+
+                  onClick={this.props.toggleSideMenu}
+ 
+ed9c40
+ 
+className="Slidetop"
+ 
+text-align: right;
+ 
+    
+ 
+padding-top: 150px;
+ 
+    
+ 
+padding-top: 150px;
+ 
+padding-top: 150px;
+ 
+    
+ 
+color: yellow;
+ 
+    
+ 
+color: yellow;
+ 
+    
+ 
+ padding: 10px 20px;
+ 
+background-color: #3bdc40;
+ 
+background-color: red;
+ 
+    background-color: #3bdc40;
+    display: block;
+    width: 100%;
+ 
+    background-color: red;
+    display: block;
+    width: 100%;
+ 
+  display: block;
+    width: 100%;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+ 
+    background-color: #3bdc40;
+    display: block;
+    width: 100%;
+ 
+    background-color: red;
+    display: block;
+    width: 100%;
+ 
+    display: block;
+    width: 100%;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+ 
+   background-color: #3bdc40;
+    display: block;
+    width: 100%;
+ 
+    background-color: red;
+    display: block;
+    width: 100%;
+ 
+    display: block;
+    width: 100%;
+    
+ 
+font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+ 
+padding: 10px 20px;
+ 
+  font-weight: 700;
+  font-size: 20px;
+  color: yellow;
+ 
+ "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+ 
+background-color: rgb(247, 119, 119);
+ 
+#000
+ 
+    
+ 
+and (max-width: 1200px)
+ 
+
+.each-slide > div {
+  background-size: cover;
+  height: 650px;
+}
+
+ 
+.each-slide-child div {
+  background-color: red;
+  display: block;
+  width: 100%;
+}
+
+.each-slide-child p {
+  background-color: red;
+  display: block;
+  width: 100%;
+}
+
+ 
+  body {
+    font-size: 18px;
+  }
+  /* Additional styles for large screens */
+ 
+  body {
+    font-size: 16px; /* Reset font size for medium screens */
+  }
+  /* Additional styles for medium screens */
+ 
+ body {
+    font-size: 14px;
+  }
+  /* Additional styles for small screens */
+ 
+/* Default styles for all screen sizes */
+body {
+  font-size: 16px;
+}
+ 
+
+/* Extra-large screens (e.g., large desktops) */
+@media (min-width: 1201px) {
+  body {
+    font-size: 20px;
+  }
+  /* Additional styles for extra-large screens */
+}
+
+ 
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+ 
+  align-items: center;
+  justify-content: center;
+ 
+display: flex;
+ 
+.each-slide-child span {
+}
+ 
+padding: 10px;
+ 
+svg
+ 
+prevArrow={prevArrow: "ss" }
+ 
+true
+ 
+        
+ 
+caption1: "Slide 1",
+ 
 https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
  
 );
