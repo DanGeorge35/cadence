@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TelegramIcon from "@mui/icons-material/Telegram";
 class Footer extends Component {
   render() {
     return (
       <div className="footer ">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-lg-2  " style={{ minHeight: "100px" }}>
+            <div className="col-lg-2 col-4  " style={{ minHeight: "100px" }}>
               <label className="footerHead ">MENU</label>
               <a className="footerLink ">HOME</a>
               <a className="footerLink ">REGULAR MENU</a>
@@ -13,7 +15,7 @@ class Footer extends Component {
               <a className="footerLink ">GALLERY</a>
               <a className="footerLink ">ABOUT</a>
             </div>
-            <div className="col-lg-2 " style={{ minHeight: "100px" }}>
+            <div className="col-lg-2 col-4 " style={{ minHeight: "100px" }}>
               <label className="footerHead">LINK</label>
               <a className="footerLink ">HOME</a>
               <a className="footerLink ">REGULAR MENU</a>
@@ -21,15 +23,28 @@ class Footer extends Component {
               <a className="footerLink ">GALLERY</a>
               <a className="footerLink ">ABOUT</a>
             </div>
-            <div className="col-lg-2 " style={{ minHeight: "100px" }}>
+            <div className="col-lg-2 col-4 " style={{ minHeight: "100px" }}>
               <label className="footerHead">CONTACT</label>
               <a className="footerLink">HOME</a>
               <a className="footerLink">REGULAR MENU</a>
               <a className="footerLink">BOOK AN EVENT</a>
               <p style={{ paddingTop: "10px" }}></p>
               <label className="footerHead">FOLLOW US ON</label>
-              <a className="footerIcon">GALLERY</a>
-              <a className="footerIcon">ABOUT</a>
+              <a
+                className="footerIcon"
+                href=" https://www.instagram.com/cadence_lounge/"
+              >
+                <InstagramIcon />
+              </a>
+              <a className="footerIcon" href="https://t.me/+d2INnzyuB1A4ZWZk">
+                <TelegramIcon />
+              </a>
+              <a
+                className="footerIcon"
+                href="https://medium.com/@thecadencecafe"
+              >
+                <span className="mediumIcon">M</span>
+              </a>
             </div>
             <div className="col-lg-6 " style={{ minHeight: "100px" }}>
               <div
@@ -48,7 +63,7 @@ class Footer extends Component {
                     color: "#968145",
                   }}
                 >
-                  Enjoyment & Entertainment
+                  More Than Just a Restaurant and Bar
                 </label>
               </div>
               <div className="pb-3">
@@ -72,6 +87,7 @@ class Footer extends Component {
             </div>
           </div>
         </div>
+        <div className="bottomFooter">© 2023 CADENCE+ Sweet Experiences</div>
       </div>
     );
   }

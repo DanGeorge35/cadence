@@ -3,10 +3,10 @@ import React, { Component } from "react";
 class JoinUs extends Component {
   render() {
     return (
-      <div className="bg-dark text-white">
-        <div className="container pt-3 pb-3 ">
-          <div className="pt-5 pb-5 pe-3 px-3  ">
-            <div className="row pt-5 pb-5 ">
+      <div className=" text-white" style={{ backgroundColor: "#001119f9" }}>
+        <div className="container pt-4 pb-3 ">
+          <div className="pt-lg-5 pt-1 pb-5 pe-3 px-3  ">
+            <div className="row pt-lg-5 pb-5 ">
               <div className="col-lg-6 ">
                 <img src="fam2.jpg" style={{ width: "100%" }} />
               </div>

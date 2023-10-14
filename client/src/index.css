@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,700&family=Dancing+Script:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&family=Libre+Baskerville:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,700&family=Dancing+Script:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap");
 /* 
 font-family: "Cormorant Garamond", serif;
 font-family: "Dancing Script", cursive;
 font-family: "Nanum Myeongjo", serif; 
+
+h4{font-family: 'Libre Baskerville', sans-serif;font-size: 24px;font-weight: 400;}
+
+h5{font-family: 'Raleway', sans-serif;font-size: 18px;font-weight: 500;
 */
 
 /* Add any additional custom styles here */
@@ -20,6 +24,9 @@ font-family: "Nanum Myeongjo", serif;
 }
 .fontFam3 {
   font-family: "Cormorant Garamond", serif;
+}
+.fontFam4 {
+  font-family: "Libre Baskerville", sans-serif;
 }
 
 .nav-link {
@@ -149,13 +156,26 @@ font-family: "Nanum Myeongjo", serif;
 
 /* FOOTER */
 .footer {
-  background-color: #0a0c0f;
+  border-top: 10px solid black;
+}
+
+.bottomFooter {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-top: 1px solid #4c3d01;
+  padding: 15px 20px;
+  background-color: #01202ef9;
+  text-align: center;
+  color: white;
+}
+
+.footer .container-fluid {
+  background-color: #003c55f9;
   padding-left: 150px;
 }
 .footer .col-lg-6 {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #18191b;
+  background-color: #003a51f9;
   padding-right: 100px;
   padding-left: 100px;
 }
@@ -173,7 +193,7 @@ font-family: "Nanum Myeongjo", serif;
   margin-bottom: 20px;
   color: #968145;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 15px;
 }
 .footerLink {
   margin-top: 15px;
@@ -187,6 +207,28 @@ font-family: "Nanum Myeongjo", serif;
   display: block;
   font-size: 20px;
   font-weight: 600;
+}
+
+.footerIcon {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.mediumIcon {
+  margin-left: 5px;
+  font-weight: 700;
+  font-size: 16px !important;
+  vertical-align: middle;
+}
+.mediumIcon::after {
+  border: 1px solid white;
+  height: 26px;
+  width: 26px;
+  display: inline-block;
+  position: absolute;
+  margin-left: -21px;
+  border-radius: 100%;
+  content: "";
 }
 /* FOOTER */
 
@@ -216,6 +258,21 @@ font-family: "Nanum Myeongjo", serif;
     width: 100%;
     margin: 0 auto;
   }
+  .footer .container-fluid {
+    padding-left: 10px;
+  }
+  .footer .col-lg-6 {
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+  }
+  .footer .col-lg-2 {
+    font-size: 12px !important;
+    padding-left: 5px;
+    padding-right: 0px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+  }
 }
 /* Medium screens (e.g., tablets) */
 @media (min-width: 480px) and (max-width: 779px) {
@@ -241,6 +298,21 @@ font-family: "Nanum Myeongjo", serif;
     text-align: justify;
     width: 80%;
     margin: 0 auto;
+  }
+  .footer .container-fluid {
+    padding-left: 10px;
+  }
+  .footer .col-lg-6 {
+    padding-left: 50px;
+    paddingleft: 50px;
+    paddingbottom: 20px;
+  }
+  .footer .col-lg-2 {
+    font-size: 12px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 40px;
+    padding-top: 30px;
   }
 }
 @media (min-width: 780px) and (max-width: 1093px) {

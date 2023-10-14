@@ -1,3 +1,71 @@
+Unforgettable
+ 
+Providing
+ 
+{" "}
+ 
++ Enjoyment & Entertainment
+ 
++ Enjoyment & Entertainment
+        </div>
+ 
+1
+ 
+ <label className="footerHead">FOLLOW US ON</label>
+ 
+  
+  font-size: 14px;
+  font-weight: 400;
+ 
+font-family: "Raleway", sans-serif !important;
+ 
+fo
+ 
+font-family: "Raleway", sans-serif !important;
+ 
+
+h3{font-family: 'Libre Baskerville', sans-serif;font-size: 42px;font-weight: 400;}
+
+ 
+
+body{font-family: 'Raleway', sans-serif;font-size: 14px;font-weight: 400;}
+
+h1{font-family: 'Raleway', sans-serif;font-size: 62px;font-weight: 500;}
+
+h2{font-family: 'Raleway', sans-serif;font-size: 18px;font-weight: 500;}
+
+ 
+font-size: 30px;
+ 
+imo
+ 
+padding: 20px;
+ 
+ font-weight: 700;
+  font-size: 20px;
+  vertical-align: middle;
+ 
+baseline
+ 
+<InstagramIcon />
+ 
+
+             
+ 
+https://t.me/+d2INnzyuB1A4ZWZk
+ 
+<Icon>facebook</Icon>
+ 
+<Icon>instagram</Icon>
+ 
+     rel="stylesheet"
+ 
+import { Facebook, Instagram } from "@mui/icons-material";
+ 
+Cadence
+ 
+  A Brief History of Cadence
+ 
 color: "#b88a74"
  
 ed9c40

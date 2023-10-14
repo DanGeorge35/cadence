@@ -15,7 +15,7 @@ class Home extends Component {
         <div className="about">
           <div className="pt-5 aboutInfo pe-3 px-3">
             <p style={{ paddingTop: "50px" }}></p>
-  
+
             <p
               className=""
               style={{
@@ -28,15 +28,15 @@ class Home extends Component {
               A Brief History of Cadence
             </p>
             <label className="aboutContent">
-              A Brief History of Cadence Cadence is more than just a restaurant
-              and bar; it&apos;s a testament to a journey fueled by passion,
-              creativity, and a deep love for providing unforgettable
-              experiences. Our story began when Cadence took over an existing
-              restaurant nestled on New Eleyele Road in Ibadan. Recognizing the
-              untapped potential of this space, we embarked on a mission to
-              transform it into something truly extraordinary. We envisioned a
-              place where people could come together, savor exquisite cuisine,
-              enjoy signature cocktails, and create timeless memories.
+              Cadence is more than just a restaurant and bar; it&apos;s a
+              testament to a journey fueled by passion, creativity, and a deep
+              love for providing unforgettable experiences. Our story began when
+              Cadence took over an existing restaurant nestled on New Eleyele
+              Road in Ibadan. Recognizing the untapped potential of this space,
+              we embarked on a mission to transform it into something truly
+              extraordinary. We envisioned a place where people could come
+              together, savor exquisite cuisine, enjoy signature cocktails, and
+              create timeless memories.
             </label>
             <br></br>
             <br></br>
