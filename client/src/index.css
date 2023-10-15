@@ -71,6 +71,28 @@ h5{font-family: 'Raleway', sans-serif;font-size: 18px;font-weight: 500;
   height: 100%;
   z-index: 1;
 }
+.indicators {
+  position: absolute;
+  width: 100%;
+  margin-top: -40px !important;
+  z-index: 100;
+}
+.each-slideshow-indicator {
+  position: absolute;
+}
+
+.react-slideshow-container + ul.indicators li {
+  width: 12px !important;
+  height: 12px !important;
+  margin: 6px;
+}
+
+.react-slideshow-container + ul.indicators .each-slideshow-indicator:before {
+  width: 13px !important;
+  height: 13px !important;
+  background: rgb(255, 247, 0) !important;
+  box-shadow: 0px 0px 10px #ddd !important;
+}
 
 .SideMenu .SideContent {
   position: absolute;
@@ -104,11 +126,31 @@ h5{font-family: 'Raleway', sans-serif;font-size: 18px;font-weight: 500;
   margin-bottom: 5px;
   font-size: 20px;
 }
+.react-slideshow-container .nav svg {
+  width: 15px;
+  height: 15px;
+  filter: brightness(0) invert(1);
+}
+
+.react-slideshow-container .nav svg:hover {
+  filter: brightness(0) invert(0) !important;
+}
 
 .react-slideshow-container .nav {
   display: none;
+  width: 20px;
+  height: 150px;
+  top: 60%;
+  background: #372c0265;
+  box-shadow: 0px 0px 5px #ddd;
+}
+.react-slideshow-container .default-nav:first-of-type {
+  border-radius: 0px 100px 100px 0px;
 }
 
+.react-slideshow-container .default-nav:last-of-type {
+  border-radius: 100px 0px 0px 100px;
+}
 .each-slide-child {
   background-color: #00000076;
   padding-top: 150px;
@@ -214,6 +256,18 @@ h5{font-family: 'Raleway', sans-serif;font-size: 18px;font-weight: 500;
   color: #fff;
 }
 
+.about-page {
+  background-image: url("../public/food3.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+.about-page > div {
+  height: 450px;
+  color: white;
+  background-color: rgba(46, 44, 4, 0.656);
+}
+
 .mediumIcon {
   margin-left: 5px;
   font-weight: 700;
@@ -234,6 +288,9 @@ h5{font-family: 'Raleway', sans-serif;font-size: 18px;font-weight: 500;
 
 /* Small screens (e.g., mobile phones) */
 @media (max-width: 480px) {
+  .react-slideshow-container .nav {
+    display: none;
+  }
   .each-slide > div {
     background-size: cover;
     height: 70vh;
@@ -276,6 +333,9 @@ h5{font-family: 'Raleway', sans-serif;font-size: 18px;font-weight: 500;
 }
 /* Medium screens (e.g., tablets) */
 @media (min-width: 480px) and (max-width: 779px) {
+  .react-slideshow-container .nav {
+    display: none;
+  }
   .each-slide > div {
     background-size: cover;
     height: 70vh;
@@ -304,8 +364,7 @@ h5{font-family: 'Raleway', sans-serif;font-size: 18px;font-weight: 500;
   }
   .footer .col-lg-6 {
     padding-left: 50px;
-    paddingleft: 50px;
-    paddingbottom: 20px;
+    padding-bottom: 20px;
   }
   .footer .col-lg-2 {
     font-size: 12px !important;

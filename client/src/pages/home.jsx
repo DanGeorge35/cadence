@@ -72,15 +72,7 @@ class Home extends Component {
           <div className="location pt-5 aboutInfo  container-fluid">
             <div>
               <p style={{ paddingTop: "50px" }}></p>
-              <p
-                style={{
-                  fontSize: "18px",
-                  fontWeight: "600",
-                  color: "white",
-                }}
-              >
-                OUR LOCATION
-              </p>
+
               <div
                 className="text-warning"
                 style={{

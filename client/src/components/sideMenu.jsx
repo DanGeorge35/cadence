@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
 class SideMenu extends Component {
@@ -32,53 +33,48 @@ class SideMenu extends Component {
             </div>
             <ul className="navbar-nav  mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <NavLink to="/" className="nav-link  " aria-current="page">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink to="/about" className="nav-link  " aria-current="page">
                   About
-                </a>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Menu
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Comming soon
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Events
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Reservation
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Blog
-                </a>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink
+                  to="/contact"
+                  className="nav-link  "
+                  aria-current="page"
+                >
+                  Contact Us
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/reservation"
+                  className="nav-link  "
+                  aria-current="page"
+                >
+                  Reservation
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/blog" className="nav-link  " aria-current="page">
+                  Blog
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink
+                  to="/invest"
+                  className="nav-link  "
+                  aria-current="page"
+                >
                   Invest
-                </a>
+                </NavLink>
               </li>
             </ul>
             <button

@@ -1,3 +1,150 @@
+
+.react-slideshow-container .nav {
+  
+}
+ 
+svg
+ 
+opacity: 0.1;
+ 
+  fill: red; /* Change the fill color */
+  stroke: blue;
+ 
+filter: brightness(0) invert(1);
+ 
+margin-left: 10px;
+ 
+text-align: center;
+ 
+position: absolute;
+ 
+  border-radius: 50%;
+  content: "";
+ 
+  .react-slideshow-container .nav > svg {
+    width: 15px;
+    height: 15px;
+  }
+ 
+width: 40px;
+    height: 50px;
+ 
+margin-top: 40px;
+ 
+display: block;
+ 
+display: 
+ 
+display:
+ 
+<a className="nav-link" href="#"></a>
+ 
+<a className="nav-link" href="#"></a>
+ 
+ {/* <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Menu
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        Comming soon
+                      </a>
+                    </li>
+                  </ul>
+                </li> */}
+ 
+<a className="nav-link active" aria-current="page" href="#">
+ 
+</a>
+ 
+active
+ 
+active
+ 
+  <a className="nav-link" href="Reservation">
+                    Reservation
+                  </a>
+ 
+    <a className="nav-link" href="Blog">
+                    Blog
+                  </a>
+ 
+active
+ 
+ </a>
+ 
+  <a className="nav-link" href="About">
+ 
+, Redirect 
+ 
+Link, Redirect
+ 
+  BrowserRouter as Router,
+  Route,
+ 
+bg-black 
+ 
+color: white;
+ 
+height: 500px;
+ 
+py-5 
+ 
+            
+ 
+{" "}
+ 
+CurrentPage
+ 
+import CurrentPage from "./components/currentpage";
+ 
+import CurrentPage from "./components/currentpage";
+ 
+  {" "}
+          page={CurrentPage}
+ 
+about
+ 
+import About from "./pages/about";
+ 
+</p>
+    </div>
+ 
+<div>
+      <p>You are on the route: {
+ 
+activeClassName="active"
+ 
+</a>
+ 
+   ref="Home"
+                  >
+ 
+useState
+ 
+className= 
+ 
+useState
+ 
+useLocation
+ 
+About
+ 
+import Banner from "../components/banner";
+ 
+<Banner />
+ 
+ag
+ 
+Page
+ 
 Unforgettable
  
 Providing

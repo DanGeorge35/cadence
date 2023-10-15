@@ -12,7 +12,7 @@ class JoinUs extends Component {
               </div>
               <div className="col-lg-6 pt-5 pb-5">
                 <h1 className="pb-3 text-primary-color">
-                  Join the Cadence Family
+                  Join the Cadence the development portal
                 </h1>
                 <div
                   className="fontFam3"
