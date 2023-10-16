@@ -137,13 +137,14 @@ h5{font-family: 'Raleway', sans-serif;font-size: 18px;font-weight: 500;
 }
 
 .react-slideshow-container .nav {
-  display: none;
+  display: block;
   width: 20px;
   height: 150px;
-  top: 60%;
+
   background: #372c0265;
   box-shadow: 0px 0px 5px #ddd;
 }
+
 .react-slideshow-container .default-nav:first-of-type {
   border-radius: 0px 100px 100px 0px;
 }
@@ -156,6 +157,7 @@ h5{font-family: 'Raleway', sans-serif;font-size: 18px;font-weight: 500;
   padding-top: 150px;
   height: 100%;
 }
+
 .each-slide-child .Slidetop {
   display: block;
   width: 100%;
@@ -194,6 +196,12 @@ h5{font-family: 'Raleway', sans-serif;font-size: 18px;font-weight: 500;
   color: rgb(152, 152, 152);
   font-size: 19px;
   padding-top: 30px;
+}
+
+.each-slide2 > div {
+  background-size: cover;
+  height: 50vh;
+  border-radius: 20px;
 }
 
 /* FOOTER */
@@ -330,9 +338,16 @@ h5{font-family: 'Raleway', sans-serif;font-size: 18px;font-weight: 500;
     padding-bottom: 40px;
     padding-top: 30px;
   }
+
+  .each-slide2 > div {
+    height: 30vh;
+  }
 }
 /* Medium screens (e.g., tablets) */
 @media (min-width: 480px) and (max-width: 779px) {
+  .each-slide2 > div {
+    height: 30vh;
+  }
   .react-slideshow-container .nav {
     display: none;
   }

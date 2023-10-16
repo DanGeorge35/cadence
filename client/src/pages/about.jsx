@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import SiteSlide from "../components/siteSlide";
 
 class About extends Component {
   render() {
@@ -46,6 +47,11 @@ class About extends Component {
 
           <div className="about ext3">
             <div className="  aboutInfo  pe-3 px-3">
+              <div className="aboutContent">
+                <div>
+                  <SiteSlide />
+                </div>
+              </div>
               <p
                 className=""
                 style={{

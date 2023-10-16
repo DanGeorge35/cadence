@@ -3,8 +3,8 @@ import Header from "../components/header";
 import Banner from "../components/banner";
 import Footer from "../components/footer";
 import InfoCard from "../components/InfoCard";
-import JoinUs from "../components/JoinUs";
-
+import JoinPortal from "../components/JoinPortal";
+import SiteSlide from "../components/siteSlide";
 class Home extends Component {
   render() {
     return (
@@ -92,6 +92,11 @@ class Home extends Component {
               </label>
             </div>
 
+            <div className="aboutContent">
+              <div>
+                <SiteSlide />
+              </div>
+            </div>
             <div className="pane pt-5 pb-5" style={{ textAlign: "justify" }}>
               <div className="row">
                 <div
@@ -146,7 +151,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <JoinUs />
+        <JoinPortal />
         <Footer />
       </div>
     );

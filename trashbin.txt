@@ -1,3 +1,116 @@
+ border-radius: 20px;
+ 
+background-size: cover;
+ 
+import { Button } from "@mui/material";
+ 
+<Button classes="containedWarning">Apply to Join</Button>
+ 
+olor="warning"
+ 
+  style={{
+                    minWidth: "200px",
+                    fontSize: "17px",
+                    fontWeight: "700",
+                  }}
+ 
+Invest With Us
+ 
+ pb-5
+ 
+-5
+ 
+pt-lg-5 
+ 
+pt-5 
+ 
+<img src="fam2.jpg" style={{ width: "100%" }} />
+ 
+the development portal
+ 
+style={{ height: "400px !important" }}
+ 
+Get Started
+ 
+import JoinUs from "../components/JoinUs";
+ 
+.each-slide2
+ 
+indicators={true
+ 
+ caption1: "",
+        caption2: "",
+        caption3: "",
+        action: { title: "Invest With Us", url: "invest" },
+ 
+</img>
+ 
+ackgroundImage: `
+ 
+className="each-slide" 
+ 
+ indicators={true}
+ 
+<div className="each-slide2-child">
+                <div className="Slidetop">{slideImage.caption1}</div>
+                <div className="Slidetitle">{slideImage.caption2}</div>
+                <div className="Slidedetails">{slideImage.caption3}</div>
+              </div>
+ 
+ caption1: "",
+        caption2: "",
+        caption3: "",
+        action: { title: "Invest With Us", url: "invest" },
+ 
+  caption1: "",
+        caption2: "",
+        caption3: "",
+        action: { title: "Order Now", url: "contactus" },
+ 
+</div>
+ 
+<div>
+ 
+Investing in Cadence means joining a thriving business and becoming part of the Cadence family
+ 
+Join the Cadence Family
+ 
+ Discover the finest cuisine in town, waiting just for you!
+ 
+Ready for a delicious meal
+ 
+More than just a restaurant and bar
+ 
+A testament to a journey fueled by passion, creativity, and a deep love for providing unforgettable experiences.
+ 
+A Journey of Excellence
+ 
+Ambience
+ 
+Immerse yourself in an atmosphere that seamlessly
+                  blends contemporary style with warmth. Our interiors are
+                  designed to create the perfect backdrop for your moments of
+                  joy and celebration.
+ 
+Get ready for evenings filled with live music,
+                  comedy nights, and themed events that will keep you coming
+                  back for more.
+ 
+Live Entertainment
+ 
+ Our mixologists are ready to dazzle your taste buds with
+                  innovative cocktails that will elevate your dining experience.
+ 
+Crafted Cocktails
+ 
+Indulge in a culinary journey like no other. Our chefs have
+          crafted a menu that celebrates diverse flavors, using only the finest
+          ingredients
+ 
+ourmet Dining
+ 
+<siteSlide />
+ 
 
 .react-slideshow-container .nav {
   

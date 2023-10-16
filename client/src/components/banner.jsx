@@ -30,7 +30,7 @@ class Banner extends Component {
       },
     ];
     return (
-      <Slide autoplay={true} indicators={true} infinite={true}>
+      <Slide autoplay={true} arrows={false} indicators={true} infinite={true}>
         {images.map((slideImage, index) => (
           <div className="each-slide" key={index}>
             <div style={{ backgroundImage: `url(${slideImage.url})` }}>

@@ -12,7 +12,7 @@ class JoinUs extends Component {
               </div>
               <div className="col-lg-6 pt-5 pb-5">
                 <h1 className="pb-3 text-primary-color">
-                  Join the Cadence the development portal
+                  Join the Cadence Family
                 </h1>
                 <div
                   className="fontFam3"
@@ -31,14 +31,14 @@ class JoinUs extends Component {
                   make Cadence&apos;s reopening an event to remember.
                   <div className="py-4">
                     <button
-                      className="btn btn-warning   py-3 fontFam4 "
+                      className="btn btn-warning   py-2 fontFam4 "
                       style={{
-                        minWidth: "250px",
-                        fontSize: "20px",
+                        minWidth: "200px",
+                        fontSize: "17px",
                         fontWeight: "700",
                       }}
                     >
-                      Get Started
+                      Invest With Us
                     </button>
                   </div>
                 </div>
