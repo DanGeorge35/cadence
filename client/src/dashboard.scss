@@ -1,0 +1,48 @@
+$myColor: red;
+
+.signupheader {
+  background-color: $myColor;
+}
+
+.cover{
+  background-image: url(../public/food1.jpeg);
+  position: fixed;
+  left:0px;
+  right:0px;
+  top: 0px;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.signupLeft{
+min-height: 100vh;
+overflow: hidden;
+
+}
+.registerLogo{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding: 25px 0px;
+}
+.registerForm{
+  background-color:#198754d1;
+  min-height: 50vh;
+  padding: 40px 0px;
+}
+
+.signSlide > div {
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.react-slideshow-container .nav {
+  display: none;
+}
+.signSlideCover{
+  background-color: rgba(14, 12, 1, 0.557);
+}

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TelegramIcon from "@mui/icons-material/Telegram";
+
 class Footer extends Component {
   render() {
     return (
@@ -9,42 +8,58 @@ class Footer extends Component {
           <div className="row">
             <div className="col-lg-2 col-4  " style={{ minHeight: "100px" }}>
               <label className="footerHead ">MENU</label>
-              <a className="footerLink ">HOME</a>
-              <a className="footerLink ">REGULAR MENU</a>
-              <a className="footerLink ">BOOK AN EVENT</a>
-              <a className="footerLink ">GALLERY</a>
-              <a className="footerLink ">ABOUT</a>
+              <a className="footerLink " href="/home">
+                HOME
+              </a>
+              <a className="footerLink " href="/about">
+                ABOUT
+              </a>
+
+              <a className="footerLink " href="/reservation">
+                RESERVATION
+              </a>
             </div>
             <div className="col-lg-2 col-4 " style={{ minHeight: "100px" }}>
               <label className="footerHead">LINK</label>
-              <a className="footerLink ">HOME</a>
-              <a className="footerLink ">REGULAR MENU</a>
-              <a className="footerLink ">BOOK AN EVENT</a>
-              <a className="footerLink ">GALLERY</a>
-              <a className="footerLink ">ABOUT</a>
+
+              <a className="footerLink " href="/invest">
+                INVEST
+              </a>
+
+              <a className="footerLink " href="/privacy">
+                PRIVACY POLICY
+              </a>
+              <a className="footerLink " href="/terms">
+                TERMS & CONDITION
+              </a>
             </div>
             <div className="col-lg-2 col-4 " style={{ minHeight: "100px" }}>
-              <label className="footerHead">CONTACT</label>
-              <a className="footerLink">HOME</a>
-              <a className="footerLink">REGULAR MENU</a>
-              <a className="footerLink">BOOK AN EVENT</a>
-              <p style={{ paddingTop: "10px" }}></p>
-              <label className="footerHead">FOLLOW US ON</label>
+              <label className="footerHead">SOCIALS </label>
               <a
-                className="footerIcon"
+                className="footerLink"
                 href=" https://www.instagram.com/cadence_lounge/"
+                target="_blank"
+                rel="noreferrer"
               >
-                <InstagramIcon />
-              </a>
-              <a className="footerIcon" href="https://t.me/+d2INnzyuB1A4ZWZk">
-                <TelegramIcon />
+                <span className="ml-3">INSTAGRAM</span>
               </a>
               <a
-                className="footerIcon"
-                href="https://medium.com/@thecadencecafe"
+                className="footerLink"
+                href="https://t.me/+d2INnzyuB1A4ZWZk"
+                target="_blank"
+                rel="noreferrer"
               >
-                <span className="mediumIcon">M</span>
+                <span className="ml-3">TELEGRAM</span>
               </a>
+              <a
+                className="footerLink"
+                href="https://medium.com/@thecadencecafe"
+                target="_blank"
+                rel="noreferrer"
+              >
+                MEDIUM
+              </a>
+              <p style={{ paddingTop: "10px" }}></p>
             </div>
             <div className="col-lg-6 " style={{ minHeight: "100px" }}>
               <div

@@ -26,45 +26,64 @@ class Reservation extends Component {
                 color: "rgb(251 202 14)",
               }}
             >
-              A Brief History of Cadence
+              Welcome to Cadence - Your One-Stop Booking Destination!
             </p>
-            <label className="aboutContent">
-              Cadence is more than just a restaurant and bar; it&apos;s a
-              testament to a journey fueled by passion, creativity, and a deep
-              love for providing unforgettable experiences. Our story began when
-              Cadence took over an existing restaurant nestled on New Eleyele
-              Road in Ibadan. Recognizing the untapped potential of this space,
-              we embarked on a mission to transform it into something truly
-              extraordinary. We envisioned a place where people could come
-              together, savor exquisite cuisine, enjoy signature cocktails, and
-              create timeless memories.
-            </label>
-            <br></br>
-            <br></br>
-            <img src="food_banner2.png" style={{ width: "80%" }} />
-          </div>
+            <div className="aboutContent" style={{ textAlign: "justify" }}>
+              <div className="text-white">
+                At Cadence, we&apos;re delighted to offer a wide range of
+                booking options tailored to meet your every need. Our
+                easy-to-use booking platform simplifies the process of reserving
+                spaces, accommodations, and transportation within Ibadan.
+              </div>
+              <br></br>
+              <br></br>
 
-          <div className="about ext3">
-            <div className="  aboutInfo  pe-3 px-3">
-              <p
-                className=""
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "700",
-                  color: "rgb(251 202 14)",
-                }}
+              <ol>
+                <li>
+                  <b className="text-white">Book a Space:</b> <br></br> Looking
+                  to host a memorable event or simply dine with friends in a
+                  vibrant and luxurious setting? Cadence allows you to reserve
+                  spaces within our prestigious restaurant and lounge. Whether
+                  it&apos;s a private event, a romantic evening, or a gathering
+                  with friends, our spaces offer the perfect backdrop to your
+                  memorable moments.
+                  <br></br>
+                  <br></br>
+                </li>
+                <li>
+                  <b className="text-white">Book a Shortlet:</b> <br></br> When
+                  you visit Ibadan, choose from our selection of short-rent
+                  luxury homes for a comfortable and convenient stay. Immerse
+                  yourself in the local culture, and enjoy the comforts of home
+                  within our thoughtfully designed accommodations.
+                  <br></br>
+                  <br></br>
+                </li>
+                <li>
+                  <b className="text-white">Book a Ride:</b> <br></br> Need a
+                  hassle-free way to get around Ibadan? Cadence Fleet is here to
+                  serve your transportation needs. Book a ride and enjoy
+                  comfortable and safe travel throughout the city. Your
+                  convenience is our priority.
+                  <br></br>
+                </li>
+              </ol>
+              <div>
+                <br></br>
+                Experience seamless booking at Cadence and explore everything
+                Ibadan has to offer, whether you&apos;re looking for space,
+                accommodation, or transportation. Your adventure begins with a
+                click.
+              </div>
+              <a
+                className="btn btn-outline-warning mt-5 px-5 w100 d-block"
+                href="contact"
               >
-                The Transformation
-              </p>
-              <label className="aboutContent text-white  pb-4    border-warning">
-                Our journey was marked by relentless dedication and a commitment
-                to excellence. We embarked on a massive renovation project,
-                meticulously designing every corner to exude elegance and
-                sophistication. Our vision extended beyond the confines of the
-                restaurant as we set out to build an outdoor bar space that
-                would redefine leisure and entertainment.
-              </label>
+                Contact Us
+              </a>
             </div>
+            <br></br>
+            <br></br>
           </div>
         </div>
 

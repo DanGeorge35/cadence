@@ -61,15 +61,6 @@ class Navs extends Component {
                     Reservation
                   </NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink
-                    to="/blog"
-                    className="nav-link  "
-                    aria-current="page"
-                  >
-                    Blog
-                  </NavLink>
-                </li>
 
                 <li className="nav-item">
                   <NavLink
@@ -82,13 +73,14 @@ class Navs extends Component {
                 </li>
               </ul>
             </div>
-            <button
-              className="btn btn-outline-warning   py-2  d-flex  d-md-none d-none  d-lg-block"
+            <NavLink
+              to="/investmentform"
+              aria-current="page"
+              className="btn btn-outline-warning  px-4 pe-4 py-2  d-flex  d-md-none d-none  d-lg-block"
               style={{ minWidth: "150px" }}
-              onClick={this.props.toggleSideMenu}
             >
-              Sign In / Sign up
-            </button>
+              Get Started
+            </NavLink>
 
             <span
               className="navbar-toggler   d-block d-lg-none "

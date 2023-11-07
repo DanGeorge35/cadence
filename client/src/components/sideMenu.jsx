@@ -77,17 +77,15 @@ class SideMenu extends Component {
                 </NavLink>
               </li>
             </ul>
-            <button
-              className="btn btn-warning  text-center mt-4 p-3  d-flex "
-              style={{ width: "100%" }}
+
+            <NavLink
+              to="/investmentform"
+              aria-current="page"
+              className="btn btn-outline-warning  px-4 pe-4 py-2  d-flex "
+              style={{ minWidth: "150px" }}
             >
-              Sign In / Sign up
-              <span style={{ position: "absolute", right: "55px" }}>
-                <span className="material-symbols-outlined animate__animated animate__infinite animate__slideInRight">
-                  chevron_right
-                </span>
-              </span>
-            </button>
+              Get Started
+            </NavLink>
           </div>
         </div>
       </div>

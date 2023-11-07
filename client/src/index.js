@@ -4,6 +4,7 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
 import "animate.css";
+import "./dashboard.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

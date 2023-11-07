@@ -1,0 +1,39 @@
+
+Function Component (function Form() {...}):
+These are also known as functional components.
+They are simple JavaScript functions that take props as an argument and return JSX (the component's UI).
+Functional components are typically used for "presentational" components that don't have their own state or lifecycle 
+methods.
+With the introduction of React Hooks, you can now use state and lifecycle features in functional components using 
+hooks like useState and useEffect.
+
+function Form() {
+  return (
+    <div>
+      {/* JSX representing the component's UI */}
+    </div>
+  );
+}
+
+
+Class Component (class Form extends Component { ... }):
+
+Class components are traditional React components that extend the Component class from the React library.
+They are used for more complex components that need to manage their own state, use lifecycle methods, and interact with props and state.
+While class components have been widely used in older versions of React, with the introduction of React Hooks,
+ many class component features can now be replicated in functional components.
+Here's an example of a class component:
+
+import React, { Component } from 'react';
+
+class Form extends Component {
+  // Component state and lifecycle methods can be defined here
+  render() {
+    return (
+      <div>
+        {/* JSX representing the component's UI */}
+      </div>
+    );
+  }
+}
+

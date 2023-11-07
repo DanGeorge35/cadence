@@ -6,7 +6,7 @@ class Banner extends Component {
   render() {
     const images = [
       {
-        url: "./food1.jpeg",
+        url: "./cadfood1.jpeg",
         caption1: "",
         caption2: "A Journey of Excellence",
         caption3:
@@ -14,14 +14,14 @@ class Banner extends Component {
         action: { title: "Join Us", url: "signup" },
       },
       {
-        url: "./food2.jpeg",
+        url: "./cadfood2.jpeg",
         caption1: "More than just a restaurant and bar",
         caption2: "Ready for a delicious meal?",
-        caption3: " Discover the finest cuisine in town, waiting just for you!",
-        action: { title: "Order Now", url: "contactus" },
+        caption3: " Discover the finest cuisine in town, waiting just for you!",
+        action: { title: "Order Now", url: "contact" },
       },
       {
-        url: "./food4.jpeg",
+        url: "./cadfood3.jpeg",
         caption1: "Invest",
         caption2: "Join the Cadence Family",
         caption3:

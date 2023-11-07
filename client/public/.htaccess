@@ -1,0 +1,16 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Set the base path (if your site is in a subdirectory)
+# RewriteBase /subdirectory
+
+# Redirect requests to the React app's entry point (usually index.html)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
+
+# If you want to specify different RewriteRules for different routes, you can do so using the following format:
+# RewriteRule ^about$ about.html [L]
+# Set custom error pages (optional)
+# ErrorDocument 404 /404.html
+# ErrorDocument 500 /500.html

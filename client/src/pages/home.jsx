@@ -1,12 +1,29 @@
 import React, { Component } from "react";
+
 import Header from "../components/header";
 import Banner from "../components/banner";
 import Footer from "../components/footer";
 import InfoCard from "../components/InfoCard";
 import JoinPortal from "../components/JoinPortal";
 import SiteSlide from "../components/siteSlide";
+import Form from "../components/form";
+import Modal from "../components/modal";
 class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showModal: false,
+    };
+  }
+  toggleModal = () => {
+    this.setState((prevState) => ({
+      showModal: !prevState.showModal,
+    }));
+  };
+
   render() {
+    const { showModal } = this.state;
+
     return (
       <div>
         <Header />
@@ -152,6 +169,12 @@ class Home extends Component {
           </div>
         </div>
         <JoinPortal />
+        <Modal
+          title="Join Community"
+          showModal={showModal}
+          toggleModal={this.toggleModal}
+          content={<Form />}
+        />
         <Footer />
       </div>
     );

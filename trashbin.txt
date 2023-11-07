@@ -1,3 +1,589 @@
+    
+ 
+ All investor information will be kept confidential. Only
+                        investment amounts may be shared publicly.
+ 
+7. 
+ 
+
+
+
+
+
+
+
+
+
+
+4. 
+ 
+<li></li>
+                    <li></li>
+ 
+  <ul>
+                          <li>
+                            ROI Investment: You can invest a specific amount
+                            with a guaranteed Return on Investment (ROI) of 50%.
+                            The investment period is 12 months, with ROI paid
+                            quarterly.
+                          </li>
+                          <li>
+                            Ownership Investment: You can purchase a percentage
+                            ownership of Cadence. The value of ownership shares
+                            is N1,000,000 per 1%. Ownership dividends will be
+                            paid based on your ownership percentage.
+                          </li>
+                        </ul>
+ 
+                          
+ 
+<br></br>
+ 
+<br></br>
+ 
+<br></br>
+ 
+<br></br>
+ 
+  <br></br>
+ 
+<br></br>
+ 
+ <br></br>
+ 
+ pe-3 px-3
+ 
+</div>
+ 
+</div>
+ 
+aboutInfo
+ 
+aboutInfo
+ 
+</li>
+ 
+<br></br>
+ 
+Residential Address
+ 
+Full Name
+ 
+ bigint UN 
+ 
+Investment Form
+ 
+fluid
+ 
+fluid
+ 
+  padding: 11px 15px;
+ 
+useState
+ 
+useState
+ 
+        
+ 
+      setFullname("");
+      setEmail("");
+      setRole("");
+      setLink("");
+ 
+
+      console.log("email:", email);
+      console.log("link:", link);
+      console.log("role:", role);
+      console.log("whatsapp:", whatsapp);
+ 
+   const [fullname, setFullname] = useState("");
+    const [email, setEmail] = useState("");
+    const [role, setRole] = useState("");
+    const [link, setLink] = useState("");
+    const [whatsapp, setWhatsapp] = useState("");
+ 
+<investForm />
+ 
+import in
+ 
+import investForm from "../components/investForm";
+ 
+import investForm from "../components/investForm";
+ 
+<investForm />
+ 
+<Form />
+ 
+investForm;
+ 
+import investForm from "../components/investForm";
+ 
+<investForm />
+ 
+JoinUs from "../components/JoinUs";
+ 
+className=" "
+ 
+about-page
+ 
+import JoinUs from "../components/JoinUs";
+ 
+ d-md-none d-none  d-lg-block
+ 
+Sign In / Sign up
+ 
+WITH US
+ 
+Sign In / Sign u
+ 
+components
+ 
+components/ErrorMessage";
+ 
+components
+ 
+"prop-types": "^15.8.1",
+ 
+"react-scripts": "5.0.1",
+ 
+    "web-vitals": "^2.1.4",
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "17.0.2",
+ 
+  "devDependencies": {
+ 
+  }
+ 
+from "./Routes";
+ 
+contact
+ 
+ from "dashboard/pages/NotFound";
+ 
+import Home from "./pages/home";
+ 
+ch
+ 
+   <label className="footerHead">FOLLOW US ON</label>
+              <a className="footerIcon"></a>
+              <a className="footerIcon">
+                <TelegramIcon />
+              </a>
+ 
+ <a
+                className="footerIcon"
+                
+              >
+                <span className="mediumIcon">M</span>
+              </a>
+ 
+              <a className="footerLink ">ABOUT</a>
+ 
+Llorca
+ 
+import  from "@mui/material";
+ 
+</span>
+ 
+label
+ 
+                    
+ 
+{" "}
+ 
+  <br />
+              <input
+                className="form-control"
+                type="text"
+                name="lastname"
+                placeholder="Lastname"
+              />
+ 
+ agree to terms and condition
+ 
+u
+ 
+flex
+ 
+ml-3 
+ 
+bottom
+ 
+pt-4
+ 
+filter: blur(1);
+ 
+Span
+ 
+</input>
+ 
+offset-lg-3
+ 
+<SignSlide />
+ 
+.signupRight{
+  background-color: green;
+  min-height: 100vh;
+}
+ 
+  <br></br>
+ 
+  <br></br>
+                  <br></br>
+ 
+000
+ 
+5
+ 
+<br></br>
+ 
+bg-black 
+ 
+ bdarkg-
+ 
+bg-dark
+ 
+  <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+ 
+nter your last name
+ 
+fluid
+ 
+{//
+ 
+ <div className="row">
+          <div className="col-lg-7 bg-dark ">
+            <div className="text-center pt-5">
+              <img src="logo.png" alt="Cadence" style={{ height: "80px" }} />
+            </div>
+            <div></div>
+          </div>
+        </div>
+ 
+fluid
+ 
+ <div className="col-lg-5 p-0 ">
+            <SignSlide />
+          </div>
+ 
+ const images = [
+      {
+        url: "./drink1.jpeg",
+      },
+      {
+        url: "./drink2.jpeg",
+      },
+      {
+        url: "./drink3.jpeg",
+      },
+      {
+        url: "./drink5.jpeg",
+      },
+    ];
+ 
+ border border-5 
+ 
+warning
+ 
+signupRight
+ 
+pt-4 pb-4
+ 
+    
+ 
+<MyButton />
+ 
+<a href=>
+ 
+     
+ 
+ d-md-none d-none  d-lg-block
+ 
+className="nav-link  "
+ 
+onClick={this.props.toggleSideMenu}
+ 
+- [ ] Refactor codebase according to best practices and standards.
+ 
+- [ ] Make sure that every test is passing before moving forward.
+ 
+database connection by creating `.env` file with necessary environment variables (DB_URL)
+ 
+You may need to use sudo before createdb depending upon
+ 
+
+- [ ] Implement authentication middleware which will check jwt tokens from headers. If there is no valid token provided then return error message otherwise move
+ 
+- [ ] Run `npm install` in terminal/command prompt inside the project directory to install all dependencies.
+ 
+- [ ] Add more tests to the existing test suite.
+- [ ] Add tests for new features and refactoring.
+- [x] Update the documentation to reflect changes made in this PR.
+ 
+Docker
+ 
+<button
+ 
+   <label htmlFor="emailaddress" className="form-label">
+                        Email Address
+                      </label>
+ 
+ffset-lg-1
+ 
+</img>
+ 
+/client/public
+ 
+console.log("whatsapp:", whatsapp);
+ 
+const [whatsapp, setWhatsapp] = useState("");
+ 
+ <input
+                    type="whatsapp"
+                    className="form-control  "
+                    id="whatsapp"
+                    value={whatsapp}
+                    onChange={(e) => setWhatsapp(e.target.value)}
+                  />
+ 
+<label htmlFor="link" className="form-label">
+                    Su
+                  </label>
+ 
+ <div id="fullnameHelp" className="form-text">
+                    We&apos;ll never share your email with anyone else.
+                  </div>
+ 
+about
+ 
+aboutContent
+ 
+style={{ backgroundColor: "#001119f9" }}
+ 
+<p style={{ paddingTop: "50px" }}></p>
+ 
+ { Component } 
+ 
+  <div className="about-page ">
+          <div className="d-flex   align-items-center justify-content-center">
+            <h1>CONTACT US</h1>
+          </div>
+        </div>
+        <div className="about">
+          <div className="pt-5 aboutInfo pe-3 px-3">
+            <p style={{ paddingTop: "50px" }}></p>
+
+            <p
+              className=""
+              style={{
+                fontFamily: "Nanum Myeongjo",
+                fontSize: "30px",
+                fontWeight: "700",
+                color: "rgb(251 202 14)",
+              }}
+            >
+              A Brief History of Cadence
+            </p>
+            <label className="aboutContent">
+              Cadence is more than just a restaurant and bar; it&apos;s a
+              testament to a journey fueled by passion, creativity, and a deep
+              love for providing unforgettable experiences. Our story began when
+              Cadence took over an existing restaurant nestled on New Eleyele
+              Road in Ibadan. Recognizing the untapped potential of this space,
+              we embarked on a mission to transform it into something truly
+              extraordinary. We envisioned a place where people could come
+              together, savor exquisite cuisine, enjoy signature cocktails, and
+              create timeless memories.
+            </label>
+            <br></br>
+            <br></br>
+            <img src="food_banner2.png" style={{ width: "80%" }} />
+          </div>
+
+          <div className="about ext3">
+            <div className="  aboutInfo  pe-3 px-3">
+              <p
+                className=""
+                style={{
+                  fontSize: "20px",
+                  fontWeight: "700",
+                  color: "rgb(251 202 14)",
+                }}
+              >
+                The Transformation
+              </p>
+              <label className="aboutContent text-white  pb-4    border-warning">
+                Our journey was marked by relentless dedication and a commitment
+                to excellence. We embarked on a massive renovation project,
+                meticulously designing every corner to exude elegance and
+                sophistication. Our vision extended beyond the confines of the
+                restaurant as we set out to build an outdoor bar space that
+                would redefine leisure and entertainment.
+              </label>
+            </div>
+          </div>
+        </div>
+ 
+<br></br>
+ 
+                  {" "}
+ 
+                  {" "}
+ 
+
+                  2.
+ 
+ <img src="food_banner2.png" style={{ width: "80%" }} />
+ 
+  <div className="about ext3">
+            <div className="  aboutInfo  pe-3 px-3">
+              <p
+                className=""
+                style={{
+                  fontSize: "20px",
+                  fontWeight: "700",
+                  color: "rgb(251 202 14)",
+                }}
+              >
+                The Transformation
+              </p>
+              <label className="aboutContent text-white  pb-4    border-warning">
+                Our journey was marked by relentless dedication and a commitment
+                to excellence. We embarked on a massive renovation project,
+                meticulously designing every corner to exude elegance and
+                sophistication. Our vision extended beyond the confines of the
+                restaurant as we set out to build an outdoor bar space that
+                would redefine leisure and entertainment.
+              </label>
+            </div>
+          </div>
+ 
+type="role"
+ 
+value={email}
+ 
+py-3
+ 
+outline: 0;
+ 
+placeholder="What is your fullname"
+ 
+        <div id="fullnameHelp" className="form-text">
+            We&apos;ll never share your email with anyone else.
+          </div>
+ 
+Link to Social media profile
+ 
+   
+ 
+        <div id="linkHelp" className="form-text">
+         
+          </div>
+ 
+  <div id="whatsappHelp" className="form-text">
+            Whatsapp Number
+          </div>
+ 
+Link Social
+ 
+
+
+            /
+ 
+
+              
+ 
+ dangerouslySetInnerHTML={{ __html: content }}
+ 
+import { renderToStaticNodeStream } from "react-dom/server";
+ 
+ renderToStaticMarkup,
+ 
+<div>{content}</div>
+ 
+, // An optional string prop
+ 
+, { Component }
+ 
+render() {
+ 
+class
+ 
+Component
+ 
+ss
+ 
+setShowModal(!showModal);
+ 
+const [showModal, setShowModal] = useState(false);
+ 
+Form
+ 
+useState
+ 
+className="modal 
+ 
+toggleSideMenu
+ 
+ constructor() {
+    super();
+    this.content = {
+      title,
+      content,
+    };
+  }
+ 
+import { title, content } from "prop-types";
+ 
+<div
+        className="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabIndex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="staticBackdropLabel">
+                {title}
+              </h5>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">{title}</div>
+          </div>
+        </div>
+      </div>
+ 
+   <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" className="btn btn-primary">
+                Understood
+              </button>
+            </div>
+ 
+string
+ 
+Modal
+ 
  border-radius: 20px;
  
 background-size: cover;

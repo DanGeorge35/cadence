@@ -12,13 +12,14 @@ class JoinPortal extends Component {
             <div className="row  ">
               <div className="col-lg-12  text-center">
                 <div>
-                  <img src="form.png" style={{ height: "300px" }} />
+                  <img src="join.png" style={{ height: "200px" }} />
                 </div>
+                <br></br>
                 <h1 className="pb-3 text-primary-color">
                   Join the Cadence the Development Portal
                 </h1>
                 <div
-                  className="fontFam3 pb-5"
+                  className="pb-5"
                   style={{ fontSize: "20px", fontWeight: "400" }}
                 >
                   Apply to join the Cadence Creator Community
@@ -26,6 +27,8 @@ class JoinPortal extends Component {
 
                 <button
                   className="btn btn-warning   py-2 fontFam4 "
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
                   style={{
                     minWidth: "200px",
                     fontSize: "17px",
