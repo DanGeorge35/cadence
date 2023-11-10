@@ -14,7 +14,7 @@ class Banner extends Component {
         action: { title: "Join Us", url: "signup" },
       },
       {
-        url: "./cadfood1.jpeg",
+        url: "./cadfood4.jpeg",
         caption1: "More than just a restaurant and bar",
         caption2: "Ready for a delicious meal?",
         caption3: " Discover the finest cuisine in town, waiting just for you!",
