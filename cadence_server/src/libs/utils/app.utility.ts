@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import fs from 'fs'
 import { type Fields } from 'formidable'
 
@@ -27,8 +27,13 @@ async function CheckPassword (password: string, hash: string): Promise<boolean> 
 }
 
 async function EncryptPassword (password: string): Promise<string> {
-  const saltRounds = 10
-  return await bcrypt.hash(password, saltRounds)
+  try {
+    const saltRounds = 10
+    return await bcrypt.hash(password, saltRounds)
+  } catch (error) {
+    console.error('Error encrypting password:', error)
+    return password
+  }
 }
 
 function adjustFieldsToValue (
