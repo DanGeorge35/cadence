@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "if-env TYPE=server && (cd server && nodemon cadence.js) || (cd client && react-scripts start)",
-    "start": "if-env TYPE=server && (cd server && node cadence.js) || (cd client && react-scripts start)",
-    "server": "node ./server/cadence.js",
-    "client": "cd client && npm start",
-    "build-client": "cd client && npm install && npm run build",
-    "server-build": "cd server && npm run build",
-    "server-debug": "cd server && ts-node ./src/index.ts"
+    "test": "if-env TYPE=candence_server && (cd candence_server && nodemon cadence.js) || (cd cadence_client && react-scripts start)",
+    "start": "if-env TYPE=candence_server && (cd candence_server && node cadence.js) || (cd cadence_client && react-scripts start)",
+    "server": "node ./candence_server/cadence.js",
+    "cadence_client": "cd cadence_client && npm start",
+    "build-cadence_client": "cd cadence_client && npm install && npm run build",
+    "server-build": "cd candence_server && npm run build",
+    "server-debug": "cd candence_server && ts-node ./src/index.ts"
   },
   "repository": {
     "type": "git",
