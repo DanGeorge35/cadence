@@ -65,7 +65,7 @@ class InvestorsController {
         }
         return res.status(result.code).send(result)
       }
-      const dir = '/public/investors'
+      const dir = '../../public/investors'
       if (!fs.existsSync(`.${dir}`)) {
         fs.mkdirSync(`.${dir}`)
       }
