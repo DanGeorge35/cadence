@@ -3,13 +3,13 @@
     RewriteBase /
 
     # Redirect all requests to the React app's entry point (usually index.html)
-    RewriteCond %{REQUEST_URI} !^/api
+    RewriteCond %{REQUEST_URI} !^/production
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^ index.html [L]
 
     # Proxy requests to the API on localhost:5000
-    RewriteCond %{REQUEST_URI} ^/api [NC]
+    RewriteCond %{REQUEST_URI} ^/production [NC]
     RewriteRule ^(.*)$ http://localhost:5000/$1 [P,L]
 
     # If you want to specify different RewriteRules for different routes, you can do so using the following format:
