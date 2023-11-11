@@ -1,6 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import path from 'path'
+import os from 'os'
 // import csrf from 'csurf'
 import cookieParser from 'cookie-parser'
 import morgan from 'morgan'
@@ -24,10 +25,21 @@ app.use(cookieParser())
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
 }
-app.use(
+
+// Get the home directory of the current user
+
+if (process.env.NODE_ENV === 'development') {
+  app.use(
     `/${process.env.NODE_ENV}/public`,
     express.static(path.join(__dirname, '../public'))
-)
+  )
+} else {
+  const homeDirectory = os.homedir()
+  app.use(
+    `/${process.env.NODE_ENV}/public`,
+    express.static(path.join(homeDirectory, '/home/public'))
+  )
+}
 // csurf config
 // const csrfProtection = csrf({ cookie: true });
 // app.use(csrfProtection);
