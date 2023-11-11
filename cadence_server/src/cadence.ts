@@ -1,7 +1,7 @@
-import server from "./server";
+import server from './server'
 
-const port = process.env.PORT;
+const port = process.env.PORT
 
 server.listen(port, () => {
-  console.log(`Server is running on  http://localhost:${port}`);
-});
+  console.log(`Server is running on  http://localhost:${port}`)
+})

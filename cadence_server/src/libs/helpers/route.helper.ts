@@ -27,7 +27,7 @@ class RouteHelper {
     router.get(`/${process.env.NODE_ENV}`, (req: any, res: any) => {
       res.setHeader('content-type', 'application/json')
       const report = {
-        message: 'You are welcome to Acresal',
+        message: 'You are welcome to Cadence',
         code: 201
       }
       res.status(201).send(report)
