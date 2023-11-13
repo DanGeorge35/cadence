@@ -6,10 +6,10 @@
     "test": "if-env TYPE=cadence_server && (cd cadence_server && nodemon cadence.js) || (cd cadence_client && react-scripts start)",
     "start": "if-env TYPE=cadence_server && (cd cadence_server && node cadence.js) || (cd cadence_client && react-scripts start)",
     "server": "node ./cadence_server/cadence.js",
-    "cadence_client": "cd cadence_client && npm start",
-    "client-build": "cd cadence_client && npm install && npm run build",
-    "server-build": "cd cadence_server && npm run build",
-    "server-debug": "cd cadence_server && ts-node ./src/cadence.ts"
+    "client": "cd cadence_client && npm start",
+    "build": "cd cadence_client && npm install && npm run build",
+    "builds": "cd cadence_server && npm run build",
+    "debug": "cd cadence_server && ts-node ./src/cadence.ts"
   },
   "repository": {
     "type": "git",

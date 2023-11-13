@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable @typescript-eslint/no-extraneous-class */
 /* eslint-disable-next-line @typescript-eslint/no-misused-promises */
-import { getUIDfromDate, EncryptPassword, GenerateToken, CheckPassword } from '../../libs/utils/app.utility'
+import { getUIDfromDate, EncryptPassword, GenerateToken, CheckPassword, SendMail } from '../../libs/utils/app.utility'
 import Investors from '../../models/investors.model'
 import Auth from '../../models/auths.model'
 import InvestorsValidation from './investors.validation'
@@ -93,6 +93,47 @@ class InvestorsController {
 
       const dInvestors = await Investors.create({ ...data })
       dInvestors.dataValues.account = daccount
+      // send mail
+      const templateParams = {
+        to_name: data.FullName,
+        reply_to: 'contact@cadencepub.com',
+        subject: 'Confirmation of Your Investment Interest with Cadence',
+        message: `
+Thank you for expressing your interest in investing with Cadence. We are delighted that you are considering us as your investment partner.
+Your trust means a lot to us, and we want to assure you that your investment is safe with Cadence.\n\n
+
+To complete the investment process, please proceed with the following steps:\n
+
+Step 1: Transfer your investment amount to the following Cadence bank account:\n\n
+
+Bank Name: Moniepoint\n
+Account Name: Cadence Cafe\n
+Account Number: 5356651057\n
+\n
+Step 2: After making the transfer, please reply to this email with the following payment details:\n\n
+
+Date of payment\n
+Amount transferred\n
+Transaction reference or receipt number\n
+Your full name\n
+\n
+Step 3: Our team will process your investment and issue the necessary documents to validate your investment with Cadence. You will receive a confirmation certificate once this process is complete.
+\n\n
+If you have any questions or need further assistance, please don't hesitate to reach out to us at 09018009811
+\n
+We look forward to having you as part of our journey at Cadence and promise to do our best to make your investment a rewarding and fulfilling experience.
+\n
+Thank you once again for considering Cadence as your investment partner. Together, we'll create something extraordinary.
+\n\n\n
+Warm regards,\n\n
+
+Ola\n
+Team Lead/CEO, Cadence\n\n`,
+        to_email: data.Email
+      }
+
+      await SendMail('template_syxz21k', templateParams)
+
       res.status(201).json({ success: true, data: dInvestors })
     } catch (error: any) {
       return res.status(400).send({

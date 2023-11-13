@@ -1,3 +1,47 @@
+ error.message,
+
+
+        openSnackbar("error", error.message);
+
+.response.data
+
+text
+
+{
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }
+
+   <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000} // Adjust as needed
+        onClose={closeSnackbar}
+        sx={{
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+        <Alert
+          onClose={closeSnackbar}
+          severity={snackbarSeverity}
+          sx={{ width: "100%" }}
+        >
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
+
+response.data
+
+
+
+onClick={closeBackdrop}
+
+t, { useState, useEffect }
+
+, 'https://site2.com', 'https://site3.com'
+
 ../../public/
 
 

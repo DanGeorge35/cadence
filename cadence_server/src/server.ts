@@ -17,10 +17,18 @@ const app = express()
 dotenv.config()
 
 // MiddleWare
+// const allowedOrigins = ['*']
+
+const corsOptions = {
+  origin: '*',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true // Enable cookies or other credentials
+}
+
 app.use(helmet()) // Security first middleware
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-app.use(cors()) // enable CORS - Cross Origin Resource Sharing
+app.use(cors(corsOptions))
 app.use(cookieParser())
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))

@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 import fs from 'fs'
+import axios from 'axios'
 import { type Fields } from 'formidable'
 
 function Authorization (req: any, res: any, next: any): any {
@@ -34,6 +35,34 @@ async function EncryptPassword (password: string): Promise<string> {
     console.error('Error encrypting password:', error)
     return password
   }
+}
+
+async function SendMail (templateID: string, templateParams: any): Promise<void> {
+  const options = {
+    service_id: 'service_vdnsdbq',
+    template_id: templateID,
+    user_id: 'RCVp1J62LBFzk1i31',
+    template_params: templateParams
+  }
+
+  const ddata = JSON.stringify(options)
+
+  const config = {
+    method: 'post',
+    url: 'https://api.emailjs.com/api/v1.0/email/send',
+    data: ddata,
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+
+  await axios(config)
+    .then((response) => {
+      // console.log(JSON.stringify(response.data));
+    })
+    .catch((error) => {
+      console.log(error.message)
+    })
 }
 
 function adjustFieldsToValue (
@@ -93,5 +122,6 @@ export {
   CheckPassword,
   RenameUploadFile,
   adjustFieldsToValue,
-  getUIDfromDate
+  getUIDfromDate,
+  SendMail
 }
