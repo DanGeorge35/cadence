@@ -65,10 +65,10 @@ class InvestorsController {
         return res.status(result.code).send(result)
       }
 
-      const checkExist = await Investors.findOne({ where: { ...data } })
+      const checkExist = await Investors.findOne({ where: { Email: data.Email } })
       if (checkExist !== null) {
         return res.status(400).send({
-          message: 'This Investor Record Already Exist',
+          message: 'This Investor  Already Exist',
           code: 400
         })
       }
@@ -131,10 +131,8 @@ Ola\n
 Team Lead/CEO, Cadence\n\n`,
         to_email: data.Email
       }
-
-      await SendMail('template_syxz21k', templateParams)
-
       res.status(201).json({ success: true, data: dInvestors })
+      await SendMail('template_syxz21k', templateParams)
     } catch (error: any) {
       return res.status(400).send({
         message: error.message,
