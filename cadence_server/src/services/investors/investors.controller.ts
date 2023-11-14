@@ -100,39 +100,39 @@ class InvestorsController {
         subject: 'Confirmation of Your Investment Interest with Cadence',
         message: `
 Thank you for expressing your interest in investing with Cadence. We are delighted that you are considering us as your investment partner.
-Your trust means a lot to us, and we want to assure you that your investment is safe with Cadence.\n\n
+Your trust means a lot to us, and we want to assure you that your investment is safe with Cadence.</br></br>
 
-To complete the investment process, please proceed with the following steps:\n
+To complete the investment process, please proceed with the following steps:</br>
 
-Step 1: Transfer your investment amount to the following Cadence bank account:\n\n
+Step 1: Transfer your investment amount to the following Cadence bank account:</br></br>
 
-Bank Name: Moniepoint\n
-Account Name: Cadence Cafe\n
-Account Number: 5356651057\n
-\n
-Step 2: After making the transfer, please reply to this email with the following payment details:\n\n
+Bank Name: Moniepoint</br>
+Account Name: Cadence Cafe</br>
+Account Number: 5356651057</br>
+</br>
+Step 2: After making the transfer, please reply to this email with the following payment details:</br></br>
 
-Date of payment\n
-Amount transferred\n
-Transaction reference or receipt number\n
-Your full name\n
-\n
+Date of payment</br>
+Amount transferred</br>
+Transaction reference or receipt number</br>
+Your full name</br>
+</br>
 Step 3: Our team will process your investment and issue the necessary documents to validate your investment with Cadence. You will receive a confirmation certificate once this process is complete.
-\n\n
+</br></br>
 If you have any questions or need further assistance, please don't hesitate to reach out to us at 09018009811
-\n
+</br>
 We look forward to having you as part of our journey at Cadence and promise to do our best to make your investment a rewarding and fulfilling experience.
-\n
+</br>
 Thank you once again for considering Cadence as your investment partner. Together, we'll create something extraordinary.
-\n\n\n
-Warm regards,\n\n
+</br></br></br>
+Warm regards,</br></br>
 
-Ola\n
-Team Lead/CEO, Cadence\n\n`,
+Ola</br>
+Team Lead/CEO, Cadence</br></br>`,
         to_email: data.Email
       }
       res.status(201).json({ success: true, data: dInvestors })
-      await SendMail('template_syxz21k', templateParams)
+      await SendMail(templateParams)
     } catch (error: any) {
       return res.status(400).send({
         message: error.message,

@@ -1,3 +1,4 @@
+import nodemailer from 'nodemailer'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 import fs from 'fs'
@@ -37,7 +38,7 @@ async function EncryptPassword (password: string): Promise<string> {
   }
 }
 
-async function SendMail (templateID: string, templateParams: any): Promise<void> {
+async function SendMailJS (templateID: string, templateParams: any): Promise<void> {
   const options = {
     service_id: 'service_vdnsdbq',
     template_id: templateID,
@@ -63,6 +64,46 @@ async function SendMail (templateID: string, templateParams: any): Promise<void>
     .catch((error) => {
       console.log(error)
     })
+}
+
+async function SendMail (mail: any): Promise<void> {
+  const transporter = nodemailer.createTransport({
+    host: 'mail.cadencepub.com',
+    port: 465,
+    secure: true, // Use secure connection (TLS/SSL)
+    auth: {
+      user: 'contact@cadencepub.com',
+      pass: 'contact001'
+    }
+  })
+
+  const htmlMessage = `
+  <div style="background-color: black;">
+    <div style="background-color:black;padding:10px;text-align:center">
+      <img src="https://cadencepub.com/logo.png" alt="Cadence" width="143" height="60">
+    </div>
+    Dear ${mail.to_name},<br><br>
+      ${mail.message}
+    <div style="text-align: center; background-color: black;color:yellow;padding:5px;font-size:12px">
+      <b>Cadence:</b> Sweet Experiences
+    </div>
+  </div>`
+
+  // Email options
+  const mailOptions = {
+    from: 'contact@cadencepub.com',
+    to: mail.to_email,
+    subject: mail.subject,
+    html: htmlMessage
+  }
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error != null) {
+      console.error('Error:', error.message)
+    } else {
+      console.log('Email sent:', info.response)
+    }
+  })
 }
 
 function adjustFieldsToValue (
@@ -123,5 +164,6 @@ export {
   RenameUploadFile,
   adjustFieldsToValue,
   getUIDfromDate,
-  SendMail
+  SendMail,
+  SendMailJS
 }

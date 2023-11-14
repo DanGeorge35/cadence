@@ -64,6 +64,8 @@ const InvestmentForm = () => {
 
   const handleFormSubmission = async (e) => {
     e.preventDefault();
+    let BASEURL = "https://cadencepub.com/production/";
+    BASEURL = "http://localhost:5000/development/";
     //Loading
     openBackdrop();
     const formData = {
@@ -86,7 +88,7 @@ const InvestmentForm = () => {
 
     try {
       const response = await axios.post(
-        "https://cadencepub.com/production/api/v1/investors",
+        `${BASEURL}api/v1/investors`,
         formData,
         {
           headers: {
