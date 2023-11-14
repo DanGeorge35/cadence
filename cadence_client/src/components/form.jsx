@@ -1,6 +1,26 @@
 import React, { useState } from "react";
+import { Backdrop, CircularProgress } from "@mui/material";
+import Swal from "sweetalert2";
+import axios from "axios";
 
 function Form() {
+  const showAlert = (data) => {
+    Swal.fire({
+      title: data.title, //"success",
+      text: data.text, //"success",
+      icon: data.icon, //"success",
+      confirmButtonText: data.button,
+    });
+  };
+  const [backdropOpen, setBackdropOpen] = useState(false);
+
+  const openBackdrop = () => {
+    setBackdropOpen(true);
+  };
+
+  const closeBackdrop = () => {
+    setBackdropOpen(false);
+  };
   // Define a state to manage form submission
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
@@ -8,7 +28,14 @@ function Form() {
   const [link, setLink] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
 
-  const handleFormSubmission = (e) => {
+  const resetFormFields = () => {
+    setFullname("");
+    setEmail("");
+    setRole("");
+    setLink("");
+  };
+
+  const handleFormSubmission = async (e) => {
     e.preventDefault(); // Prevent the default form submission behavior
 
     // Perform any form submission logic here, e.g., send data to a server
@@ -18,15 +45,68 @@ function Form() {
     console.log("role:", role);
     console.log("whatsapp:", whatsapp);
 
+    let BASEURL = "https://cadencepub.com/production/";
+    BASEURL = "http://localhost:5000/development/";
+    //Loading
+    openBackdrop();
+    const formData = {
+      FullName: fullname,
+      Email: email,
+      Whatsapp: whatsapp,
+      Role: role,
+      Link: link,
+    };
+
+    try {
+      const response = await axios.post(`${BASEURL}api/v1/workers`, formData, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer your_access_token_here",
+        },
+      });
+
+      console.log(response);
+
+      showAlert({
+        title: "Successfully Registered",
+        text: "Data submitted successfully",
+        icon: "success",
+        button: "Ok",
+      });
+      resetFormFields();
+    } catch (error) {
+      if (error.response) {
+        console.log(error.response.data);
+        showAlert({
+          title: "Error",
+          text: error.response.data.message,
+          icon: "error",
+          button: "Ok",
+        });
+      } else {
+        console.error(error.message);
+        showAlert({
+          title: "Error",
+          text: error.message,
+          icon: "error",
+          button: "Ok",
+        });
+      }
+    } finally {
+      closeBackdrop();
+    }
+
     // Reset the form fields
-    setFullname("");
-    setEmail("");
-    setRole("");
-    setLink("");
   };
 
   return (
     <div>
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={backdropOpen}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
       <form onSubmit={handleFormSubmission}>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">

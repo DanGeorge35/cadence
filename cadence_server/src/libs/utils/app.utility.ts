@@ -24,6 +24,7 @@ function GenerateToken (data: any): string {
   const JWT_SECRET: any = process.env.jwtkey
   return jwt.sign({ data }, JWT_SECRET, { expiresIn: '30d' })
 }
+
 async function CheckPassword (password: string, hash: string): Promise<boolean> {
   return await bcrypt.compare(password, hash)
 }

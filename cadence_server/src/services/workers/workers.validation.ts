@@ -2,7 +2,6 @@
 import Joi from 'joi'
 
 const schema = Joi.object({
-  id: Joi.string().required().min(1),
   UserID: Joi.string().required().min(1),
   FullName: Joi.string().required().min(1),
   Email: Joi.string().required().min(1),
@@ -27,7 +26,6 @@ export default workersValidation
 
 /* --------------------------------------------------------- POSTMAN TEST DATA STRUCTURE
  {
-    "id" : "",
     "UserID" : "",
     "FullName" : "",
     "Email" : "",
