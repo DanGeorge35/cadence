@@ -6,7 +6,7 @@ const WorkersEndpoint = [
   {
     path: `${ENDPOINT_URL}/`,
     method: 'post',
-    handler: [Authorization, WorkersController.createWorkers]
+    handler: [WorkersController.createWorkers]
   },
   {
     path: `${ENDPOINT_URL}/login`,
