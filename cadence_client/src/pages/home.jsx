@@ -173,7 +173,7 @@ class Home extends Component {
           title="Join Community"
           showModal={showModal}
           toggleModal={this.toggleModal}
-          content={<Form />}
+          content={<Form toggleModal={this.toggleModal} />}
         />
         <Footer />
       </div>

@@ -83,8 +83,7 @@ class WorkersController {
       const dpaswprd = data.Password ?? DID
       const account: any = {}
       account.UserID = data.UserID
-      account.FirstName = data.FirstName
-      account.LastName = data.LastName
+      account.FullName = data.FullName
       account.Email = data.Email
       account.Role = data.Role
       account.UserType = 'Worker'

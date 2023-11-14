@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Backdrop, CircularProgress } from "@mui/material";
 import Swal from "sweetalert2";
 import axios from "axios";
+import PropTypes from "prop-types";
 
-function Form() {
+const Form = (props) => {
   const showAlert = (data) => {
     Swal.fire({
       title: data.title, //"success",
@@ -93,6 +94,7 @@ function Form() {
         });
       }
     } finally {
+      props.toggleModal();
       closeBackdrop();
     }
 
@@ -167,7 +169,7 @@ function Form() {
             className="form-control  "
             id="link"
             value={link}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setLink(e.target.value)}
           />
         </div>
 
@@ -190,6 +192,10 @@ function Form() {
       </form>
     </div>
   );
-}
+};
+
+Form.propTypes = {
+  toggleModal: PropTypes.func.isRequired, // Make sure it's a function and required
+};
 
 export default Form;
