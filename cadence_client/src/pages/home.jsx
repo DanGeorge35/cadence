@@ -53,7 +53,12 @@ class Home extends Component {
               we embarked on a mission to transform it into something truly
               extraordinary. We envisioned a place where people could come
               together, savor exquisite cuisine, enjoy signature cocktails, and
-              create timeless memories.
+              create timeless memories. <br></br>
+              <br></br>However, what started as the acquisition and renovation
+              of an existing restaurant, quickly evolved into a multifaceted
+              venture. Cadence doesn&apos;t just operate as a restaurant,
+              lounge, and bar; we&apos;ve expanded our horizons to include
+              short-let apartments
             </label>
             <br></br>
             <br></br>
@@ -73,12 +78,19 @@ class Home extends Component {
                 The Transformation
               </p>
               <label className="aboutContent text-white  pb-4    border-warning">
-                Our journey was marked by relentless dedication and a commitment
-                to excellence. We embarked on a massive renovation project,
-                meticulously designing every corner to exude elegance and
-                sophistication. Our vision extended beyond the confines of the
-                restaurant as we set out to build an outdoor bar space that
-                would redefine leisure and entertainment.
+                Our journey at Cadence has been defined by unwavering dedication
+                and a pursuit of excellence. From a meticulous renovation that
+                breathed elegance into every corner to the creation of an
+                outdoor bar space redefining leisure and entertainment, Cadence
+                is a symphony of sophistication.<br></br>
+                <br></br> But there&apos;s more to Cadence than meets the eye.
+                We&apos;ve expanded our horizons to include the concept of
+                short-let homes, adding a new dimension to our commitment to
+                provide exceptional experiences. This goes beyond just dining;
+                it&apos;s about indulgence, entertainment, and now, a touch of
+                luxury living.<br></br>
+                <br></br> Join us at Cadence, where every detail tells a story
+                of refinement, and every moment promises a unique experience.
               </label>
             </div>
           </div>
@@ -103,9 +115,7 @@ class Home extends Component {
                 className="aboutContent text-light"
                 style={{ textAlign: "center" }}
               >
-                As we prepare to unveil the new Cadence in October, we invite
-                you to be part of this exciting chapter. What can you expect
-                when you step through our doors?
+                What can you expect when you step through our doors?
               </label>
             </div>
 
@@ -158,10 +168,8 @@ class Home extends Component {
                   <InfoCard
                     img="ext1.jpg"
                     title="Ambience"
-                    content="Immerse yourself in an atmosphere that seamlessly
-                  blends contemporary style with warmth. Our interiors are
-                  designed to create the perfect backdrop for your moments of
-                  joy and celebration."
+                    content="For those seeking a home away from home, our short-let apartments provide a touch of luxury and comfort.
+                    Our interiors are designed to create the perfect backdrop for your moments of joy and celebration."
                   />
                 </div>
               </div>

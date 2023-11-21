@@ -16,13 +16,21 @@ class JoinPortal extends Component {
                 </div>
                 <br></br>
                 <h1 className="pb-3 text-primary-color">
-                  Join the Cadence the Development Portal
+                  Join the Cadence Development Portal
                 </h1>
                 <div
                   className="pb-5"
                   style={{ fontSize: "20px", fontWeight: "400" }}
                 >
-                  Apply to join the Cadence Creator Community
+                  Sharing the best experiences begins with you! 🌟 As we gear up
+                  to reopen, we&apos;re excited to invite potential investors to
+                  join the Cadence family. Cadence isn&apos;t just a place to
+                  dine and unwind; it&apos;s a unique investment opportunity
+                  covering a restaurant, lounge, bar, and short-let homes, all
+                  promising lucrative returns. Be part of our journey to create
+                  a legacy of excellence in hospitality. Don&apos;t miss
+                  out—reach out today to explore Cadence investment
+                  opportunities
                 </div>
 
                 <button

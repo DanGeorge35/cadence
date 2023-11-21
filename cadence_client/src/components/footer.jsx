@@ -81,28 +81,25 @@ class Footer extends Component {
                   More Than Just a Restaurant and Bar
                 </label>
               </div>
-              <div className="pb-3">
-                <label className="cHeader fontFam2" style={{ color: "#999" }}>
-                  Monday -Thursday
-                </label>
-                <label className="cHeader">@ 8am - 8pm</label>
-              </div>
+
               <div className="pb-3">
                 <label className="cHeader fontFam2" style={{ color: "#999" }}>
                   Friday - Saturday
                 </label>
-                <label className="cHeader">@ 8am - 8pm</label>
+                <label className="cHeader">@ 9am - 1am</label>
               </div>
               <div className="pb-3">
                 <label className="cHeader fontFam2" style={{ color: "#999" }}>
                   Sunday
                 </label>
-                <label className="cHeader">@ 9am to 5pm</label>
+                <label className="cHeader">@ 12pm to 1am</label>
               </div>
             </div>
           </div>
         </div>
-        <div className="bottomFooter">© 2023 CADENCE+ Sweet Experiences</div>
+        <div className="bottomFooter">
+          © 2023 CADENCE -- &quot;Dine in Style, Sip in Harmony &quot;
+        </div>
       </div>
     );
   }

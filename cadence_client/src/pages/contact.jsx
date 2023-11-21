@@ -38,7 +38,7 @@ function Contact() {
           <div className="container">
             <div className="pt-5  pe-3 px-3">
               <h1 className="pb-4 text-center fontFam4 pb-5 ">
-                Locations for Food, Fun and Friends
+                Location for Food, Fun and Friends
               </h1>
               <div className="row">
                 <div className="col-lg-3  fontFam0  ">

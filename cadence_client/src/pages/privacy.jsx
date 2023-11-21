@@ -204,7 +204,7 @@ class Privacy extends Component {
                     Grace Plaza New Eleyele Road Ibadan<br></br>
                   </b>
                   <b style={{ color: "rgb(251 202 14)", fontSize: "25px" }}>
-                    contact@cadencecafehouse.com
+                    contact@cadencepub.com
                   </b>
                   <br></br>
                   <b style={{ color: "rgb(251 202 14)", fontSize: "25px" }}>
