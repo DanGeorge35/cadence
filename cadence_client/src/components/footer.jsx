@@ -78,13 +78,13 @@ class Footer extends Component {
                     color: "#968145",
                   }}
                 >
-                  More Than Just a Restaurant and Bar
+                  Dine in Style, Sip in Harmony
                 </label>
               </div>
 
               <div className="pb-3">
                 <label className="cHeader fontFam2" style={{ color: "#999" }}>
-                  Friday - Saturday
+                  Monday - Saturday
                 </label>
                 <label className="cHeader">@ 9am - 1am</label>
               </div>

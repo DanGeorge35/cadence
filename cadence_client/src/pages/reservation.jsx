@@ -31,9 +31,9 @@ class Reservation extends Component {
             <div className="aboutContent" style={{ textAlign: "justify" }}>
               <div className="text-white">
                 At Cadence, we&apos;re delighted to offer a wide range of
-                booking options tailored to meet your every need. Our
-                easy-to-use booking platform simplifies the process of reserving
-                spaces, accommodations, and transportation within Ibadan.
+                booking options tailored to meet your every need. Our platform
+                simplifies the process of reserving spaces, accommodations, and
+                transportation within Ibadan.
               </div>
               <br></br>
               <br></br>

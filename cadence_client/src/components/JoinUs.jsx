@@ -30,7 +30,8 @@ class JoinUs extends Component {
                   us today to discuss investment opportunities, and let&apos;s
                   make Cadence&apos;s reopening an event to remember.
                   <div className="py-4">
-                    <button
+                    <a
+                      href="investmentform"
                       className="btn btn-warning   py-2 fontFam4 "
                       style={{
                         minWidth: "200px",
@@ -39,7 +40,7 @@ class JoinUs extends Component {
                       }}
                     >
                       Invest With Us
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

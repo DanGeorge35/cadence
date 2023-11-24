@@ -22,15 +22,13 @@ class JoinPortal extends Component {
                   className="pb-5"
                   style={{ fontSize: "20px", fontWeight: "400" }}
                 >
-                  Sharing the best experiences begins with you! 🌟 As we gear up
-                  to reopen, we&apos;re excited to invite potential investors to
-                  join the Cadence family. Cadence isn&apos;t just a place to
-                  dine and unwind; it&apos;s a unique investment opportunity
-                  covering a restaurant, lounge, bar, and short-let homes, all
-                  promising lucrative returns. Be part of our journey to create
-                  a legacy of excellence in hospitality. Don&apos;t miss
-                  out—reach out today to explore Cadence investment
-                  opportunities
+                  Calling all creative minds! 🚀 Join the Cadence Development
+                  Portal and be part of redefining the future of hospitality.
+                  <br></br>
+                  Your innovative ideas can shape unforgettable experiences.
+                  <br></br>
+                  Let&apos;s craft excellence together. Dive into development
+                  with Cadence! 💡✨
                 </div>
 
                 <button
