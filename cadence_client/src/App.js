@@ -11,7 +11,6 @@ import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
 import InvestmentForm from "./pages/InvestmentForm";
 import Blog from "./pages/blog";
-import SignUp from "./dashboard/pages/signup";
 import SignIn from "./dashboard/pages/signin";
 
 class App extends Component {
@@ -55,7 +54,6 @@ class App extends Component {
               element={<InvestmentForm {...AppProps} />}
             />
             <Route path="/blog" element={<Blog {...AppProps} />} />
-            <Route path="signup" element={<SignUp {...AppProps} />} />
             <Route path="signin" element={<SignIn {...AppProps} />} />
             <Route path="*" element={<NoPage />} />
           </Routes>

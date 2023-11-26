@@ -11,7 +11,7 @@ class Banner extends Component {
         caption2: "A Journey of Excellence",
         caption3:
           "A testament to a journey fueled by passion, creativity, and a deep love for providing unforgettable experiences.",
-        action: { title: "Join Us", url: "signup" },
+        action: { title: "Join Us", url: "invest" },
       },
       {
         url: "./cadfood4.jpeg",
