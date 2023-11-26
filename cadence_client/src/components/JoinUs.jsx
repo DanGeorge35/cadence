@@ -18,17 +18,14 @@ class JoinUs extends Component {
                   className="fontFam3"
                   style={{ fontSize: "20px", fontWeight: "400" }}
                 >
-                  We believe that the best experiences are shared. As we prepare
-                  to reopen our doors, we extend an invitation to you - our
-                  potential investors. Cadence is not just a place to dine and
-                  unwind; it&apos;s an investment opportunity that promises
-                  lucrative returns. By joining us on this journey, you&apos;re
-                  not only investing in a thriving business but also becoming a
-                  part of the Cadence family. Together, we&apos;ll create a
-                  legacy of excellence in hospitality. Don&apos;t miss out on
-                  this chance to be part of something exceptional. Reach out to
-                  us today to discuss investment opportunities, and let&apos;s
-                  make Cadence&apos;s reopening an event to remember.
+                  &quot;Sharing the best experiences begins with you! 🌟
+                  We&apos;re excited to invite potential investors to join the
+                  Cadence family. Cadence isn&apos;t just a place to dine and
+                  unwind; it&apos;s a unique investment opportunity covering a
+                  restaurant, lounge, bar, and short-let homes, all promising
+                  lucrative returns. Be part of our journey to create a legacy
+                  of excellence in hospitality. Don&apos;t miss out—reach out
+                  today to explore Cadence investment opportunities
                   <div className="py-4">
                     <a
                       href="investmentform"

@@ -65,7 +65,7 @@ const InvestmentForm = () => {
   const handleFormSubmission = async (e) => {
     e.preventDefault();
     let BASEURL = "https://cadencepub.com/production/";
-    BASEURL = "http://localhost:5000/development/";
+    // BASEURL = "http://localhost:5000/development/";
     //Loading
     openBackdrop();
     const formData = {
@@ -273,17 +273,14 @@ const InvestmentForm = () => {
                   <label htmlFor="inputAmount" className="form-label">
                     Investment Amount
                   </label>
-                  <select
-                    id="inputAmount"
+                  <input
+                    type="number"
                     className="form-control"
+                    id="inputAmount"
+                    min="500000"
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
-                  >
-                    <option value="0" defaultValue>
-                      -- Select Amount
-                    </option>
-                    <option value="50000">50,000</option>
-                  </select>
+                  />
                 </div>
 
                 <div className="mb-3">

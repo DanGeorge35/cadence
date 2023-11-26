@@ -47,7 +47,7 @@ const Form = (props) => {
     console.log("whatsapp:", whatsapp);
 
     let BASEURL = "https://cadencepub.com/production/";
-    BASEURL = "http://localhost:5000/development/";
+    // BASEURL = "http://localhost:5000/development/";
     //Loading
     openBackdrop();
     const formData = {
