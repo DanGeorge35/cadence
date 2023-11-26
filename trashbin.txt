@@ -1,3 +1,5 @@
+<br />
+
 import SignUp from "./dashboard/pages/signup";
 
 //map iinvestment from 500,000

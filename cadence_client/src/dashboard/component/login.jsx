@@ -23,7 +23,7 @@ export default function Register() {
                 name="email"
                 placeholder="Enter your email"
               />
-              <br />
+
               <input
                 className="form-control"
                 type="password"
@@ -31,7 +31,6 @@ export default function Register() {
                 placeholder="Password"
               />
 
-              <br />
               <FormControlLabel
                 control={<Checkbox color="warning" defaultChecked />}
                 label="Remember Me"
@@ -42,12 +41,6 @@ export default function Register() {
               <button className="btn w-100 btn-warning" type="submit">
                 SIGN IN
               </button>
-              <div className="text-white text-center pt-3">
-                Dont have an account?
-                <a href="/signup" className="text-warning d-block">
-                  <b>Sign Up</b>
-                </a>
-              </div>
             </form>
           </div>
         </div>

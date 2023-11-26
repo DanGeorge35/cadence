@@ -32,8 +32,13 @@ overflow: hidden;
   background-color:#198754d1;
   min-height: 50vh;
   padding: 40px 0px;
+  margin: 15px;
+  border-radius: 10px;
 }
 
+.registerForm input{
+background-color: #fff;
+}
 .signSlide > div {
   background-size: cover;
   height: 100vh;
