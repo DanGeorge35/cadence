@@ -37,7 +37,7 @@ class Footer extends Component {
               <label className="footerHead">SOCIALS </label>
               <a
                 className="footerLink"
-                href=" https://www.instagram.com/cadence_lounge/"
+                href="https://www.instagram.com/cadencepub/"
                 target="_blank"
                 rel="noreferrer"
               >
