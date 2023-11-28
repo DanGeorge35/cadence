@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable @typescript-eslint/no-extraneous-class */
 /* eslint-disable-next-line @typescript-eslint/no-misused-promises */
-import fs from 'fs'
 import { getUIDfromDate, EncryptPassword, GenerateToken, CheckPassword } from '../../libs/utils/app.utility'
 import Workers from '../../models/workers.model'
 import Auth from '../../models/auths.model'
@@ -65,10 +64,6 @@ class WorkersController {
         }
         return res.status(result.code).send(result)
       }
-      const dir = '/public/workers'
-      if (!fs.existsSync(`.${dir}`)) {
-        fs.mkdirSync(`.${dir}`)
-      }
 
       const checkExist = await Workers.findOne({ where: { ...data } })
       if (checkExist !== null) {
@@ -93,16 +88,6 @@ class WorkersController {
       account.Verified = '1'
 
       const daccount = await Workers.create({ ...account })
-
-      if (data.Signature !== undefined) {
-        const Signature = `${DID}-SIG`
-        const base64Str = data.Signature
-        const base64 = base64Str.replace('data:image/png;base64,', '')
-        const imagePath = `.${dir}/${Signature}.png`
-        const buffer = Buffer.from(base64, 'base64')
-        fs.writeFileSync(imagePath, buffer)
-        data.Signature = `${process.env.DOMAIN}/${process.env.NODE_ENV}${dir}/${Signature}.png`
-      }
 
       const dWorkers = await Workers.create({ ...data })
       dWorkers.dataValues.account = daccount
