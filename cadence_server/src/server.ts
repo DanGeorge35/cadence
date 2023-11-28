@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 import path from 'path'
 import os from 'os'
 // import csrf from 'csurf'
-import cookieParser from 'cookie-parser'
+// import cookieParser from 'cookie-parser'
 import morgan from 'morgan'
 import cors from 'cors'
 import helmet from 'helmet'
@@ -29,7 +29,7 @@ app.use(helmet()) // Security first middleware
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.use(cors(corsOptions))
-app.use(cookieParser())
+// app.use(cookieParser())
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
 }
