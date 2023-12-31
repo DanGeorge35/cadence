@@ -100,35 +100,35 @@ class InvestorsController {
         subject: 'Confirmation of Your Investment Interest with Cadence',
         message: `
 Thank you for expressing your interest in investing with Cadence. We are delighted that you are considering us as your investment partner.
-Your trust means a lot to us, and we want to assure you that your investment is safe with Cadence.</br></br>
+Your trust means a lot to us, and we want to assure you that your investment is safe with Cadence.<br><br>
 
-To complete the investment process, please proceed with the following steps:</br>
+To complete the investment process, please proceed with the following steps:<br>
 
-Step 1: Transfer your investment amount to the following Cadence bank account:</br></br>
+Step 1: Transfer your investment amount to the following Cadence bank account:<br><br>
 
-Bank Name: Moniepoint</br>
-Account Name: Cadence Cafe</br>
-Account Number: 5356651057</br>
-</br>
-Step 2: After making the transfer, please reply to this email with the following payment details:</br></br>
+Bank Name: Moniepoint<br>
+Account Name: Cadence Cafe<br>
+Account Number: 5356651057<br>
+<br>
+Step 2: After making the transfer, please reply to this email with the following payment details:<br><br>
 
-Date of payment</br>
-Amount transferred</br>
-Transaction reference or receipt number</br>
-Your full name</br>
-</br>
+Date of payment<br>
+Amount transferred<br>
+Transaction reference or receipt number<br>
+Your full name<br>
+<br>
 Step 3: Our team will process your investment and issue the necessary documents to validate your investment with Cadence. You will receive a confirmation certificate once this process is complete.
-</br></br>
+<br><br>
 If you have any questions or need further assistance, please don't hesitate to reach out to us at 09018009811
-</br>
+<br>
 We look forward to having you as part of our journey at Cadence and promise to do our best to make your investment a rewarding and fulfilling experience.
-</br>
+<br>
 Thank you once again for considering Cadence as your investment partner. Together, we'll create something extraordinary.
-</br></br></br>
-Warm regards,</br></br>
+<br><br><br>
+Warm regards,<br><br>
 
-Ola</br>
-Team Lead/CEO, Cadence</br></br>`,
+Ola<br>
+Team Lead/CEO, Cadence<br>`,
         to_email: data.Email
       }
       res.status(201).json({ success: true, data: dInvestors })
