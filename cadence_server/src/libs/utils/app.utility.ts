@@ -94,7 +94,7 @@ async function SendMail (mail: any): Promise<void> {
 
   // Email options
   const mailOptions = {
-    from: 'contact@cadencepub.com',
+    from: '"Cadence" <contact@cadencepub.com>',
     to: mail.to_email,
     subject: mail.subject,
     html: htmlMessage
