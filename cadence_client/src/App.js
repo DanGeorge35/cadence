@@ -10,8 +10,9 @@ import Investment from "./pages/invest";
 import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
 import InvestmentForm from "./pages/InvestmentForm";
-import Blog from "./pages/blog";
+import LogoutPage from "./pages/logout";
 import SignIn from "./dashboard/pages/signin";
+import Dashboard from "./dashboard/pages/dashboard";
 
 class App extends Component {
   constructor(props) {
@@ -53,8 +54,30 @@ class App extends Component {
               path="/investmentform"
               element={<InvestmentForm {...AppProps} />}
             />
-            <Route path="/blog" element={<Blog {...AppProps} />} />
-            <Route path="signin" element={<SignIn {...AppProps} />} />
+            <Route path="/signin" element={<SignIn {...AppProps} />} />
+            {/* DASHBOARD */}
+            <Route
+              path="/account"
+              element={<Dashboard {...AppProps} dashpage="DashHome" />}
+            />
+            <Route
+              path="/account/home"
+              element={<Dashboard {...AppProps} dashpage="DashHome" />}
+            />
+            <Route
+              path="/account/investments"
+              element={<Dashboard {...AppProps} dashpage="Investments" />}
+            />
+            <Route
+              path="/account/transactions"
+              element={<Dashboard {...AppProps} dashpage="Transactions" />}
+            />
+            <Route
+              path="/account/profile"
+              element={<Dashboard {...AppProps} dashpage="profile" />}
+            />
+            <Route path="/logout" element={<LogoutPage />} />
+
             <Route path="*" element={<NoPage />} />
           </Routes>
         </Router>

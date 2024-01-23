@@ -11,13 +11,13 @@ class SideMenu extends Component {
         className={`SideMenu  ${
           isOpen
             ? ""
-            : " animate__animated animate__faster animate__fadeOutRight"
+            : " animate__animated animate__faster animate__fadeOutLeft"
         } `}
       >
         <div className="fadeCover animate__animated animate__faster animate__fadeIn"></div>
         <div
           className={`SideContent animate__animated animate__faster  ${
-            isOpen ? " animate__slideInLeft" : "  animate__slideOutRight"
+            isOpen ? " animate__slideInLeft" : "  animate__slideOutLeft"
           }`}
         >
           <div>

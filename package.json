@@ -5,7 +5,7 @@
   "scripts": {
     "test": "if-env TYPE=cadence_server && (cd cadence_server && nodemon cadence.js) || (cd cadence_client && react-scripts start)",
     "start": "if-env TYPE=cadence_server && (cd cadence_server && node cadence.js) || (cd cadence_client && react-scripts start)",
-    "server": "node ./cadence_server/cadence.js",
+    "server": "cd cadence_server && tsc && node dist/cadence.js",
     "client": "cd cadence_client && npm start",
     "build": "cd cadence_client && npm install && npm run build",
     "builds": "cd cadence_server && npm run build",

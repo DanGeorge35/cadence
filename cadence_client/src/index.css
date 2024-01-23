@@ -148,7 +148,7 @@ select option {
 .SideMenu .SideContent {
   position: absolute;
   top: 0px;
-  right: 0px;
+  left: 0px;
   background-color: #fffefeed;
   height: 100%;
   width: 50%;
@@ -159,6 +159,16 @@ select option {
   padding-left: 10px;
   padding-right: 25px;
   height: 100%;
+}
+.menu {
+  display: block;
+}
+.menu-item {
+  display: block;
+  border-bottom: 1px solid #3e3e3e;
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .SideContent > div::after {

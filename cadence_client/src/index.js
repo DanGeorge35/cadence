@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
 import "animate.css";
 import "./dashboard.scss";
+import "chart.js/auto";
+
 //yes
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

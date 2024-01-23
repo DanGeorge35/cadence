@@ -1,3 +1,204 @@
+ </div>
+            <div className="col-lg-6 p-4 bg-white ">
+
+investment
+
+you
+
+name
+
+.string.name
+
+DTable.propTypes = {
+  tdata: PropTypes.string.tdata, // Make sure it's a function and required
+};
+
+import DTab
+
+import DTable from "./table";
+
+import tabb
+
+   <button
+                className="btn btn-secondary pt-2 pb-2 pe-4 px-4 text-light"
+                style={{ float: "right" }}
+              >
+                Create New Investment
+              </button>
+
+ border-4 border-secondary
+
+tn-block
+
+Investments
+
+alert(dashpage);
+
+func.isRequired,
+
+ {...AppProps} dashpage="logout
+
+404
+
+account
+
+import Blog from "./pages/blog";
+
+<Route path="/blog" element={<Blog {...AppProps} />} />
+
+import { Line } from "react-chartjs-2";
+
+minHeight: "70vh"
+
+c19420
+
+Dataset
+
+ ${
+          data ? "" : "
+
+
+            <NavLink
+              to="/investmentform"
+              aria-current="page"
+              className="btn btn-outline-warning  px-4 pe-4 py-2  d-flex "
+              style={{ minWidth: "150px" }}
+            >
+              Get Started
+            </NavLink>
+          </div>
+
+auto
+
+/fams2.jpg
+
+bg-light
+
+FF0000
+
+000
+
+314CA3
+
+314CA3
+
+our-svg-image
+
+Amount
+
+
+
+{" "}
+
+, fontSize: "20px"
+
+Home
+
+ round-100
+
+ d-md-none d-none  d-lg-block
+
+ bg-dark
+
+{" "}
+
+
+
+
+
+
+
+
+
+
+
+marginRight: "20px",
+
+
+
+Home
+
+outlined
+
+outlined
+
+Contact Us
+
+navbar-nav
+
+navbar-collapse
+
+collapse d-none d-none-md d-block-lg
+
+    id="navbarSupportedContent"
+
+
+
+style={{ paddingLeft: "80px", paddingTop: "30px" }}
+
+  <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            {/* Register form */}
+            <form action="#" method="POST" className="p-2">
+              <h5 className=" text-center text-white pt-4 ">
+                <b>Account Login</b>
+              </h5>
+              <div className=" text-center text-warning  fontFam2 pb-4">
+                Login to your account
+              </div>
+
+              <br />
+              <input
+                className="form-control"
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+              />
+
+              <input
+                className="form-control"
+                type="password"
+                name="password"
+                placeholder="Password"
+              />
+
+              <FormControlLabel
+                control={<Checkbox color="warning" defaultChecked />}
+                label="Remember Me"
+              />
+              <br></br>
+              <br></br>
+
+              <button className="btn w-100 btn-warning" type="submit">
+                SIGN IN
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+animate__slideInRight
+
+/
+
+import InfoCard from "./components/InfoCard";
+
+/dashboard/pages/dashboard";
+
+import "./dashboard/styles/color.css";
+import "./dashboard/styles/font.css";
+import "./dashboard/styles/index.css";
+import "./dashboard/styles/tailwind.css";
+
+import "./dashboard/styles/color"
+
+"./dashboard/styles/color.css";
+
+import App from "./App";
+
+import ReactDOM from "react-dom";
+
 Publications
 
 <br />
