@@ -132,8 +132,15 @@ Amount transferred<br>
 Transaction reference or receipt number<br>
 Your full name<br>
 <br>
-Step 3: Our team will process your investment and issue the necessary documents to validate your investment with Cadence. You will receive a confirmation certificate once this process is complete.
+Step 3: Our team will process your investment and issue the necessary documents to validate your investment with Cadence. You will receive a confirmation certificate once this process is completed.
 <br><br>
+Step 4: <b>Login To Your Dashboard with the following details:</b>
+ Link : <a href="https://cadencepub.com/signin">https://cadencepub.com/signin</a>
+ Email: ${data.Email}
+ Password: ${data.UserID}
+<br><br>
+
+
 If you have any questions or need further assistance, please don't hesitate to reach out to us at 09018009811
 <br>
 We look forward to having you as part of our journey at Cadence and promise to do our best to make your investment a rewarding and fulfilling experience.
