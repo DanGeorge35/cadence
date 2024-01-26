@@ -65,7 +65,7 @@ const InvestmentForm = () => {
   const handleFormSubmission = async (e) => {
     e.preventDefault();
     let BASEURL = "https://cadencepub.com/production/";
-    BASEURL = "http://localhost:5000/development/";
+    // BASEURL = "http://localhost:5000/development/";
     //Loading
     openBackdrop();
     const formData = {
