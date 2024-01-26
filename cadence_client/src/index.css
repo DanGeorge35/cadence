@@ -151,11 +151,11 @@ select option {
   left: 0px;
   background-color: #fffefeed;
   height: 100%;
-  width: 50%;
+  width: 70%;
   background-image: url("../public/plate1.png");
 }
 .SideContent > div {
-  background-color: #e1fdfff6;
+  background-color: #fff;
   padding-left: 10px;
   padding-right: 25px;
   height: 100%;
@@ -169,6 +169,40 @@ select option {
   padding-left: 20px;
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border: 2px solid #999 !important;
+}
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  color: #474746 !important;
+  font-weight: 700;
+}
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border: 2px solid #c79f00 !important;
+}
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #c79f00 !important;
+}
+.imgDiv {
+  width: 200px;
+  height: 200px;
+  background-color: #eee;
+  display: inline-block;
+  border: 2px solid #ddd;
+}
+
+.css-1ckq8tj-MuiButtonBase-root-MuiButton-root {
+  padding: 10px 20px !important;
+  background-color: #fbb00e !important;
+}
+.css-1qtu9q6-MuiButtonBase-root-MuiButton-root {
+  background-color: #fbb00e !important;
+}
+.imgDiv:hover {
+  cursor: pointer;
+  background-color: #ddd;
 }
 
 .SideContent > div::after {

@@ -1,35 +1,47 @@
-import React from "react";
-// import SignSlide from "../component/signSlide";
+import React, { Component } from "react";
 import Login from "../component/login";
+import { Navigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
-export default function SignIn() {
-  return (
-    <div>
-      <div className="container-fluid">
-        <div className="cover"></div>
-        <div className="row signSlideCover ">
-          <div className="col-lg-4 offset-lg-4 signupLeft  p-0 ">
-            <div className=" signupLeftBase">
-              <div className="text-center registerLogo">
-                <div>
-                  <a href="/home">
-                    <img
-                      src="logo.png"
-                      alt="Cadence"
-                      style={{ height: "80px", verticalAlign: "center" }}
-                    />
-                  </a>
+class SignIn extends Component {
+  render() {
+    const LoginUser = localStorage.getItem("LoginUser");
+    if (LoginUser) {
+      return <Navigate to="/account" />;
+    }
+    return (
+      <div>
+        <div className="container-fluid">
+          <div className="cover"></div>
+          <div className="row signSlideCover ">
+            <div className="col-lg-4 offset-lg-4 signupLeft  p-0 ">
+              <div className=" signupLeftBase">
+                <div className="text-center registerLogo">
+                  <div>
+                    <a href="/home">
+                      <img
+                        src="logo.png"
+                        alt="Cadence"
+                        style={{ height: "80px", verticalAlign: "center" }}
+                      />
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="">
-                <div className=" registerForm">
-                  <Login />
+                <div className="">
+                  <div className=" registerForm">
+                    <Login BASEURL={this.props.BASEURL} />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
+SignIn.propTypes = {
+  BASEURL: PropTypes.string,
+};
+
+export default SignIn;

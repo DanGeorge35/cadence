@@ -21,7 +21,7 @@ class Navs extends Component {
             </a>
 
             <NavLink
-              to="/investmentform"
+              to="/account/profile"
               aria-current="page"
               className="btn btn-light  px-3 pe-3 py-2  d-flex"
               style={{ width: "45px", height: "45px", borderRadius: "100%" }}
@@ -35,7 +35,7 @@ class Navs extends Component {
               className="navbar-toggler   d-block d-lg-none "
               onClick={this.props.toggleSideMenu}
             >
-              <span className="material-symbols-outlined ">lunch_dining</span>
+              <span className="material-symbols-outlined ">menu</span>
             </span>
           </div>
         </nav>

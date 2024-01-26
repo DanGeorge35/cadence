@@ -1,14 +1,105 @@
-import React from "react";
-import { Checkbox, FormControlLabel } from "@mui/material";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import {
+  Checkbox,
+  FormControlLabel,
+  Backdrop,
+  CircularProgress,
+} from "@mui/material";
 
-export default function Register() {
+import Swal from "sweetalert2";
+import axios from "axios";
+
+export default function Login(props) {
+  const showAlert = (data) => {
+    Swal.fire({
+      title: data.title, //"success",
+      text: data.text, //"success",
+      icon: data.icon, //"success",
+      confirmButtonText: data.button,
+    });
+  };
+  const [backdropOpen, setBackdropOpen] = useState(false);
+
+  const openBackdrop = () => {
+    setBackdropOpen(true);
+  };
+
+  const closeBackdrop = () => {
+    setBackdropOpen(false);
+  };
+  // Define a state to manage form submission
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleFormSubmission = async (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+    // Perform any form submission logic here, e.g., send data to a server
+    console.log("email:", email);
+    const BASEURL = props.BASEURL;
+    //Loading
+    openBackdrop();
+    const formData = {
+      email: email,
+      password: password,
+    };
+
+    try {
+      const response = await axios.post(
+        `${BASEURL}api/v1/investors/login`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer your_access_token_here",
+          },
+        }
+      );
+
+      response.data.credentials = formData;
+
+      localStorage.setItem("LoginUser", JSON.stringify(response.data));
+      closeBackdrop();
+      // redirect to dashboard
+      window.location = "/account";
+    } catch (error) {
+      if (error.response) {
+        console.log(error.response.data);
+        showAlert({
+          title: "Error",
+          text: error.response.data.message,
+          icon: "error",
+          button: "Ok",
+        });
+      } else {
+        console.error(error.message);
+        showAlert({
+          title: "Error",
+          text: error.message,
+          icon: "error",
+          button: "Ok",
+        });
+      }
+    } finally {
+      closeBackdrop();
+    }
+
+    // Reset the form fields
+  };
+
   return (
     <div>
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            {/* Register form */}
-            <form action="#" method="POST" className="p-2">
+            <Backdrop
+              sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+              open={backdropOpen}
+            >
+              <CircularProgress color="inherit" />
+            </Backdrop>
+            <form onSubmit={handleFormSubmission}>
               <h5 className=" text-center text-white pt-4 ">
                 <b>Account Login</b>
               </h5>
@@ -21,6 +112,7 @@ export default function Register() {
                 className="form-control"
                 type="email"
                 name="email"
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
               />
 
@@ -28,6 +120,7 @@ export default function Register() {
                 className="form-control"
                 type="password"
                 name="password"
+                onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
               />
 
@@ -48,3 +141,7 @@ export default function Register() {
     </div>
   );
 }
+
+Login.propTypes = {
+  BASEURL: PropTypes.string,
+};

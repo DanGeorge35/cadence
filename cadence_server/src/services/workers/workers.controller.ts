@@ -25,7 +25,7 @@ class WorkersController {
       const user = await Workers.findOne({ where: { Email: email } })
       if (!account) {
         const result: any = {
-          message: 'Investor Account  Not Found!',
+          message: 'Workers Account  Not Found!',
           code: 400
         }
         return res.status(result.code).json(result)
@@ -68,7 +68,7 @@ class WorkersController {
       const checkExist = await Workers.findOne({ where: { ...data } })
       if (checkExist !== null) {
         return res.status(400).send({
-          message: 'This Investor Record Already Exist',
+          message: 'This Workers Record Already Exist',
           code: 400
         })
       }
@@ -87,7 +87,7 @@ class WorkersController {
       account.Token = dpaswprd
       account.Verified = '1'
 
-      const daccount = await Workers.create({ ...account })
+      const daccount = await Auth.create({ ...account })
 
       const dWorkers = await Workers.create({ ...data })
       dWorkers.dataValues.account = daccount

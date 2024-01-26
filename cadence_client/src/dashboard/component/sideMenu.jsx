@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import Menu from "../component/menu";
 import PropTypes from "prop-types";
 
 class SideMenu extends Component {
@@ -31,61 +31,8 @@ class SideMenu extends Component {
                 <span className="material-symbols-outlined">close</span>
               </span>
             </div>
-            <ul className="navbar-nav  mb-2 mb-lg-0">
-              <li className="nav-item">
-                <NavLink to="/" className="nav-link  " aria-current="page">
-                  Home
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/about" className="nav-link  " aria-current="page">
-                  About
-                </NavLink>
-              </li>
 
-              <li className="nav-item">
-                <NavLink
-                  to="/contact"
-                  className="nav-link  "
-                  aria-current="page"
-                >
-                  Contact Us
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/reservation"
-                  className="nav-link  "
-                  aria-current="page"
-                >
-                  Reservation
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/blog" className="nav-link  " aria-current="page">
-                  Blog
-                </NavLink>
-              </li>
-
-              <li className="nav-item">
-                <NavLink
-                  to="/invest"
-                  className="nav-link  "
-                  aria-current="page"
-                >
-                  Invest
-                </NavLink>
-              </li>
-            </ul>
-
-            <NavLink
-              to="/investmentform"
-              aria-current="page"
-              className="btn btn-outline-warning  px-4 pe-4 py-2  d-flex "
-              style={{ minWidth: "150px" }}
-            >
-              Get Started
-            </NavLink>
+            <Menu toggleSideMenu={this.props.toggleSideMenu} />
           </div>
         </div>
       </div>

@@ -1,3 +1,264 @@
+ { Component }
+
+metrics.TBvalues = Object.values(InvestmentData[0] || {});
+
+toLocaleString();
+
++ " Year(s)";
+
+delete
+
+ }; // Create a shallow copy to avoid modifying the original object
+
+ { ...
+
+  getMetrics(InvestmentData) {
+    const metrics = {};
+
+    let TotalInVAmount = 0;
+    let ActiveInvestment = 0;
+    let PendingInvestment = 0;
+
+    for (let i = 0; i < InvestmentData.length; i++) {
+      const element = InvestmentData[i];
+      if (element.hasOwnProperty("Amount")) {
+        delete element["Amount"];
+      }
+
+      if (element.Status === "Active") {
+        TotalInVAmount += Number(element.Amount);
+        ActiveInvestment++;
+      } else {
+        PendingInvestment++;
+      }
+    }
+    metrics.TotalInvAmount = TotalInVAmount;
+    metrics.ActiveInvestment = ActiveInvestment;
+    metrics.PendingInvestment = PendingInvestment;
+    metrics.TBheaders = Object.keys(InvestmentData[0]);
+    metrics.TBvalues = Object.values(InvestmentData[0]);
+    return metrics;
+  }
+
+
+
+
+console.log(InvestmentData.rows);
+
+
+
+console.log(metrics);
+
+{ Component }
+
+alert(response.data.credentials);
+
+alert(formData);
+
+localStorage.setItem("LoginUser", JSON.stringify(response.data));
+
+dashpage: PropTypes.string,
+
+
+
+dashpage: PropTypes.string,
+
+   closeBackdrop();
+      // redirect to dashboard
+
+
+window.location = "/account";
+
+ else {
+        console.error(error.message);
+        showAlert({
+          title: "Error",
+          text: error.message,
+          icon: "error",
+          button: "Ok",
+        });
+      }
+
+{this.}
+
+checkUser
+
+this.setState((prevState) => ({
+      isSideMenuOpen: !prevState.isSideMenuOpen,
+    }));
+
+
+
+user
+
+Dan George
+
+, { Component }
+
+  const [email, setEmail] = useState("");
+  const [role, setRole] = useState("");
+  const [link, setLink] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
+
+data
+
+data
+
+data
+
+ { Component }
+
+
+  render() {
+
+export default Account;
+
+prevState
+
+false
+
+isSideMenuOpen
+
+
+
+
+  loginUser: PropTypes.string.name,
+  setLoginUser: PropTypes.func.isRequired,
+
+loginUser
+
+props
+
+
+
+const AppProps = {};
+
+
+    setIsLoggedIn(false);
+
+
+
+
+
+ !== undefined
+
+}
+
+else navigate(-1);
+
+
+
+
+
+
+
+alert(props);
+
+console.log(response.data);
+
+dSetLoginUser
+
+ setLoginUser={this.props.setLoginUser}
+
+loginUser
+
+
+
+console.log("fullname:", fullname);
+
+    console.log("link:", link);
+    console.log("role:", role);
+    console.log("whatsapp:", whatsapp);
+
+
+
+
+
+
+  const [link, setLink] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
+
+ float: "right"
+
+import * as Icons from "@mui/icons-material";
+
+fff
+
+  padding-left: 10px;
+  padding-right: 25px;
+
+  <ul className="navbar-nav  mb-2 mb-lg-0">
+              <li className="nav-item">
+                <NavLink to="/" className="nav-link  " aria-current="page">
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/about" className="nav-link  " aria-current="page">
+                  About
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink
+                  to="/contact"
+                  className="nav-link  "
+                  aria-current="page"
+                >
+                  Contact Us
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/reservation"
+                  className="nav-link  "
+                  aria-current="page"
+                >
+                  Reservation
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/blog" className="nav-link  " aria-current="page">
+                  Blog
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink
+                  to="/invest"
+                  className="nav-link  "
+                  aria-current="page"
+                >
+                  Invest
+                </NavLink>
+              </li>
+            </ul>
+
+
+() => this.handleView(item.id)
+
+borderRadius: "10px 10px 0px 0px",
+
+gr
+
+const
+
+  align: center;
+
+items
+
+vertical-align: ;
+
+color
+
+color
+
+className="border-warning"
+
+value={searchQuery}
+
+<input
+
  </div>
             <div className="col-lg-6 p-4 bg-white ">
 

@@ -17,68 +17,56 @@ import Dashboard from "./dashboard/pages/dashboard";
 class App extends Component {
   constructor(props) {
     super(props);
-
-    // Initialize state or fetch initial login status
-    this.state = {
-      loginUser: {},
-    };
   }
 
-  SetLoginUser = (userObj) => {
-    this.setState({ loginUser: userObj });
-  };
-
   render() {
-    const AppProps = {
-      loginUser: this.state.loginUser,
-      setLoginUser: this.SetLoginUser,
-    };
-
+    let BASEURL = "https://cadencepub.com/production/";
+    BASEURL = "http://localhost:5000/development/";
     return (
       <div>
         <Router>
           <Routes>
-            <Route index element={<Home />} />
-            <Route path="/" element={<Home {...AppProps} />} />
-            <Route path="/home" element={<Home {...AppProps} />} />
-            <Route path="/About" element={<About {...AppProps} />} />
-            <Route path="/contact" element={<Contact {...AppProps} />} />
+            <Route index element={<Home BASEURL={BASEURL} />} />
+            <Route path="/" element={<Home BASEURL={BASEURL} />} />
+            <Route path="/home" element={<Home BASEURL={BASEURL} />} />
+            <Route path="/About" element={<About BASEURL={BASEURL} />} />
+            <Route path="/contact" element={<Contact BASEURL={BASEURL} />} />
             <Route
               path="/reservation"
-              element={<Reservation {...AppProps} />}
+              element={<Reservation BASEURL={BASEURL} />}
             />
-            <Route path="/invest" element={<Investment {...AppProps} />} />
-            <Route path="/privacy" element={<Privacy {...AppProps} />} />
-            <Route path="/terms" element={<Terms {...AppProps} />} />
+            <Route path="/invest" element={<Investment BASEURL={BASEURL} />} />
+            <Route path="/privacy" element={<Privacy BASEURL={BASEURL} />} />
+            <Route path="/terms" element={<Terms BASEURL={BASEURL} />} />
             <Route
               path="/investmentform"
-              element={<InvestmentForm {...AppProps} />}
+              element={<InvestmentForm BASEURL={BASEURL} />}
             />
-            <Route path="/signin" element={<SignIn {...AppProps} />} />
+            <Route path="/signin" element={<SignIn BASEURL={BASEURL} />} />
             {/* DASHBOARD */}
             <Route
               path="/account"
-              element={<Dashboard {...AppProps} dashpage="DashHome" />}
+              element={<Dashboard dashpage="DashHome" BASEURL={BASEURL} />}
             />
             <Route
               path="/account/home"
-              element={<Dashboard {...AppProps} dashpage="DashHome" />}
+              element={<Dashboard dashpage="DashHome" BASEURL={BASEURL} />}
             />
             <Route
               path="/account/investments"
-              element={<Dashboard {...AppProps} dashpage="Investments" />}
+              element={<Dashboard dashpage="Investments" BASEURL={BASEURL} />}
             />
             <Route
               path="/account/transactions"
-              element={<Dashboard {...AppProps} dashpage="Transactions" />}
+              element={<Dashboard dashpage="Transactions" BASEURL={BASEURL} />}
             />
             <Route
               path="/account/profile"
-              element={<Dashboard {...AppProps} dashpage="profile" />}
+              element={<Dashboard dashpage="profile" BASEURL={BASEURL} />}
             />
-            <Route path="/logout" element={<LogoutPage />} />
+            <Route path="/logout" element={<LogoutPage BASEURL={BASEURL} />} />
 
-            <Route path="*" element={<NoPage />} />
+            <Route path="*" element={<NoPage BASEURL={BASEURL} />} />
           </Routes>
         </Router>
       </div>

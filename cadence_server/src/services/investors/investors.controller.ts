@@ -6,6 +6,10 @@ import { getUIDfromDate, EncryptPassword, GenerateToken, CheckPassword, SendMail
 import Investors from '../../models/investors.model'
 import Auth from '../../models/auths.model'
 import InvestorsValidation from './investors.validation'
+import Investments from '../../models/investments.model'
+import Roi from '../../models/rois.model'
+import Transactions from '../../models/transactions.model'
+import Systems from '../../models/systems.model'
 
 class InvestorsController {
   static async login (req: any, res: any): Promise<any> {
@@ -25,7 +29,7 @@ class InvestorsController {
       const user = await Investors.findOne({ where: { Email: email } })
       if (!account) {
         const result: any = {
-          message: 'Investor Account  Not Found!',
+          message: 'Account  Not Found!',
           code: 400
         }
         return res.status(result.code).json(result)
@@ -43,7 +47,14 @@ class InvestorsController {
         token = GenerateToken(user)
       }
 
-      res.status(200).json({ success: true, data: user, token })
+      const data: any = {}
+      data.user = user
+      data.investments = await Investments.findAndCountAll({ where: { investorId: user?.dataValues.UserID } })
+      data.roi = await Roi.findAndCountAll({ where: { investorId: user?.dataValues.UserID } })
+      data.transactions = await Transactions.findAndCountAll({ where: { investorId: user?.dataValues.UserID } })
+      data.System = await Systems.findOne({ where: { id: 1 } })
+
+      res.status(200).json({ success: true, data, token })
     } catch (error: any) {
       const result: any = {
         message: 'Error login in: ' + error.message,
@@ -92,6 +103,10 @@ class InvestorsController {
       const daccount = await Auth.create({ ...account })
 
       const dInvestors = await Investors.create({ ...data })
+
+      data.investorId = data.UserID
+      await Investments.create({ ...data })
+
       dInvestors.dataValues.account = daccount
       // send mail
       const templateParams = {

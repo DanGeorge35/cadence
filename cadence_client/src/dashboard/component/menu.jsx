@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import * as Icons from "@mui/icons-material";
+import PropTypes from "prop-types";
 
 export default function Menu() {
   return (
@@ -73,7 +74,7 @@ export default function Menu() {
         </li>
 
         <li className="menu-item">
-          <NavLink to="/logout" className="nav-link  " aria-current="page">
+          <a href="/logout" className="nav-link  " aria-current="page">
             <span
               style={{
                 verticalAlign: "middle",
@@ -83,9 +84,13 @@ export default function Menu() {
               <Icons.LogoutTwoTone />
             </span>
             <span style={{ marginTop: "5px" }}> Logout</span>
-          </NavLink>
+          </a>
         </li>
       </ul>
     </div>
   );
 }
+
+Menu.propTypes = {
+  toggleSideMenu: PropTypes.func.isRequired, // Make sure it's a function and required
+};
