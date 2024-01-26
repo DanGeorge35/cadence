@@ -21,7 +21,7 @@ class App extends Component {
 
   render() {
     let BASEURL = "https://cadencepub.com/production/";
-    BASEURL = "http://localhost:5000/development/";
+    // BASEURL = "http://localhost:5000/development/";
     return (
       <div>
         <Router>
