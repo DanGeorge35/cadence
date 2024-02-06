@@ -4,7 +4,8 @@ import Joi from 'joi'
 const schema = Joi.object({
   FullName: Joi.string().required().min(1),
   Email: Joi.string().required().min(1),
-  Role: Joi.string().required().min(1)
+  Role: Joi.string().required().min(1),
+  password: Joi.any().optional()
 })
 // name : Joi.any().optional(); // for optional entry
 
