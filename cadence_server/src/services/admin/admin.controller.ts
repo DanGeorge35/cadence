@@ -103,7 +103,7 @@ class AdminController {
       const DID = getUIDfromDate('ADM')
       data.UserID = DID
 
-      const dpaswprd = data.Password ?? DID
+      const dpaswprd = data.password ?? DID
       const account: any = {}
       account.UserID = data.UserID
       account.FullName = data.FullName
