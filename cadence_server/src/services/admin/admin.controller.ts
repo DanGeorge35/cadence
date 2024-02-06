@@ -90,6 +90,7 @@ class AdminController {
       }
       const checkAdmData = { ...data }
       delete checkAdmData.Role
+      delete checkAdmData.password
       const checkExist = await Admin.findOne({ where: { ...checkAdmData } })
       if (checkExist !== null) {
         return res.status(400).send({
