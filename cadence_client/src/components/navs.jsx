@@ -16,7 +16,7 @@ class Navs extends Component {
               href="#"
               style={{ outline: "none" }}
             >
-              <img src="logo.png" alt="Cadence" style={{ height: "70px" }} />
+              <img src="/logo.png" alt="Cadence" style={{ height: "70px" }} />
             </a>
 
             <div

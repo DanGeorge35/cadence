@@ -9,7 +9,7 @@ class Navs extends Component {
       <div className="">
         <nav
           className="navbar navbar-expand-lg  border-2 border-warning fixed-top p-1"
-          style={{ backgroundColor: "#000" }}
+          style={{ backgroundColor: "#e4ad06" }}
         >
           <div className="container" style={{ height: "53px", width: "100vw" }}>
             <a

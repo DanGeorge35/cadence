@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Login from "../component/login";
-import { Navigate, NavLink } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 class SignIn extends Component {
   render() {
-    const LoginUser = localStorage.getItem("LoginUser");
-    if (LoginUser) {
-      return <Navigate to="/account" />;
+    const LoginAdmin = localStorage.getItem("LoginAdmin");
+    if (LoginAdmin) {
+      return <Navigate to="/admin" />;
     }
     return (
       <div>
@@ -20,7 +20,7 @@ class SignIn extends Component {
                   <div>
                     <a href="/home">
                       <img
-                        src="logo.png"
+                        src="../logo.png"
                         alt="Cadence"
                         style={{ height: "80px", verticalAlign: "center" }}
                       />
@@ -28,22 +28,8 @@ class SignIn extends Component {
                   </div>
                 </div>
                 <div className="">
-                  <div className=" registerForm">
+                  <div className="AdminForm">
                     <Login BASEURL={this.props.BASEURL} />
-                    <div className="text-center  pt-4">
-                      <span>Dont have an account?</span>
-                      <br />
-                      <span className="animate__animated  animate__fadeIn animate__infinite">
-                        <NavLink
-                          to="/investmentform/"
-                          className="nav-link  "
-                          aria-current="page"
-                          style={{ fontSize: "14px ", color: "#a8d6ff" }}
-                        >
-                          &lt;&lt; Register Your Investment Account &lt;&lt;
-                        </NavLink>
-                      </span>
-                    </div>
                   </div>
                 </div>
               </div>

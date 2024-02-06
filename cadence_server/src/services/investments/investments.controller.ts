@@ -2,11 +2,92 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable @typescript-eslint/no-extraneous-class */
 /* eslint-disable-next-line @typescript-eslint/no-misused-promises */
+import moment from 'moment'
 import Investments from '../../models/investments.model'
 import InvestmentsValidation from './investments.validation'
+import Transactions from '../../models/transactions.model'
+import Rois from '../../models/rois.model'
+import Systems from '../../models/systems.model'
 
 class InvestmentsController {
-/**
+  /**
+ * Create Investments
+ *
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @returns {Promise<any>} A Promise that resolves to the response.
+ */
+  static async approveInvestment (req: any, res: any, next: any): Promise<any> {
+    try {
+      const data = req.body
+      if (!data.investmentId) {
+        return res.status(400).send({
+          success: false,
+          message: 'Invalid Invetsment ID',
+          code: 400
+        })
+      }
+      const singleInvestments = await Investments.findOne({ where: { id: data.investmentId } })
+      if (singleInvestments === null) {
+        return res.status(400).send({
+          success: false,
+          message: 'Investment not found.',
+          code: 400
+        })
+      }
+      // Check if investment exists and is in pending state
+      if (singleInvestments?.dataValues.Status === 'Pending') {
+        return res.status(400).send({
+          success: false,
+          message: "This investment isn't available for Approval.",
+          code: 400
+        })
+      }
+      const dSystem = await Systems.findOne({ where: { id: 1 } })
+      let Duration = 1
+      let MontlyDuraion = 12
+      if (singleInvestments?.dataValues.Duration) {
+        Duration = parseInt(singleInvestments?.dataValues.Duration) * Duration
+        MontlyDuraion = Duration * 12
+      }
+      const amount = parseFloat(singleInvestments?.dataValues.Amount)
+      const investmentID = singleInvestments?.dataValues.id
+      const investorId = singleInvestments?.dataValues.investorId
+      const percentage = parseFloat(dSystem?.dataValues.roi)
+
+      for (let i = 1; i <= MontlyDuraion; i++) {
+        const currentDate = new Date()
+        const currentMonth = currentDate.getMonth()
+        const returnAmount = (percentage / 100) * amount
+        currentDate.setMonth(currentMonth + i)
+        const returnDate = moment(currentDate).format('YYYY-MM-DD HH:mm:ss')
+        const returnDateMonth = moment(currentDate).format('MMMM Do YYYY')
+        const SaveROI = { investorId, investmentId: investmentID, percentage, returnAmount, returnDate, returnDateMonth }
+        await Rois.create({ ...SaveROI })
+      }
+
+      const dinvestments = await singleInvestments.update({ Status: 'Active' })
+      // find transasction
+      const transaction = await Transactions.findOne({ where: { investmentId: investmentID } })
+      if (transaction) {
+        await transaction.update({ status: 'Success' })
+      }
+      const syst = await Systems.findOne({ where: { id: 1 } })
+      const totalInvAmt = parseFloat(syst?.dataValues.totalActiveAmount) + amount
+      if (syst) {
+        await syst.update({ totalActiveAmount: totalInvAmt })
+      }
+      return res.status(201).json({ success: true, data: dinvestments })
+    } catch (error: any) {
+      return res.status(400).send({
+        success: false,
+        message: error.message,
+        code: 400
+      })
+    }
+  };
+
+  /**
  * Create Investments
  *
  * @param {Object} req - The request object.
@@ -53,6 +134,11 @@ class InvestmentsController {
       if (!singleInvestments) {
         return res.status(400).json({ success: false, data: `No Investments with the id ${req.params.id}` })
       }
+
+      const singleTransactions = await Transactions.findOne({ where: { investmentId: id } })
+      const invROI = await Rois.findAll({ where: { investmentId: id } })
+      singleInvestments.dataValues.Transactions = singleTransactions
+      singleInvestments.dataValues.ROIs = invROI
 
       return res.status(200).json({ success: true, data: singleInvestments })
     } catch (error: any) {

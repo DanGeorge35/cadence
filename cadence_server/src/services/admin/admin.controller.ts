@@ -7,6 +7,12 @@ import { getUIDfromDate, EncryptPassword, GenerateToken, CheckPassword } from '.
 import Auth from '../../models/auths.model'
 import Admin from '../../models/admin.model'
 import AdminValidation from './admin.validation'
+import Investments from '../../models/investments.model'
+import Roi from '../../models/rois.model'
+import Transactions from '../../models/transactions.model'
+import Systems from '../../models/systems.model'
+import sequelize from '../../config/db'
+import { QueryTypes } from 'sequelize'
 
 class AdminController {
   static async login (req: any, res: any, next: any): Promise<any> {
@@ -40,11 +46,17 @@ class AdminController {
         return res.status(result.code).json(result)
       }
 
+      const data: any = { user, account }
       if (user !== null) {
-        token = GenerateToken(user)
+        token = GenerateToken(data)
       }
+      data.investments = await Investments.findAndCountAll()
+      data.roi = await Roi.findAndCountAll()
+      data.invChart = await sequelize.query("SELECT DATE_FORMAT(createdAt, '%b, %Y') AS MonthPeriod,SUM(CAST(Amount AS DECIMAL(10,2))) AS TotalAmount FROM investments where Status = 'Active' GROUP BY MonthPeriod order by id", { type: QueryTypes.SELECT })
+      data.transactions = await Transactions.findAndCountAll()
+      data.System = await Systems.findOne({ where: { id: 1 } })
 
-      res.status(200).json({ success: true, data: user, token })
+      res.status(200).json({ success: true, data, token })
     } catch (error: any) {
       const result: any = {
         message: 'Error login in: ' + error.message,
@@ -76,8 +88,9 @@ class AdminController {
       if (!fs.existsSync(`.${dir}`)) {
         fs.mkdirSync(`.${dir}`)
       }
-
-      const checkExist = await Admin.findOne({ where: { ...data } })
+      const checkAdmData = { ...data }
+      delete checkAdmData.Role
+      const checkExist = await Admin.findOne({ where: { ...checkAdmData } })
       if (checkExist !== null) {
         return res.status(400).send({
           success: false,

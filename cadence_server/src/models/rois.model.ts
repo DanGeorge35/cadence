@@ -28,6 +28,14 @@ const Rois = sequelize.define(
     returnDate: {
       type: DataTypes.STRING,
       allowNull: true
+    },
+    returnDateMonth: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    status: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   },
   {

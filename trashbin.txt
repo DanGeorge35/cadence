@@ -1,3 +1,327 @@
+animate__faster
+
+</span>
+
+<span>
+
+e8c207d4
+
+ffc207
+
+e4ad06
+
+bg-warning
+
+.toLocaleString();
+
+        <div></div>
+
+value
+
+Welcome to your dashboard, {UserData.FullName}.
+
+ffc207
+
+
+
+backgroundColor: "#ffc207",
+
+logout
+
+returnMonth
+totalReturnAmount
+
+  for (let i = 0; i < element.length; i++) {
+
+.reload();
+
+ http://localhost:3000/
+
+
+
+Purpose: "Buy Investment",
+
+console.log
+
+  //loop through ROI
+
+DateMonth
+
+  return item.returnDateMonth
+
+ ? item.returnDateMonth : null;
+
+returnDateMonth
+
+
+
+ "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ],
+
+
+
+let roiDateArray = Object.keys(ROI).map(("returnDateMonth") => new Date(parseInt(date)));
+
+cons
+
+      </button>
+
+block
+
+handleFormSubmission
+
+   <div className="row">
+            <div className="col-lg-6">
+              <a
+                href={data.Transactions.photo}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {data.Transactions.photo}
+              </a>
+              {/* <div className="" style={{ textAlign: "left" }}>
+                <img src={data.Transactions.photo} style={{ width: "100%" }} />
+              </div> */}
+            </div>
+          </div>
+
+      </div>
+
+ "photo"
+
+const
+
+TransactionData = props.UserData.data.transactions;
+  const tableHeaders = Object.keys(TransactionData[0] || {});
+  const tableData = TransactionData.rows;
+
+word
+
+word
+
+   // redirect to dashboard
+      window.location = "/admin";
+
+
+      localStorage.setItem("LoginAdmin", JSON.stringify(response.data));
+
+
+
+addInvestement
+
+nu.propTypes = {
+  toggleSideMenu: PropTypes.func.isRequired, // Make sure it's a function and required
+};
+
+
+you
+
+: (
+                  {}
+                )
+
+ != ""
+
+null
+
+)}
+
+<div></div>
+
+
+
+{
+
+View
+
+link
+
+/account/transactions/
+
+ata.i
+
+<br />
+
+   </div>
+
+success
+
+setInvestmentData(null)
+
+
+
+
+
+ const file =
+
+  };
+
+border border-1
+
+Name
+
+
+
+<input
+                  type="number"
+                  id="amount"
+                  name="amount"
+                  min="50"
+                  required
+                ></input>
+
+
+
+{" "}
+
+<br><br>
+
+  Step 1:
+
+for="amount"
+
+Invetsment
+
+</br>
+
+ext-cent
+
+text-center
+
+badge badge-pill bg-warning
+
+{data.Status}{" "}
+
+</div>
+
+import AddInvestment from "../component/addInvestment";
+import SingleInvestment from "../component/singleInvestment";
+
+/" +
+
+isRequired
+
+isRequired
+
+style={{ marginTop: "5px" }}
+
+ <Icons.Home />
+
+useState
+
+UserData.data.user;
+
+ { useEffect }
+
+formData
+
+formData
+
+import SingleInvestment from "../component/singleInvestment";
+
+import AddInveen
+
+ent from "../component/addInvestment";
+
+omponent/singleInvestment
+
+id
+
+data.credentials = formData;
+
+log
+
+window.scrollTo(0, 0);
+
+params
+
+//
+
+//
+
+
+
+dashpage,
+
+match
+
+    const {  } = this.props;
+
+message
+
+ return;
+
+ return;
+
+token
+
+data
+
+token
+
+token
+
+alert(UserData.UserID);
+
+warning
+
+ offset-lg-3
+
+invesmentform
+
+important
+
+Information
+
+ bg-light
+
+ <p className="p-5"></p>
+                  <p className="p-5"></p>
+
+</div>
+
+/div>
+
+{/* <Footer /> */}
+
+props.
+
+setEmail("");
+
+  setFullnameNOK("");
+  setRelationshipNOK("");
+  setPhoneNOK("");
+  setEmailNOK("");
+  setAddressNOK("");
+};
+
+Button
+
+
+              </span>
+              <span style={{ marginTop: "5px" }}>Dashboard</span>
+
+import DynamicTable from "./DynamicTable";
+
+e4ad06
+
+warning
+
+
+
+dashpage: PropTypes.string,
+
  { Component }
 
 metrics.TBvalues = Object.values(InvestmentData[0] || {});

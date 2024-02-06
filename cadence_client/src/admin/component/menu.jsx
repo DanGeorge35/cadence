@@ -7,7 +7,7 @@ export default function Menu() {
     <div className=" ">
       <ul className="menu m-0 p-0 mb-lg-0">
         <li className="menu-item">
-          <NavLink to="/account/" className="nav-link  " aria-current="page">
+          <NavLink to="/admin/" className="nav-link  " aria-current="page">
             <span
               style={{
                 verticalAlign: "middle",
@@ -21,7 +21,7 @@ export default function Menu() {
         </li>
         <li className="menu-item">
           <NavLink
-            to="/account/investments"
+            to="/admin/investments"
             className="nav-link  "
             aria-current="page"
           >
@@ -39,7 +39,7 @@ export default function Menu() {
 
         <li className="menu-item">
           <NavLink
-            to="/account/transactions"
+            to="/admin/transactions"
             className="nav-link  "
             aria-current="page"
           >
@@ -56,7 +56,7 @@ export default function Menu() {
         </li>
         <li className="menu-item">
           <NavLink
-            to="/account/profile"
+            to="/admin/profile"
             className="nav-link  "
             aria-current="page"
           >
@@ -73,7 +73,7 @@ export default function Menu() {
         </li>
 
         <li className="menu-item">
-          <a href="/logout" className="nav-link  " aria-current="page">
+          <a href="/admin/logout" className="nav-link  " aria-current="page">
             <span
               style={{
                 verticalAlign: "middle",

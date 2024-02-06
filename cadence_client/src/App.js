@@ -10,9 +10,12 @@ import Investment from "./pages/invest";
 import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
 import InvestmentForm from "./pages/InvestmentForm";
-import LogoutPage from "./pages/logout";
+import UserLogoutPage from "./pages/logout";
+import AdminLogoutPage from "./admin/pages/logout";
 import SignIn from "./dashboard/pages/signin";
 import Dashboard from "./dashboard/pages/dashboard";
+import Admin from "./admin/pages/dashboard";
+import AdminSignIn from "./admin/pages/signin";
 
 class App extends Component {
   constructor(props) {
@@ -21,7 +24,7 @@ class App extends Component {
 
   render() {
     let BASEURL = "https://cadencepub.com/production/";
-    // BASEURL = "http://localhost:5000/development/";
+    BASEURL = "http://localhost:5000/development/";
     return (
       <div>
         <Router>
@@ -43,6 +46,7 @@ class App extends Component {
               element={<InvestmentForm BASEURL={BASEURL} />}
             />
             <Route path="/signin" element={<SignIn BASEURL={BASEURL} />} />
+
             {/* DASHBOARD */}
             <Route
               path="/account"
@@ -61,10 +65,66 @@ class App extends Component {
               element={<Dashboard dashpage="Transactions" BASEURL={BASEURL} />}
             />
             <Route
+              path="/account/addinvestments"
+              element={<Dashboard dashpage="AddInvestment" BASEURL={BASEURL} />}
+            />
+            <Route
+              path="/account/singleinvestments/:id"
+              element={
+                <Dashboard dashpage="SingleInvestment" BASEURL={BASEURL} />
+              }
+            />
+            <Route
               path="/account/profile"
               element={<Dashboard dashpage="profile" BASEURL={BASEURL} />}
             />
-            <Route path="/logout" element={<LogoutPage BASEURL={BASEURL} />} />
+
+            {/* ADMIN */}
+            <Route
+              path="/admin/signin"
+              element={<AdminSignIn BASEURL={BASEURL} />}
+            />
+
+            <Route
+              path="/admin"
+              element={<Admin dashpage="DashHome" BASEURL={BASEURL} />}
+            />
+
+            <Route
+              path="/admin/home"
+              element={<Admin dashpage="DashHome" BASEURL={BASEURL} />}
+            />
+
+            <Route
+              path="/admin/investments"
+              element={<Admin dashpage="Investments" BASEURL={BASEURL} />}
+            />
+            <Route
+              path="/admin/singleinvestments/:id"
+              element={<Admin dashpage="SingleInvestment" BASEURL={BASEURL} />}
+            />
+            <Route
+              path="/admin/transactions"
+              element={<Admin dashpage="Transactions" BASEURL={BASEURL} />}
+            />
+
+            <Route
+              path="/admin/profile"
+              element={<Admin dashpage="profile" BASEURL={BASEURL} />}
+            />
+
+            <Route
+              path="/logout"
+              element={<UserLogoutPage BASEURL={BASEURL} />}
+            />
+            <Route
+              path="/account/logout"
+              element={<UserLogoutPage BASEURL={BASEURL} />}
+            />
+            <Route
+              path="/admin/logout"
+              element={<AdminLogoutPage BASEURL={BASEURL} />}
+            />
 
             <Route path="*" element={<NoPage BASEURL={BASEURL} />} />
           </Routes>

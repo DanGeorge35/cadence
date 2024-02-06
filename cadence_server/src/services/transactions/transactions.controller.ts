@@ -7,6 +7,7 @@ import Transactions from '../../models/transactions.model'
 import TransactionsValidation from './transactions.validation'
 import { IncomingForm } from 'formidable'
 import { RenameUploadFile, getUIDfromDate, adjustFieldsToValue } from '../../libs/utils/app.utility'
+import Investments from '../../models/investments.model'
 
 class TransactionsController {
   /**
@@ -51,6 +52,12 @@ class TransactionsController {
         }
 
         const newTransactions = await Transactions.create({ ...data })
+        const singleInvestments = await Investments.findOne({ where: { id: data.investmentId } })
+
+        if (singleInvestments !== null) {
+          await singleInvestments.update({ Status: 'Awaiting Approval' })
+        }
+
         return res.status(201).json({ success: true, data: newTransactions })
       } catch (error: any) {
         const err = { success: false, code: 400, message: `SYSTEM ERROR : ${error.message}` }

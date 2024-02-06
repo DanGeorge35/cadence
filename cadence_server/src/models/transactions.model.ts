@@ -25,6 +25,10 @@ const Transactions = sequelize.define(
       type: DataTypes.STRING,
       allowNull: true
     },
+    purpose: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     status: {
       type: DataTypes.STRING,
       allowNull: true

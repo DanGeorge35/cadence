@@ -1,49 +1,54 @@
 import React from "react";
-import DynamicTable from "./DynamicTable";
+import ChartView from "../component/chart";
 import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
 
-Investment.propTypes = {
-  UserData: PropTypes.shape({
-    data: PropTypes.object,
-  }),
-  getMetrics: PropTypes.func,
-};
-
-export default function Investment(props) {
-  // const UserData = props.UserData.data.user;
+export default function DashHome(props) {
+  const UserData = props.UserData.data.user;
   const InvestmentData = props.UserData.data.investments;
   const System = props.UserData.data.System;
   const metrics = props.getMetrics(InvestmentData.rows);
-  const tableHeaders = metrics.TBheaders;
-  const tableData = InvestmentData.rows;
+  const invChart = props.UserData.data.invChart || [];
+  let invChartdate = [];
+  let invChartamount = [];
+  console.log(invChart);
+  for (let a = 0; a < invChart.length; a++) {
+    const element = invChart[a];
+    console.log(element);
+    invChartdate.push(element.MonthPeriod);
+    invChartamount.push(element.TotalAmount);
+  }
 
+  console.log(invChartdate);
+  console.log(invChartamount);
+
+  const data = {
+    labels: invChartdate,
+    datasets: [
+      {
+        label: "Monthly Investment",
+        data: invChartamount,
+        fill: true,
+        borderColor: "#ffc207",
+        backgroundColor: "#e4ad069e",
+        tension: 0.3,
+      },
+    ],
+  };
   return (
     <div>
-      <div
-        className="container bg-light "
-        style={{ minHeight: "", paddingTop: "40px" }}
-      >
-        <div className="row ">
-          <div className="col-lg-6 p-3 bg-white ">
-            <b style={{ fontSize: "25px" }}>INVESTMENT</b>
-            <br></br>
-            <span style={{ fontSize: "17px" }}>
-              All you investments, your total investment amount and return on
-              investment
-            </span>
-          </div>
-          <div className="col-lg-6 p-4 bg-white text-center ">
-            <NavLink
-              to="/account/addinvestments"
-              className="btn btn-warning pt-2 pb-2 pe-4 px-4 text-dark"
-              aria-current="page"
-            >
-              Create New Investment
-            </NavLink>
-          </div>
+      <div className="container p-4">
+        <div style={{ padding: "20px 0px" }}>
+          <span style={{ fontSize: "25px" }}>
+            👋 <b>Hello Admin!</b>
+          </span>
+          <br></br>
+          <span style={{ fontSize: "17px" }}>
+            Welcome to your dashboard, {UserData.FullName}.
+          </span>
         </div>
+      </div>
 
+      <div className="container bg-light " style={{ minHeight: "" }}>
         <div className="row ">
           <div className="col-lg-3 p-3">
             <div
@@ -113,14 +118,11 @@ export default function Investment(props) {
       </div>
       <div className="container  mt-4" style={{}}>
         <div className="row">
-          <div className="col-lg-12">
-            <DynamicTable
-              headers={tableHeaders}
-              data={tableData}
-              action="/account/singleinvestments/"
-              actionType="link"
-              actionName="View"
-            />
+          <div className="col-lg-7">
+            <ChartView data={data} />
+          </div>
+          <div className="col-lg-5">
+            <img src="../img/goldcoin.jpg" style={{ width: "100%" }} />
           </div>
         </div>
       </div>
@@ -129,3 +131,10 @@ export default function Investment(props) {
     </div>
   );
 }
+
+DashHome.propTypes = {
+  UserData: PropTypes.shape({
+    data: PropTypes.object,
+  }),
+  getMetrics: PropTypes.func,
+};

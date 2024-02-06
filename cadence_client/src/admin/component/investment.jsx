@@ -1,7 +1,6 @@
 import React from "react";
 import DynamicTable from "./DynamicTable";
 import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
 
 Investment.propTypes = {
   UserData: PropTypes.shape({
@@ -25,22 +24,13 @@ export default function Investment(props) {
         style={{ minHeight: "", paddingTop: "40px" }}
       >
         <div className="row ">
-          <div className="col-lg-6 p-3 bg-white ">
+          <div className="col-lg-12 p-3 bg-white ">
             <b style={{ fontSize: "25px" }}>INVESTMENT</b>
             <br></br>
             <span style={{ fontSize: "17px" }}>
-              All you investments, your total investment amount and return on
-              investment
+              All investments Available In Platform, Total investment amount and
+              return on investment
             </span>
-          </div>
-          <div className="col-lg-6 p-4 bg-white text-center ">
-            <NavLink
-              to="/account/addinvestments"
-              className="btn btn-warning pt-2 pb-2 pe-4 px-4 text-dark"
-              aria-current="page"
-            >
-              Create New Investment
-            </NavLink>
           </div>
         </div>
 
@@ -117,7 +107,7 @@ export default function Investment(props) {
             <DynamicTable
               headers={tableHeaders}
               data={tableData}
-              action="/account/singleinvestments/"
+              action="/admin/singleinvestments/"
               actionType="link"
               actionName="View"
             />

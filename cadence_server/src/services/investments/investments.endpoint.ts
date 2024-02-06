@@ -4,6 +4,11 @@ import { Authorization } from '../../libs/utils/app.utility'
 const ENDPOINT_URL = '/api/v1/investments'
 const InvestmentsEndpoint = [
   {
+    path: `${ENDPOINT_URL}/approve`,
+    method: 'post',
+    handler: [Authorization, InvestmentsController.approveInvestment]
+  },
+  {
     path: `${ENDPOINT_URL}/`,
     method: 'post',
     handler: [Authorization, InvestmentsController.createInvestments]

@@ -7,9 +7,11 @@ import Investors from '../../models/investors.model'
 import Auth from '../../models/auths.model'
 import InvestorsValidation from './investors.validation'
 import Investments from '../../models/investments.model'
-import Roi from '../../models/rois.model'
+
 import Transactions from '../../models/transactions.model'
 import Systems from '../../models/systems.model'
+import sequelize from '../../config/db'
+import { QueryTypes } from 'sequelize'
 
 class InvestorsController {
   static async login (req: any, res: any): Promise<any> {
@@ -50,7 +52,7 @@ class InvestorsController {
       const data: any = {}
       data.user = user
       data.investments = await Investments.findAndCountAll({ where: { investorId: user?.dataValues.UserID } })
-      data.roi = await Roi.findAndCountAll({ where: { investorId: user?.dataValues.UserID } })
+      data.roi = await sequelize.query(`SELECT  DATE_FORMAT(returnDate, '%b, %Y') AS returnMonth, SUM(CAST(returnAmount AS DECIMAL(10,2))) AS totalReturnAmount FROM  rois where investorId="${user?.dataValues.UserID}" GROUP BY  returnMonth order by id`, { type: QueryTypes.SELECT })
       data.transactions = await Transactions.findAndCountAll({ where: { investorId: user?.dataValues.UserID } })
       data.System = await Systems.findOne({ where: { id: 1 } })
 
@@ -112,45 +114,32 @@ class InvestorsController {
       const templateParams = {
         to_name: data.FullName,
         reply_to: 'contact@cadencepub.com',
-        subject: 'Confirmation of Your Investment Interest with Cadence',
+        subject: 'Welcome to Cadence Investment Platform!',
         message: `
-Thank you for expressing your interest in investing with Cadence. We are delighted that you are considering us as your investment partner.
-Your trust means a lot to us, and we want to assure you that your investment is safe with Cadence.<br><br>
+Thank you for expressing interest in investing with Cadence. We are thrilled to have you on board as a potential investor in our exciting venture.<br>
 
-To complete the investment process, please proceed with the following steps:<br>
+Your investment journey with Cadence starts now! To complete your investment and unlock exclusive benefits as a Cadence investor,
+<br> please proceed to your dashboard with the following details : <br><br>
+ Link : <a href="https://cadencepub.com/signin">https://cadencepub.com/signin</a><br>
+ Email: ${data.Email}<br>
+ Password: ${data.UserID} <br><br>
 
-Step 1: Transfer your investment amount to the following Cadence bank account:<br><br>
+<b>Here's what you can expect from your Cadence investment:</b><br>
+  <span style="margin-left:20px"><span>  🔹Access to detailed investment information and updates.<br>
 
-Bank Name: Moniepoint<br>
-Account Name: Cadence Cafe<br>
-Account Number: 5356651057<br>
+  <span style="margin-left:20px"><span>   🔹Regular updates on Cadence's progress and performance.<br>
+
+  <span style="margin-left:20px"><span>   🔹Opportunities to participate in exclusive investor events and activities.<br>
+
+  <span style="margin-left:20px"><span>   🔹Potential for attractive returns on your investment.<br><br>
+
+Thank you for choosing to invest with Cadence. <br>We look forward to a successful partnership and sharing our journey to success with you.<br>
 <br>
-Step 2: After making the transfer, please reply to this email with the following payment details:<br><br>
+Best regards,<br><br>
 
-Date of payment<br>
-Amount transferred<br>
-Transaction reference or receipt number<br>
-Your full name<br>
-<br>
-Step 3: Our team will process your investment and issue the necessary documents to validate your investment with Cadence. You will receive a confirmation certificate once this process is completed.
-<br><br>
-Step 4: <b>Login To Your Dashboard with the following details:</b>
- Link : <a href="https://cadencepub.com/signin">https://cadencepub.com/signin</a>
- Email: ${data.Email}
- Password: ${data.UserID}
-<br><br>
-
-
-If you have any questions or need further assistance, please don't hesitate to reach out to us at 09018009811
-<br>
-We look forward to having you as part of our journey at Cadence and promise to do our best to make your investment a rewarding and fulfilling experience.
-<br>
-Thank you once again for considering Cadence as your investment partner. Together, we'll create something extraordinary.
-<br><br><br>
-Warm regards,<br><br>
-
-Ola<br>
-Team Lead/CEO, Cadence<br>`,
+Ola Daniels<br>
+Chief Investment Officer<br>
+`,
         to_email: data.Email
       }
       res.status(201).json({ success: true, data: dInvestors })

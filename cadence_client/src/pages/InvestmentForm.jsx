@@ -4,8 +4,9 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import PropTypes from "prop-types";
 
-const InvestmentForm = () => {
+const InvestmentForm = (props) => {
   const showAlert = (data) => {
     Swal.fire({
       title: data.title, //"success",
@@ -64,8 +65,7 @@ const InvestmentForm = () => {
 
   const handleFormSubmission = async (e) => {
     e.preventDefault();
-    let BASEURL = "https://cadencepub.com/production/";
-    // BASEURL = "http://localhost:5000/development/";
+
     //Loading
     openBackdrop();
     const formData = {
@@ -85,10 +85,9 @@ const InvestmentForm = () => {
       NOKEmail: emailNOK,
       NOKAddress: addressNOK,
     };
-
     try {
       const response = await axios.post(
-        `${BASEURL}api/v1/investors`,
+        `${props.BASEURL}api/v1/investors`,
         formData,
         {
           headers: {
@@ -381,6 +380,9 @@ const InvestmentForm = () => {
       <Footer />
     </div>
   );
+};
+InvestmentForm.propTypes = {
+  BASEURL: PropTypes.string,
 };
 
 export default InvestmentForm;

@@ -39,6 +39,23 @@ overflow: hidden;
 .registerForm input{
 background-color: #fff;
 }
+
+.form-control{
+    margin-bottom: 0px !important;
+    margin-top: 8px !important;
+}
+.AdminForm{
+  background-color:#4a4a4a;
+  min-height: 50vh;
+  padding: 40px 10px;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+.AdminForm input{
+background-color: #fff;
+}
+
 .signSlide > div {
   background-size: cover;
   height: 100vh;

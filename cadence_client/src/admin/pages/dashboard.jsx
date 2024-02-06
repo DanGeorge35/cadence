@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import DashHome from "../component/dashhome";
 import Investment from "../component/investment";
 import Transactions from "../component/transactions";
-import AddInvestment from "../component/addInvestement";
+
 import SingleInvestment from "../component/singleInvestement";
 import Account from "../component/account";
 import Navs from "../component/navs";
@@ -32,7 +32,7 @@ const Dashboard = ({ dashpage, BASEURL }) => {
   const checkUser = async (formData) => {
     try {
       const response = await axios.post(
-        `${BASEURL}api/v1/investors/login`,
+        `${BASEURL}api/v1/admin/login`,
         formData,
         {
           headers: {
@@ -43,7 +43,7 @@ const Dashboard = ({ dashpage, BASEURL }) => {
       );
       response.data.credentials = formData;
 
-      localStorage.setItem("LoginUser", JSON.stringify(response.data));
+      localStorage.setItem("LoginAdmin", JSON.stringify(response.data));
     } catch (error) {
       if (error.response) {
         console.log(error.response.data);
@@ -53,7 +53,6 @@ const Dashboard = ({ dashpage, BASEURL }) => {
           icon: "error",
           button: "Ok",
         });
-        window.location = "/logout";
       }
     }
   };
@@ -90,16 +89,16 @@ const Dashboard = ({ dashpage, BASEURL }) => {
   const { id } = useParams();
 
   useEffect(() => {
-    if (localStorage.getItem("LoginUser")) {
-      const LoginUser = JSON.parse(localStorage.getItem("LoginUser"));
-      checkUser(LoginUser.credentials);
+    if (localStorage.getItem("LoginAdmin")) {
+      const LoginAdmin = JSON.parse(localStorage.getItem("LoginAdmin"));
+      checkUser(LoginAdmin.credentials);
     }
   }, []);
 
   let DPage;
 
-  if (localStorage.getItem("LoginUser")) {
-    const LoginUser = JSON.parse(localStorage.getItem("LoginUser"));
+  if (localStorage.getItem("LoginAdmin")) {
+    const LoginAdmin = JSON.parse(localStorage.getItem("LoginAdmin"));
 
     if (!dashpage) {
       dashpage = "DashHome";
@@ -107,29 +106,21 @@ const Dashboard = ({ dashpage, BASEURL }) => {
 
     switch (dashpage) {
       case "DashHome":
-        DPage = <DashHome UserData={LoginUser} getMetrics={getMetrics} />;
+        DPage = <DashHome UserData={LoginAdmin} getMetrics={getMetrics} />;
         break;
       case "Investments":
-        DPage = <Investment UserData={LoginUser} getMetrics={getMetrics} />;
+        DPage = <Investment UserData={LoginAdmin} getMetrics={getMetrics} />;
         break;
       case "Transactions":
-        DPage = <Transactions UserData={LoginUser} getMetrics={getMetrics} />;
+        DPage = <Transactions UserData={LoginAdmin} getMetrics={getMetrics} />;
         break;
-      case "AddInvestment":
-        DPage = (
-          <AddInvestment
-            UserData={LoginUser}
-            BASEURL={BASEURL}
-            getMetrics={getMetrics}
-          />
-        );
-        break;
+
       case "SingleInvestment":
         // eslint-disable-next-line no-case-declarations
         const match = { id };
         DPage = (
           <SingleInvestment
-            UserData={LoginUser}
+            UserData={LoginAdmin}
             BASEURL={BASEURL}
             getMetrics={getMetrics}
             match={match}
@@ -137,13 +128,13 @@ const Dashboard = ({ dashpage, BASEURL }) => {
         );
         break;
       case "profile":
-        DPage = <Account UserData={LoginUser} getMetrics={getMetrics} />;
+        DPage = <Account UserData={LoginAdmin} getMetrics={getMetrics} />;
         break;
       default:
         break;
     }
   } else {
-    return <Navigate to="/signin" />;
+    return <Navigate to="/admin/signin" />;
   }
 
   return (

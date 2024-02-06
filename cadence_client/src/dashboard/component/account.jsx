@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TextField, Button } from "@mui/material";
-import * as Icons from "@mui/icons-material";
+
 import PropTypes from "prop-types";
 
 export default function Account(props) {
@@ -44,15 +44,7 @@ export default function Account(props) {
           </div>
           <div className="pe-3 px-3">
             <div className="row">
-              <div className="col-lg-4">
-                <div className="mt-3" style={{ textAlign: "center" }}>
-                  <div className="imgDiv">
-                    <Icons.Person2Rounded
-                      style={{ fontSize: "30px", marginTop: "80px" }}
-                    />
-                  </div>
-                </div>
-              </div>
+              <div className="col-lg-3"></div>
               <div className="col-lg-6">
                 <div>
                   <TextField
@@ -117,7 +109,7 @@ export default function Account(props) {
           </div>
           <div className="pe-3 px-3">
             <div className="row">
-              <div className="col-lg-4"></div>
+              <div className="col-lg-3"></div>
               <div className="col-lg-6">
                 <div>
                   <TextField

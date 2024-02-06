@@ -6,7 +6,7 @@ const AdminEndpoint = [
   {
     path: `${ENDPOINT_URL}/`,
     method: 'post',
-    handler: [Authorization, AdminController.createAdmin]
+    handler: [AdminController.createAdmin]
   },
   {
     path: `${ENDPOINT_URL}/login`,

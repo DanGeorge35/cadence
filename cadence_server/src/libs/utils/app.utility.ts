@@ -83,11 +83,12 @@ async function SendMail (mail: any): Promise<void> {
     <div style="background-color:black;padding:10px;text-align:center">
       <img src="https://cadencepub.com/logo.png" alt="Cadence" width="143" height="60">
     </div>
-    <div style="padding:5px 25px; background-color:white; ">
+    <div style="background-color:white;font-size:15px; padding: 25px; border: 3px solid;">
        Dear ${mail.to_name},<br><br>
       ${mail.message}
+      <br>
       <div>
-    <div style="text-align: center; background-color: black;color:yellow;padding:5px;font-size:12px">
+    <div style="text-align: center; background-color: black;color:yellow;padding:5px;font-size:15px">
       <b>Cadence:</b> Sweet Experiences
     </div>
   </div>`

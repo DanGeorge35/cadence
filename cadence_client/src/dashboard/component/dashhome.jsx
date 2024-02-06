@@ -1,40 +1,50 @@
 import React from "react";
 import ChartView from "../component/chart";
 import PropTypes from "prop-types";
+import LinearProgress from "@mui/material/LinearProgress";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 export default function DashHome(props) {
   const UserData = props.UserData.data.user;
   const InvestmentData = props.UserData.data.investments;
   const System = props.UserData.data.System;
-  const metrics = props.getMetrics({ ...InvestmentData.rows });
+  const ROI = props.UserData.data.roi;
+  const metrics = props.getMetrics(InvestmentData.rows);
+  console.log(ROI);
+  // get all the roidate as an array from ROI object array
+  let ROIdate = [];
+  let ROIamount = [];
+
+  for (let a = 0; a < ROI.length; a++) {
+    const element = ROI[a];
+    console.log(element);
+    ROIdate.push(element.returnMonth);
+    ROIamount.push(element.totalReturnAmount);
+  }
+
+  console.log(ROIdate);
+  console.log(ROIamount);
 
   const data = {
-    labels: [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ],
+    labels: ROIdate,
+
     datasets: [
       {
         label: "Return On Investment",
-        data: [
-          65, 5009, 4000, 810, 1056, 2855, 940, 600, 3000, 1000, 2000, 1000,
-        ],
+        data: ROIamount,
         fill: true,
         borderColor: "#ffc207",
+        borderRadius: "5",
+        backgroundColor: "rgb(232 177 7 / 55%)",
         tension: 0.3,
       },
     ],
   };
+
+  const percentage =
+    (parseFloat(System.totalActiveAmount) / 100) * parseFloat(System.targetAmt);
+
   return (
     <div>
       <div className="container p-4">
@@ -48,7 +58,26 @@ export default function DashHome(props) {
           </span>
         </div>
       </div>
-
+      <div
+        className="container  p-3 "
+        style={{ minHeight: "", backgroundColor: "#e8c2075e" }}
+      >
+        <Box sx={{ width: "100%" }}>
+          <Typography gutterBottom variant="subtitle1">
+            Investment Progress
+          </Typography>
+          <Typography variant="body2" color="textSecondary">
+            Current Amount: ₦
+            {parseFloat(System.totalActiveAmount).toLocaleString()} / Total
+            Target: ₦{parseFloat(System.targetAmt).toLocaleString()}
+          </Typography>
+          <LinearProgress
+            variant="determinate"
+            value={percentage}
+            sx={{ marginTop: 1 }}
+          />
+        </Box>
+      </div>
       <div className="container bg-light " style={{ minHeight: "" }}>
         <div className="row ">
           <div className="col-lg-3 p-3">

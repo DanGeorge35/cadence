@@ -5,6 +5,7 @@ const schema = Joi.object({
   investorId: Joi.string().required().min(1),
   investmentId: Joi.string().required().min(1),
   amount: Joi.string().required().min(1),
+  purpose: Joi.string().required().min(1),
   photo: Joi.any().optional()
 })
 // name : Joi.any().optional(); // for optional entry
