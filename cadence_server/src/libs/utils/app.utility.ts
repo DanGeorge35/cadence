@@ -131,7 +131,8 @@ function RenameUploadFile (uploadedfile: any, filename: string): string {
   )
   const newPath = `.${filename}${extension}`
   const publicPath = `${process.env.DOMAIN}/${process.env.NODE_ENV}${filename}${extension}`
-  fs.renameSync(oldPath, newPath)
+  fs.copyFileSync(oldPath, newPath)
+  fs.unlinkSync(oldPath)
   return publicPath
 }
 
