@@ -28,14 +28,6 @@ const Systems = sequelize.define(
     roi: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    createdAt: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    updatedAt: {
-      type: DataTypes.STRING,
-      allowNull: true
     }
   },
   {
