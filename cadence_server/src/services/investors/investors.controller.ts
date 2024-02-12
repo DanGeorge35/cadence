@@ -45,6 +45,14 @@ class InvestorsController {
         return res.status(result.code).json(result)
       }
 
+      if (account.dataValues.Verified !== '1') {
+        const result: any = {
+          message: 'Account Not Verified! Kindly check your email for verification link',
+          code: 400
+        }
+        return res.status(result.code).json(result)
+      }
+
       if (user !== null) {
         token = GenerateToken(user)
       }
@@ -99,8 +107,8 @@ class InvestorsController {
       account.UserType = 'Investor'
       account.PasswordHash = await EncryptPassword(dpaswprd)
       account.RefreshToken = account.PasswordHash
-      account.Token = dpaswprd
-      account.Verified = '1'
+      account.Token = DID
+      account.Verified = '0'
 
       const daccount = await Auth.create({ ...account })
 
@@ -184,8 +192,8 @@ Chief Investment Officer<br>
       account.UserType = 'Investor'
       account.PasswordHash = await EncryptPassword(dpaswprd)
       account.RefreshToken = account.PasswordHash
-      account.Token = dpaswprd
-      account.Verified = '1'
+      account.Token = DID
+      account.Verified = '0'
 
       const daccount = await Auth.create({ ...account })
 
@@ -204,10 +212,8 @@ Chief Investment Officer<br>
 Thank you for expressing interest in investing with Cadence. We are thrilled to have you on board as a potential investor in our exciting venture.<br>
 
 Your investment journey with Cadence starts now! To complete your investment and unlock exclusive benefits as a Cadence investor,
-<br> please proceed to your dashboard with the following details : <br><br>
- Link : <a href="https://cadencepub.com/signin">https://cadencepub.com/signin</a><br>
- Email: ${data.Email}<br>
- Password: ${data.UserID} <br><br>
+<br> please proceed to your account verification  with the link below : <br>
+ Link : <a href="https://cadencepub.com/api/v1/investors/verify/${data.Email}/${DID}?">https://cadencepub.com/api/v1/investors/verify/${data.Email}/${DID}?</a><br><br>
 
 <b>Here's what you can expect from your Cadence investment:</b><br>
   <span style="margin-left:20px"><span>  🔹Access to detailed investment information and updates.<br>
@@ -237,17 +243,42 @@ Chief Investment Officer<br>
     }
   };
 
-  static async getSingleInvestors (req: any, res: any): Promise<any> {
+  static async verifyaccount (req: any, res: any): Promise<any> {
     try {
-      const { id } = req.params
+      const { email, token } = req.params
 
-      const singleInvestors = await Investors.findOne({ where: { id } })
+      const singleInvestors = await Auth.findOne({ where: { Email: email, Token: token } })
 
       if (!singleInvestors) {
         res.status(400).json({ success: false, data: `No Investor with the id ${req.params.id}` })
       }
 
       res.status(200).json({ success: true, data: singleInvestors })
+    } catch (error: any) {
+      const err = { code: 400, message: `SYSTEM ERROR : ${error.message}` }
+      console.error(error)
+      return res.status(400).send(err)
+    }
+  }
+
+  static async getSingleInvestors (req: any, res: any): Promise<any> {
+    try {
+      const { id } = req.params
+
+      const singleInvestors = await Investors.findOne({ where: { id } })
+
+      if (singleInvestors === null) {
+        return res.status(400).json({ success: false, data: 'Invalid link' })
+      }
+
+      await singleInvestors.update({ Verified: '1' })
+      // return response as html text
+      res.setHeader('Content-Type', 'text/html')
+      res.write(`
+          <h3>Your account has been verified successfully</h3><br/>
+          Please click on this <a href="https://cadencepub.com/signin/">link to login.</a>
+        `)
+      return res.end()
     } catch (error: any) {
       const err = { code: 400, message: `SYSTEM ERROR : ${error.message}` }
       console.error(error)

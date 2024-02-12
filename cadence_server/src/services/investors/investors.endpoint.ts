@@ -24,6 +24,11 @@ const InvestorsEndpoint = [
     handler: [Authorization, InvestorsController.updateInvestors]
   },
   {
+    path: `${ENDPOINT_URL}/verify/:email/:token?`,
+    method: 'get',
+    handler: [InvestorsController.verifyaccount]
+  },
+  {
     path: `${ENDPOINT_URL}/`,
     method: 'get',
     handler: [Authorization, InvestorsController.getallInvestors]

@@ -18,6 +18,7 @@ const InvestmentsEndpoint = [
     method: 'patch',
     handler: [Authorization, InvestmentsController.updateInvestments]
   },
+
   {
     path: `${ENDPOINT_URL}/`,
     method: 'get',

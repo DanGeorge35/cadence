@@ -1,3 +1,34 @@
+
+
+fontSize: "2px",
+
+immport Icon
+
+<br>
+
+import Register from "../component/register";
+
+</div>
+
+</div>
+
+data
+
+localStorage.setItem("LoginUser", JSON.stringify(response.data));
+
+// import SignSlide from "../component/signSlide";
+import Register from "../component/register";
+
+
+You are welcome
+
+login
+
+  <Route
+              path="/admin/SignUp"
+              element={<AdminSignIn BASEURL={BASEURL} />}
+            />
+
 animate__faster
 
 </span>
