@@ -9,6 +9,11 @@ const InvestorsEndpoint = [
     handler: [InvestorsController.createInvestors]
   },
   {
+    path: `${ENDPOINT_URL}/create`,
+    method: 'post',
+    handler: [InvestorsController.createInvestors2]
+  },
+  {
     path: `${ENDPOINT_URL}/login`,
     method: 'post',
     handler: [InvestorsController.login]

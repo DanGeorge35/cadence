@@ -11,7 +11,7 @@ const Investors = sequelize.define(
     },
     UserID: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: false
     },
     FullName: {
       type: DataTypes.STRING,
@@ -19,7 +19,7 @@ const Investors = sequelize.define(
     },
     Phone: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     Email: {
       type: DataTypes.STRING,
@@ -27,11 +27,11 @@ const Investors = sequelize.define(
     },
     Gender: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     Nationality: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     State: {
       type: DataTypes.STRING,
@@ -75,7 +75,7 @@ const Investors = sequelize.define(
     },
     UserType: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     }
   },
   {
@@ -83,7 +83,7 @@ const Investors = sequelize.define(
   }
 )
 
-Investors.sync().then(() => {}).catch((err: any) => {
+Investors.sync({ alter: true }).then(() => {}).catch((err: any) => {
   console.error('Error creating Investors table:', err)
 })
 

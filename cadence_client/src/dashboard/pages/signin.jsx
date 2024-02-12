@@ -20,7 +20,7 @@ class SignIn extends Component {
                   <div>
                     <a href="/home">
                       <img
-                        src="logo.png"
+                        src="/logo.png"
                         alt="Cadence"
                         style={{ height: "80px", verticalAlign: "center" }}
                       />
@@ -35,7 +35,7 @@ class SignIn extends Component {
                       <br />
                       <span className="animate__animated  animate__fadeIn animate__infinite">
                         <NavLink
-                          to="/investmentform/"
+                          to="/signup/"
                           className="nav-link  "
                           aria-current="page"
                           style={{ fontSize: "14px ", color: "#a8d6ff" }}

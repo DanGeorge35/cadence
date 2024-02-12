@@ -107,6 +107,91 @@ class InvestorsController {
       const dInvestors = await Investors.create({ ...data })
 
       data.investorId = data.UserID
+
+      dInvestors.dataValues.account = daccount
+      // send mail
+      const templateParams = {
+        to_name: data.FullName,
+        reply_to: 'contact@cadencepub.com',
+        subject: 'Welcome to Cadence Investment Platform!',
+        message: `
+Thank you for expressing interest in investing with Cadence. We are thrilled to have you on board as a potential investor in our exciting venture.<br>
+
+Your investment journey with Cadence starts now! To complete your investment and unlock exclusive benefits as a Cadence investor,
+<br> please proceed to your dashboard with the following details : <br><br>
+ Link : <a href="https://cadencepub.com/signin">https://cadencepub.com/signin</a><br>
+ Email: ${data.Email}<br>
+ Password: ${data.UserID} <br><br>
+
+<b>Here's what you can expect from your Cadence investment:</b><br>
+  <span style="margin-left:20px"><span>  🔹Access to detailed investment information and updates.<br>
+
+  <span style="margin-left:20px"><span>   🔹Regular updates on Cadence's progress and performance.<br>
+
+  <span style="margin-left:20px"><span>   🔹Opportunities to participate in exclusive investor events and activities.<br>
+
+  <span style="margin-left:20px"><span>   🔹Potential for attractive returns on your investment.<br><br>
+
+Thank you for choosing to invest with Cadence. <br>We look forward to a successful partnership and sharing our journey to success with you.<br>
+<br>
+Best regards,<br><br>
+
+Ola Daniels<br>
+Chief Investment Officer<br>
+`,
+        to_email: data.Email
+      }
+      res.status(201).json({ success: true, data: dInvestors })
+      await SendMail(templateParams)
+    } catch (error: any) {
+      return res.status(400).send({
+        message: error.message,
+        code: 400
+      })
+    }
+  };
+
+  static async createInvestors2 (req: any, res: any): Promise<any> {
+    try {
+      const data = req.body
+      const validate = await InvestorsValidation.validateCreateInvestors(data)
+      if (validate.result === 'error') {
+        const result: { code: number, message: string } = {
+          code: 400,
+          message: validate.message
+        }
+        return res.status(result.code).send(result)
+      }
+
+      const checkExist = await Investors.findOne({ where: { Email: data.Email } })
+      if (checkExist !== null) {
+        return res.status(400).send({
+          message: 'This Investor  Already Exist',
+          code: 400
+        })
+      }
+
+      const DID = getUIDfromDate('INV')
+      data.UserID = DID
+      data.UserType = 'Investor'
+      const dpaswprd = data.Password ?? DID
+
+      const account: any = {}
+      account.UserID = data.UserID
+      account.FullName = data.FullName
+      account.Email = data.Email
+      account.Role = data.UserType
+      account.UserType = 'Investor'
+      account.PasswordHash = await EncryptPassword(dpaswprd)
+      account.RefreshToken = account.PasswordHash
+      account.Token = dpaswprd
+      account.Verified = '1'
+
+      const daccount = await Auth.create({ ...account })
+
+      const dInvestors = await Investors.create({ ...data })
+
+      data.investorId = data.UserID
       await Investments.create({ ...data })
 
       dInvestors.dataValues.account = daccount

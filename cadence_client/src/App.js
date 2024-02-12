@@ -13,6 +13,8 @@ import InvestmentForm from "./pages/InvestmentForm";
 import UserLogoutPage from "./pages/logout";
 import AdminLogoutPage from "./admin/pages/logout";
 import SignIn from "./dashboard/pages/signin";
+import SignUp from "./dashboard/pages/signup";
+import Registered from "./dashboard/pages/registered";
 import Dashboard from "./dashboard/pages/dashboard";
 import Admin from "./admin/pages/dashboard";
 import AdminSignIn from "./admin/pages/signin";
@@ -46,6 +48,11 @@ class App extends Component {
               element={<InvestmentForm BASEURL={BASEURL} />}
             />
             <Route path="/signin" element={<SignIn BASEURL={BASEURL} />} />
+            <Route path="/signup" element={<SignUp BASEURL={BASEURL} />} />
+            <Route
+              path="/registered"
+              element={<Registered BASEURL={BASEURL} />}
+            />
 
             {/* DASHBOARD */}
             <Route
@@ -78,23 +85,19 @@ class App extends Component {
               path="/account/profile"
               element={<Dashboard dashpage="profile" BASEURL={BASEURL} />}
             />
-
             {/* ADMIN */}
             <Route
               path="/admin/signin"
               element={<AdminSignIn BASEURL={BASEURL} />}
             />
-
             <Route
               path="/admin"
               element={<Admin dashpage="DashHome" BASEURL={BASEURL} />}
             />
-
             <Route
               path="/admin/home"
               element={<Admin dashpage="DashHome" BASEURL={BASEURL} />}
             />
-
             <Route
               path="/admin/investments"
               element={<Admin dashpage="Investments" BASEURL={BASEURL} />}
@@ -107,12 +110,10 @@ class App extends Component {
               path="/admin/transactions"
               element={<Admin dashpage="Transactions" BASEURL={BASEURL} />}
             />
-
             <Route
               path="/admin/profile"
               element={<Admin dashpage="profile" BASEURL={BASEURL} />}
             />
-
             <Route
               path="/logout"
               element={<UserLogoutPage BASEURL={BASEURL} />}
@@ -125,7 +126,6 @@ class App extends Component {
               path="/admin/logout"
               element={<AdminLogoutPage BASEURL={BASEURL} />}
             />
-
             <Route path="*" element={<NoPage BASEURL={BASEURL} />} />
           </Routes>
         </Router>

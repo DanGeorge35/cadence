@@ -5,6 +5,13 @@ const schema = Joi.object({
   FullName: Joi.string().required().min(1),
   Phone: Joi.string().required().min(1),
   Email: Joi.string().required().min(1),
+  Password: Joi.string().required().min(1)
+})
+
+const schema2 = Joi.object({
+  FullName: Joi.string().required().min(1),
+  Phone: Joi.string().required().min(1),
+  Email: Joi.string().required().min(1),
   Gender: Joi.string().required().min(1),
   Nationality: Joi.string().required().min(1),
   State: Joi.string().required().min(1),
@@ -18,11 +25,21 @@ const schema = Joi.object({
   NOKEmail: Joi.string().required().min(1),
   NOKAddress: Joi.string().required().min(1)
 })
+
 // name : Joi.any().optional(); // for optional entry
 
 class investorsValidation {
   static async validateCreateInvestors (data: any): Promise<any> {
     const { error, value } = schema.validate(data)
+    if (error != null) {
+      error.details[0].message = error.details[0].message.replace(/\\|"|\\/g, '')
+      return { result: 'error', message: error.details[0].message }
+    }
+    return { result: 'success', message: value }
+  }
+
+  static async validateCreateInvestors2 (data: any): Promise<any> {
+    const { error, value } = schema2.validate(data)
     if (error != null) {
       error.details[0].message = error.details[0].message.replace(/\\|"|\\/g, '')
       return { result: 'error', message: error.details[0].message }

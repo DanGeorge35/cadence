@@ -74,12 +74,20 @@ class Navs extends Component {
               </ul>
             </div>
             <NavLink
-              to="/investmentform"
+              to="/signin"
               aria-current="page"
               className="btn btn-outline-warning  px-4 pe-4 py-2  d-flex  d-md-none d-none  d-lg-block"
               style={{ minWidth: "150px" }}
             >
-              Get Started
+              SignIn
+            </NavLink>
+            <NavLink
+              to="/signup"
+              aria-current="page"
+              className="btn btn-warning  px-4 pe-4 py-2  mx-3 d-flex  d-md-none d-none  d-lg-block"
+              style={{ minWidth: "150px" }}
+            >
+              Sign Up
             </NavLink>
 
             <span
