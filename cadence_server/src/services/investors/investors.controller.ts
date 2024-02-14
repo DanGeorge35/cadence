@@ -45,9 +45,9 @@ class InvestorsController {
         return res.status(result.code).json(result)
       }
 
-      if (account.dataValues.Verified !== '1') {
+      if (parseInt(account.dataValues.Verified) === 0) {
         const result: any = {
-          message: 'Account Not Verified! Kindly check your email for verification link',
+          message: 'Account Not Verified! Kindly check your email for verification link' + account.dataValues.Verified,
           code: 400
         }
         return res.status(result.code).json(result)
