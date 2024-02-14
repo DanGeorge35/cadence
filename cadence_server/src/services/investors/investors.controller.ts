@@ -126,10 +126,9 @@ class InvestorsController {
 Thank you for expressing interest in investing with Cadence. We are thrilled to have you on board as a potential investor in our exciting venture.<br>
 
 Your investment journey with Cadence starts now! To complete your investment and unlock exclusive benefits as a Cadence investor,
-<br> please proceed to your dashboard with the following details : <br><br>
- Link : <a href="https://cadencepub.com/signin">https://cadencepub.com/signin</a><br>
- Email: ${data.Email}<br>
- Password: ${data.UserID} <br><br>
+<br> please proceed to your account verification  with the link below : <br>
+ Link : <a href="https://cadencepub.com/api/v1/investors/verify/${data.Email}/${DID}?">https://cadencepub.com/api/v1/investors/verify/${data.Email}/${DID}?</a><br><br>
+
 
 <b>Here's what you can expect from your Cadence investment:</b><br>
   <span style="margin-left:20px"><span>  🔹Access to detailed investment information and updates.<br>
