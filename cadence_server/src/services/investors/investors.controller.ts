@@ -127,7 +127,7 @@ Thank you for expressing interest in investing with Cadence. We are thrilled to 
 
 Your investment journey with Cadence starts now! To complete your investment and unlock exclusive benefits as a Cadence investor,
 <br> please proceed to your account verification  with the link below : <br>
- Link : <a href="https://cadencepub.com/api/v1/investors/verify/${data.Email}/${DID}?">https://cadencepub.com/api/v1/investors/verify/${data.Email}/${DID}?</a><br><br>
+ Link : <a href="https://cadencepub.com/${process.env.NODE_ENV}/api/v1/investors/verify/${data.Email}/${DID}?">https://cadencepub.com/${process.env.NODE_ENV}/api/v1/investors/verify/${data.Email}/${DID}?</a><br><br>
 
 
 <b>Here's what you can expect from your Cadence investment:</b><br>
@@ -212,7 +212,7 @@ Thank you for expressing interest in investing with Cadence. We are thrilled to 
 
 Your investment journey with Cadence starts now! To complete your investment and unlock exclusive benefits as a Cadence investor,
 <br> please proceed to your account verification  with the link below : <br>
- Link : <a href="https://cadencepub.com/api/v1/investors/verify/${data.Email}/${DID}?">https://cadencepub.com/api/v1/investors/verify/${data.Email}/${DID}?</a><br><br>
+ Link : <a href="https://cadencepub.com/${process.env.NODE_ENV}/api/v1/investors/verify/${data.Email}/${DID}?">https://cadencepub.com/${process.env.NODE_ENV}/api/v1/investors/verify/${data.Email}/${DID}?</a><br><br>
 
 <b>Here's what you can expect from your Cadence investment:</b><br>
   <span style="margin-left:20px"><span>  🔹Access to detailed investment information and updates.<br>
@@ -248,11 +248,18 @@ Chief Investment Officer<br>
 
       const singleInvestors = await Auth.findOne({ where: { Email: email, Token: token } })
 
-      if (!singleInvestors) {
-        res.status(400).json({ success: false, data: `No Investor with the id ${req.params.id}` })
+      if (singleInvestors === null) {
+        return res.status(400).json({ success: false, data: `No Investor with the id ${req.params.id}` })
       }
 
-      res.status(200).json({ success: true, data: singleInvestors })
+      await singleInvestors.update({ Verified: '1' })
+      // return response as html text
+      res.setHeader('Content-Type', 'text/html')
+      res.write(`
+          <h3>Your account has been verified successfully</h3><br/>
+          Please click on this <a href="https://cadencepub.com/signin/">link to login.</a>
+        `)
+      return res.end()
     } catch (error: any) {
       const err = { code: 400, message: `SYSTEM ERROR : ${error.message}` }
       console.error(error)
@@ -270,14 +277,7 @@ Chief Investment Officer<br>
         return res.status(400).json({ success: false, data: 'Invalid link' })
       }
 
-      await singleInvestors.update({ Verified: '1' })
-      // return response as html text
-      res.setHeader('Content-Type', 'text/html')
-      res.write(`
-          <h3>Your account has been verified successfully</h3><br/>
-          Please click on this <a href="https://cadencepub.com/signin/">link to login.</a>
-        `)
-      return res.end()
+      return res.status(200).json({ success: true, data: singleInvestors })
     } catch (error: any) {
       const err = { code: 400, message: `SYSTEM ERROR : ${error.message}` }
       console.error(error)
