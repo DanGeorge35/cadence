@@ -67,9 +67,11 @@ export default function DashHome(props) {
             Investment Progress
           </Typography>
           <Typography variant="body2" color="textSecondary">
-            Current Amount: ₦
-            {parseFloat(System.totalActiveAmount).toLocaleString()} / Total
-            Target: ₦{parseFloat(System.targetAmt).toLocaleString()}
+            Investment Amount Raised: ₦
+            {parseFloat(System.totalActiveAmount).toLocaleString()} /Total
+            Investment Cap: ₦{parseFloat(System.targetAmt).toLocaleString()}{" "}
+            (Investment opportunity with Cadence ends upon reaching the
+            investment cap)
           </Typography>
           <LinearProgress
             variant="determinate"

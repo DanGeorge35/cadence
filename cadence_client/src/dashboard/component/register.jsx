@@ -152,7 +152,7 @@ export default function Register(props) {
               <br></br>
               <br></br>
               <button className="btn w-100 btn-warning" type="submit">
-                SIGN IN
+                SIGN UP
               </button>
             </form>
           </div>

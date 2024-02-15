@@ -42,7 +42,7 @@ const Dashboard = ({ dashpage, BASEURL }) => {
         }
       );
       response.data.credentials = formData;
-
+      // console.log(formData, response.data);
       localStorage.setItem("LoginUser", JSON.stringify(response.data));
     } catch (error) {
       if (error.response) {
@@ -105,42 +105,68 @@ const Dashboard = ({ dashpage, BASEURL }) => {
       dashpage = "DashHome";
     }
 
-    switch (dashpage) {
-      case "DashHome":
-        DPage = <DashHome UserData={LoginUser} getMetrics={getMetrics} />;
-        break;
-      case "Investments":
-        DPage = <Investment UserData={LoginUser} getMetrics={getMetrics} />;
-        break;
-      case "Transactions":
-        DPage = <Transactions UserData={LoginUser} getMetrics={getMetrics} />;
-        break;
-      case "AddInvestment":
-        DPage = (
-          <AddInvestment
-            UserData={LoginUser}
-            BASEURL={BASEURL}
-            getMetrics={getMetrics}
-          />
-        );
-        break;
-      case "SingleInvestment":
-        // eslint-disable-next-line no-case-declarations
-        const match = { id };
-        DPage = (
-          <SingleInvestment
-            UserData={LoginUser}
-            BASEURL={BASEURL}
-            getMetrics={getMetrics}
-            match={match}
-          />
-        );
-        break;
-      case "profile":
-        DPage = <Account UserData={LoginUser} getMetrics={getMetrics} />;
-        break;
-      default:
-        break;
+    if (
+      LoginUser.data.user.Gender == null ||
+      LoginUser.data.user.NOKFullName == null ||
+      LoginUser.data.user.NOKFullName == null
+    ) {
+      DPage = (
+        <Account
+          UserData={LoginUser}
+          BASEURL={BASEURL}
+          getMetrics={getMetrics}
+        />
+      );
+      showAlert({
+        title: "Incomplete  Profile",
+        text: "Please complete your account profile to access the full functionality of this platform",
+        icon: "error",
+        button: "Account Settings",
+      });
+    } else {
+      switch (dashpage) {
+        case "DashHome":
+          DPage = <DashHome UserData={LoginUser} getMetrics={getMetrics} />;
+          break;
+        case "Investments":
+          DPage = <Investment UserData={LoginUser} getMetrics={getMetrics} />;
+          break;
+        case "Transactions":
+          DPage = <Transactions UserData={LoginUser} getMetrics={getMetrics} />;
+          break;
+        case "AddInvestment":
+          DPage = (
+            <AddInvestment
+              UserData={LoginUser}
+              BASEURL={BASEURL}
+              getMetrics={getMetrics}
+            />
+          );
+          break;
+        case "SingleInvestment":
+          // eslint-disable-next-line no-case-declarations
+          const match = { id };
+          DPage = (
+            <SingleInvestment
+              UserData={LoginUser}
+              BASEURL={BASEURL}
+              getMetrics={getMetrics}
+              match={match}
+            />
+          );
+          break;
+        case "profile":
+          DPage = (
+            <Account
+              UserData={LoginUser}
+              BASEURL={BASEURL}
+              getMetrics={getMetrics}
+            />
+          );
+          break;
+        default:
+          break;
+      }
     }
   } else {
     return <Navigate to="/signin" />;

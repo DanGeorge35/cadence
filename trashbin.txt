@@ -1,3 +1,64 @@
+NavLink
+
+
+
+// console.log(formData, response.data);
+
+localStorage.setItem("LoginUser", JSON.stringify(response.data));
+
+Button
+
+  <Button
+                style={{ fontSize: "15px" }}
+                variant="contained"
+                fullWidth
+                color="info"
+              >
+                Save Profile
+              </Button>
+
+invesmentform
+
+profile
+
+
+
+FullName: FullName,
+
+
+
+Email: Email,
+
+}),
+
+fully Update
+
+resetFormFields();
+
+
+
+Duration: duration,
+
+
+
+display: "none"
+
+
+        onClick: () => history.push("/account"),
+
+error.response.data.message
+
+ {
+      alert("this is null");
+    }
+    if(
+
+length
+
+UserData
+
+user
+
 
 
 fontSize: "2px",

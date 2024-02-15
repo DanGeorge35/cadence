@@ -1,10 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-// import SignSlide from "../component/signSlide";
+import { Navigate, NavLink } from "react-router-dom";
 import Register from "../component/register";
 import PropTypes from "prop-types";
 
 const signup = ({ BASEURL }) => {
+  const LoginUser = localStorage.getItem("LoginUser");
+  if (LoginUser) {
+    return <Navigate to="/account" />;
+  }
   return (
     <div>
       <div className="container-fluid">

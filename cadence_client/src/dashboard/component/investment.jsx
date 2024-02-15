@@ -29,8 +29,8 @@ export default function Investment(props) {
             <b style={{ fontSize: "25px" }}>INVESTMENT</b>
             <br></br>
             <span style={{ fontSize: "17px" }}>
-              All you investments, your total investment amount and return on
-              investment
+              Track your investment journey: Total Invested | Investment
+              Duration | Returns
             </span>
           </div>
           <div className="col-lg-6 p-4 bg-white text-center ">

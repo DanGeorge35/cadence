@@ -47,7 +47,7 @@ class InvestorsController {
 
       if (parseInt(account.dataValues.Verified) === 0) {
         const result: any = {
-          message: 'Account Not Verified! Kindly check your email for verification link' + account.dataValues.Verified,
+          message: 'Account Not Verified! Kindly check your email for verification link',
           code: 400
         }
         return res.status(result.code).json(result)
@@ -327,7 +327,19 @@ Chief Investment Officer<br>
  */
   static async updateInvestors (req: any, res: any): Promise<any> {
     try {
-      const agentId = req.params.id
+      let agentId
+      if (req.user.data.UserType === 'Investor') {
+        if (parseInt(req.params.id) === req.user.data.id) {
+          agentId = parseInt(req.params.id)
+        } else {
+          return res.status(401).json({ success: true, message: 'You are not allowed to perform this action!' })
+        }
+      } else if (req.user.data.UserType === 'Admin') {
+        agentId = parseInt(req.params.id)
+      } else {
+        return res.status(401).json({ success: true, message: 'You are not authorized for this action!' })
+      }
+
       const updatedInfo = req.body
 
       const agent = await Investors.findByPk(agentId)
@@ -338,7 +350,7 @@ Chief Investment Officer<br>
 
       await agent.update(updatedInfo)
 
-      res.status(200).json({ success: true, data: agent, message: 'Investor information updated' })
+      return res.status(200).json({ success: true, data: agent, message: 'Investor information updated' })
     } catch (error: any) {
       const err = { code: 400, message: `SYSTEM ERROR : ${error.message}` }
       console.error(error)
