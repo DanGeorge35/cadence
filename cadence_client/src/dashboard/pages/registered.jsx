@@ -42,13 +42,13 @@ export default function Registered() {
                     </div>
                     <br></br>
                     <h2 className="text-center text-success">
-                      Your account is Successfully registered!{" "}
+                      Registration Successful!
                     </h2>
                     <br></br>
                     <br></br>
                     <h5 className="text-center" style={{ color: "#999" }}>
-                      Kindly check your emaill to see the next step in your
-                      investment journey
+                      Please check your email for the next steps in your
+                      investment process.
                     </h5>
 
                     <div className="text-center  pt-2">

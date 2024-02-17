@@ -9,7 +9,6 @@ import Reservation from "./pages/reservation";
 import Investment from "./pages/invest";
 import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
-import InvestmentForm from "./pages/InvestmentForm";
 import UserLogoutPage from "./pages/logout";
 import AdminLogoutPage from "./admin/pages/logout";
 import SignIn from "./dashboard/pages/signin";
@@ -43,10 +42,7 @@ class App extends Component {
             <Route path="/invest" element={<Investment BASEURL={BASEURL} />} />
             <Route path="/privacy" element={<Privacy BASEURL={BASEURL} />} />
             <Route path="/terms" element={<Terms BASEURL={BASEURL} />} />
-            <Route
-              path="/investmentform"
-              element={<InvestmentForm BASEURL={BASEURL} />}
-            />
+
             <Route path="/signin" element={<SignIn BASEURL={BASEURL} />} />
             <Route path="/signup" element={<SignUp BASEURL={BASEURL} />} />
             <Route

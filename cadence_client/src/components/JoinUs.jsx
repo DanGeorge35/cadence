@@ -28,7 +28,7 @@ class JoinUs extends Component {
                   today to explore Cadence investment opportunities
                   <div className="py-4">
                     <a
-                      href="investmentform"
+                      href="/signup"
                       className="btn btn-warning   py-2 fontFam4 "
                       style={{
                         minWidth: "200px",

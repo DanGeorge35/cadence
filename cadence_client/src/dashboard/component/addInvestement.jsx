@@ -172,8 +172,9 @@ export default function AddInvestment(props) {
                       type="number"
                       className="form-control"
                       id="inputAmount"
-                      min="500000"
-                      placeholder="500,000"
+                      min="250000"
+                      max="5000000"
+                      placeholder="250,000"
                       value={amount}
                       onChange={(e) => setAmount(e.target.value)}
                       style={{ color: "black !important" }}
@@ -195,6 +196,9 @@ export default function AddInvestment(props) {
                       </option>
                       <option value="1">1 year</option>
                       <option value="2">2 years</option>
+                      <option value="3">3 years</option>
+                      <option value="4">4 years</option>
+                      <option value="5">5 years</option>
                     </select>
                   </div>
 
