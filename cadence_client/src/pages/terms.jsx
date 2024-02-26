@@ -62,7 +62,7 @@ class Terms extends Component {
                           <li>
                             Ownership Investment: You can purchase a percentage
                             ownership of Cadence. The value of ownership shares
-                            is N1,000,000 per 1%. Ownership dividends will be
+                            is N2,500,000 per 1%. Ownership dividends will be
                             paid based on your ownership percentage.
                           </li>
                         </ul>
@@ -80,7 +80,7 @@ class Terms extends Component {
                         Investment Cap
                       </div>
                       <div>
-                        The total investment cap for Cadence is N40,000,000.
+                        The total investment cap for Cadence is N75,000,000.
                         Once this cap is reached, no more investments will be
                         accepted.
                       </div>

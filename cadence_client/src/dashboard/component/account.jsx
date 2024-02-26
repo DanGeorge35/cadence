@@ -100,7 +100,7 @@ export default function Account(props) {
         text: "Profile Successfully Updated",
         icon: "success",
         button: "Ok", //onclick
-        onclick: 'window.location = "/account";',
+        onclick: 'window.location = "/account/investments";',
       });
     } catch (error) {
       if (error.response) {
