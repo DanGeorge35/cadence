@@ -26,7 +26,7 @@ class TransactionsController {
             .status(400)
             .json({ success: false, code: 400, message: 'Error parsing the request' })
         }
-        const dir = '/public/transactions'
+        const dir = '../public/transactions'
         if (!fs.existsSync(`.${dir}`)) {
           fs.mkdirSync(`.${dir}`)
         }

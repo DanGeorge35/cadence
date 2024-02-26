@@ -1,7 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import path from 'path'
-import os from 'os'
+// import os from 'os'
 // import csrf from 'csurf'
 // import cookieParser from 'cookie-parser'
 import morgan from 'morgan'
@@ -42,10 +42,9 @@ if (process.env.NODE_ENV === 'development') {
     express.static(path.join(__dirname, '../public'))
   )
 } else {
-  const homeDirectory = os.homedir()
   app.use(
     `/${process.env.NODE_ENV}/public`,
-    express.static(path.join(homeDirectory, '/home/public'))
+    express.static(path.join(__dirname, '../public'))
   )
 }
 // csurf config
