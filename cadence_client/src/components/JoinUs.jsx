@@ -36,7 +36,7 @@ class JoinUs extends Component {
                         fontWeight: "700",
                       }}
                     >
-                      Invest With Us
+                      Register
                     </a>
                   </div>
                 </div>

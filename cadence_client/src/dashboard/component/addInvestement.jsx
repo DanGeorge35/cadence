@@ -50,7 +50,7 @@ export default function AddInvestment(props) {
 
   const handleFormSubmission = async (e) => {
     e.preventDefault();
-    if (amount < 500000) {
+    if (amount < 250000) {
       showAlert({
         title: "Invalid Amount",
         text: "Amount should be 500,000 or greater",
@@ -87,9 +87,10 @@ export default function AddInvestment(props) {
         button: "Ok",
       });
       // go to /account/investments in 2 secs
+      // response.data.TransactionRef=response.data.
 
       setTimeout(() => {
-        window.location = "/account/investments";
+        window.location = "/account/singleinvestments/" + response.data.data.id;
       }, 2000);
 
       resetFormFields();
