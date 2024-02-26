@@ -27,8 +27,8 @@ class TransactionsController {
             .json({ success: false, code: 400, message: 'Error parsing the request' })
         }
         const dir = '/public/transactions'
-        if (!fs.existsSync(`..${dir}`)) {
-          fs.mkdirSync(`..${dir}`)
+        if (!fs.existsSync(`.${dir}`)) {
+          fs.mkdirSync(`.${dir}`)
         }
         const data: any = adjustFieldsToValue(fields)
         const validate = await TransactionsValidation.validateCreateTransactions(data)
