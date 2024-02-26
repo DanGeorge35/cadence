@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 import {
   Checkbox,
   FormControlLabel,
@@ -147,8 +148,23 @@ export default function Register(props) {
               <br />
               <FormControlLabel
                 control={<Checkbox color="warning" defaultChecked required />}
-                label="Accept Term and Condition"
+                label="Accept "
+                style={{ marginRight: "0px" }}
               />
+              <NavLink
+                to="/terms"
+                target="_blank"
+                className="nav-link  "
+                aria-current="page"
+                style={{
+                  padding: "0px !important",
+                  fontSize: "17px ",
+                  color: "orange",
+                  display: "inline",
+                }}
+              >
+                Terms and Condition
+              </NavLink>
               <br></br>
               <br></br>
               <button className="btn w-100 btn-warning" type="submit">

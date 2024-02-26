@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navigate, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import * as Icons from "@mui/icons-material";
 import axios from "axios";
 import Swal from "sweetalert2";
 import PropTypes from "prop-types";
@@ -12,12 +14,18 @@ import Account from "../component/account";
 import Navs from "../component/navs";
 import SideMenu from "../component/sideMenu";
 import Menu from "../component/menu";
+import Modal from "../component/modal";
 
 const Dashboard = ({ dashpage, BASEURL }) => {
   const [isSideMenuOpen, setSideMenuOpen] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
 
   const toggleSideMenu = () => {
     setSideMenuOpen((prevState) => !prevState);
+  };
+
+  const toggleModal = () => {
+    setModalOpen((prevIsModalOpen) => !prevIsModalOpen);
   };
 
   const showAlert = (data) => {
@@ -98,6 +106,49 @@ const Dashboard = ({ dashpage, BASEURL }) => {
 
   let DPage;
 
+  const investmentInfo = (
+    <div>
+      <div>
+        <p>
+          Minimum investment allowed is N250,000 and a maximum of N5,000,000 per
+          individual.
+        </p>
+        Minimum investment duration is 1 year and the maximum investment
+        duration is 5 years. <br></br>
+        <br></br>Capital can only be withdrawn at the end of the chosen
+        investment tenure. In case of a verified emergency, capital may be
+        withdrawn within 7 days (terms and conditions apply).
+        <br></br>
+        <br></br>
+        Return on Investment (ROI) can only be withdrawn quarterly.
+        <br></br>
+        <br></br> Cadence presently provides a 50% annual return on investment
+        (ROI), which may be subject to periodic review at the discretion of
+        Cadence.<br></br>
+        <br></br>
+        Opportunity to invest with Cadence ceases upon reaching our investment
+        cap. However, potential investors who miss out on investing with Cadence
+        may join the waiting list.<br></br>
+        <br></br> Existing investors looking to exit before their investment
+        term expires will have the chance to sell and transfer their investment
+        to any interested investor on the waiting list
+      </div>
+      <br></br>
+      <br></br>
+      <center>
+        <NavLink
+          to="/account/addinvestments"
+          className="btn btn-warning pt-2 pb-2 pe-4 px-4 text-dark"
+          aria-current="page"
+          onClick={toggleModal}
+        >
+          <Icons.CheckBox />{" "}
+          <span className="ml-4">I understand and Accept</span>
+        </NavLink>
+      </center>
+    </div>
+  );
+
   if (localStorage.getItem("LoginUser")) {
     const LoginUser = JSON.parse(localStorage.getItem("LoginUser"));
 
@@ -129,7 +180,13 @@ const Dashboard = ({ dashpage, BASEURL }) => {
           DPage = <DashHome UserData={LoginUser} getMetrics={getMetrics} />;
           break;
         case "Investments":
-          DPage = <Investment UserData={LoginUser} getMetrics={getMetrics} />;
+          DPage = (
+            <Investment
+              UserData={LoginUser}
+              getMetrics={getMetrics}
+              toggleModal={toggleModal}
+            />
+          );
           break;
         case "Transactions":
           DPage = <Transactions UserData={LoginUser} getMetrics={getMetrics} />;
@@ -139,6 +196,7 @@ const Dashboard = ({ dashpage, BASEURL }) => {
             <AddInvestment
               UserData={LoginUser}
               BASEURL={BASEURL}
+              toggleModal={toggleModal}
               getMetrics={getMetrics}
             />
           );
@@ -188,6 +246,13 @@ const Dashboard = ({ dashpage, BASEURL }) => {
           className="col-md-9 px-0"
           style={{ height: "100vh", paddingTop: "50px", overflowY: "auto" }}
         >
+          <Modal
+            title="Please take note!"
+            showModal={isModalOpen}
+            toggleModal={toggleModal}
+            content={investmentInfo}
+          />
+
           {DPage}
         </div>
       </div>

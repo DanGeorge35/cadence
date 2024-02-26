@@ -17,7 +17,7 @@ export default function Account(props) {
       confirmButtonText: data.button,
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location.href = "/account";
+        window.location.href = "/account/investments";
       }
     });
   };
@@ -100,7 +100,7 @@ export default function Account(props) {
         text: "Profile Successfully Updated",
         icon: "success",
         button: "Ok", //onclick
-        onclick: 'window.location = "/account/investments";',
+        onclick: 'window.location = "/account/investments"',
       });
     } catch (error) {
       if (error.response) {

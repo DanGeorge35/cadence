@@ -44,6 +44,7 @@ class InvestmentsController {
         })
       }
       const dSystem = await Systems.findOne({ where: { id: 1 } })
+      let UnitPeriod = 4
       let Duration = 1
       let MontlyDuraion = 12
       if (singleInvestments?.dataValues.Duration) {
@@ -54,12 +55,12 @@ class InvestmentsController {
       const investmentID = singleInvestments?.dataValues.id
       const investorId = singleInvestments?.dataValues.investorId
       const percentage = parseFloat(dSystem?.dataValues.roi)
-
-      for (let i = 1; i <= MontlyDuraion; i++) {
+      UnitPeriod = parseInt(dSystem?.dataValues.UnitPeriod)
+      for (let i = 1; i <= (MontlyDuraion / UnitPeriod); i++) {
         const currentDate = new Date()
         const currentMonth = currentDate.getMonth()
         const returnAmount = (percentage / 100) * amount
-        currentDate.setMonth(currentMonth + i)
+        currentDate.setMonth(currentMonth + (i * UnitPeriod))
         const returnDate = moment(currentDate).format('YYYY-MM-DD HH:mm:ss')
         const returnDateMonth = moment(currentDate).format('MMMM Do YYYY')
         const SaveROI = { investorId, investmentId: investmentID, percentage, returnAmount, returnDate, returnDateMonth }

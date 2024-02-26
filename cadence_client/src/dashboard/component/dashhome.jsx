@@ -11,7 +11,7 @@ export default function DashHome(props) {
   const System = props.UserData.data.System;
   const ROI = props.UserData.data.roi;
   const metrics = props.getMetrics(InvestmentData.rows);
-  console.log(ROI);
+
   // get all the roidate as an array from ROI object array
   let ROIdate = [];
   let ROIamount = [];

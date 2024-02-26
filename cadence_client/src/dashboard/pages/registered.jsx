@@ -1,6 +1,6 @@
 import React from "react";
 import * as Icons from "@mui/icons-material";
-import { NavLink } from "react-router-dom";
+
 // import SignSlide from "../component/signSlide"
 
 export default function Registered() {
@@ -50,24 +50,6 @@ export default function Registered() {
                       Please check your email for the next steps in your
                       investment process.
                     </h5>
-
-                    <div className="text-center  pt-2">
-                      <br />
-                      <span className="animate__animated  animate__fadeIn animate__infinite">
-                        <NavLink
-                          to="/signin/"
-                          className="nav-link  "
-                          aria-current="page"
-                          style={{
-                            fontSize: "17px ",
-                            fontWeight: "700",
-                            color: "orange",
-                          }}
-                        >
-                          &gt;&gt; Login to your account &gt;&gt;
-                        </NavLink>
-                      </span>
-                    </div>
                   </div>
                 </div>
               </div>

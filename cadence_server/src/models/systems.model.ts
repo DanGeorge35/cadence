@@ -28,6 +28,10 @@ const Systems = sequelize.define(
     roi: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    UnitPeriod: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   },
   {

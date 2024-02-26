@@ -84,7 +84,7 @@ class AdminController {
         }
         return res.status(result.code).send(result)
       }
-      const dir = '../public/admin'
+      const dir = './public/admin'
       if (!fs.existsSync(`.${dir}`)) {
         fs.mkdirSync(`.${dir}`)
       }
