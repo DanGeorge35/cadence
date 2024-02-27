@@ -65,6 +65,8 @@ export default function Investment(props) {
                 <div className="col-9">
                   <div style={{ fontSize: "14px" }}>Investment Amount</div>
                   <b> ₦{metrics.TotalInvAmount.toLocaleString()}</b>
+                  <br></br>
+                  <br></br>
                 </div>
               </div>
             </div>
@@ -81,6 +83,8 @@ export default function Investment(props) {
                 <div className="col-9">
                   <div style={{ fontSize: "14px" }}>Active Investments</div>
                   <b>{metrics.ActiveInvestment}</b>
+                  <br></br>
+                  <br></br>
                 </div>
               </div>
             </div>
@@ -97,6 +101,8 @@ export default function Investment(props) {
                 <div className="col-9">
                   <div style={{ fontSize: "14px" }}>Pending Investments</div>
                   <b>{metrics.PendingInvestment}</b>
+                  <br></br>
+                  <br></br>
                 </div>
               </div>
             </div>
@@ -113,6 +119,13 @@ export default function Investment(props) {
                 <div className="col-9">
                   <div style={{ fontSize: "14px" }}>Rate of Returns</div>
                   <b>+ {System.roi} %</b>
+                  <small> in {System.UnitPeriod} Month</small>
+                  <div>
+                    <b>
+                      + {(Number(System.roi) * 12) / Number(System.UnitPeriod)}%
+                    </b>
+                    <small> Anually </small>
+                  </div>
                 </div>
               </div>
             </div>

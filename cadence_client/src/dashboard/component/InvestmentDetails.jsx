@@ -259,13 +259,16 @@ const InvestmentDetails = ({ data }) => {
               </div>
             </div>
             <div className="col-lg-6 text-center">
-              <button
+              <a
                 className="btn btn-success btn-large  w-100 text-white"
                 id="approvebtn"
+                href="https://wa.me/+2349018009811"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Icons.WhatsApp style={{ fontSize: "50px" }} />
                 <span className="mx-3">Chat Our Representative</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
