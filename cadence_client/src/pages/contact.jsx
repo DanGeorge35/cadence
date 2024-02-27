@@ -6,8 +6,8 @@ function Contact() {
   // Define a state to manage form submission
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
-  const [role, setRole] = useState("");
-  const [link, setLink] = useState("");
+  const [message, setMessage] = useState("");
+  const [Subject, setSubject] = useState("");
 
   const handleFormSubmission = (e) => {
     e.preventDefault(); // Prevent the default form submission behavior
@@ -15,14 +15,17 @@ function Contact() {
     // Perform any form submission logic here, e.g., send data to a server
     console.log("fullname:", fullname);
     console.log("email:", email);
-    console.log("link:", link);
-    console.log("role:", role);
+    console.log("Subject:", Subject);
+    console.log("message:", message);
 
-    // Reset the form fields
-    setFullname("");
-    setEmail("");
-    setRole("");
-    setLink("");
+    // Redirect to the desired email format
+    const emailFormat = `mailto:contact@cadencepub.com?subject=${encodeURIComponent(
+      fullname
+    )}(${encodeURIComponent(email)}) : ${encodeURIComponent(
+      Subject
+    )}&body=${encodeURIComponent(message)}`;
+
+    window.location.href = emailFormat;
   };
 
   return (
@@ -90,11 +93,11 @@ function Contact() {
                     <div className="mb-3">
                       <input
                         placeholder="Subject"
-                        type="link"
+                        type="text"
                         className="form-control"
-                        id="link"
-                        value={link}
-                        onChange={(e) => setEmail(e.target.value)}
+                        id="Subject"
+                        value={Subject}
+                        onChange={(e) => setSubject(e.target.value)}
                       />
                     </div>
 
@@ -103,6 +106,9 @@ function Contact() {
                         placeholder="Enter your message"
                         className="form-control"
                         style={{ height: "200px", width: "100%" }}
+                        id="message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                       ></textarea>
                     </div>
 
