@@ -61,30 +61,24 @@ class SideMenu extends Component {
                   Reservation
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink to="/blog" className="nav-link  " aria-current="page">
-                  Blog
-                </NavLink>
-              </li>
-
-              <li className="nav-item">
-                <NavLink
-                  to="/invest"
-                  className="nav-link  "
-                  aria-current="page"
-                >
-                  Invest
-                </NavLink>
-              </li>
             </ul>
 
             <NavLink
-              to="/investmentform"
+              to="/signin"
               aria-current="page"
-              className="btn btn-outline-warning  px-4 pe-4 py-2  d-flex "
+              className="btn text-warning  mt-3 px-4 pe-4 py-3 d-flex "
+              style={{ minWidth: "150px", backgroundColor: "#000" }}
+            >
+              Sign In
+            </NavLink>
+
+            <NavLink
+              to="/invest"
+              aria-current="page"
+              className="btn btn-warning  px-4 pe-4 py-3 mt-4 d-flex "
               style={{ minWidth: "150px" }}
             >
-              Get Started
+              Invest with Us
             </NavLink>
           </div>
         </div>
