@@ -61,6 +61,16 @@ class Navs extends Component {
                     Reservation
                   </NavLink>
                 </li>
+                <li className="nav-item">
+                  <a
+                    href="https://medium.com/@thecadencecafe "
+                    target="_blank"
+                    rel="noreferrer"
+                    className="nav-link"
+                  >
+                    Blog
+                  </a>
+                </li>
               </ul>
             </div>
             <NavLink

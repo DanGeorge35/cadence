@@ -61,6 +61,16 @@ class SideMenu extends Component {
                   Reservation
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <a
+                  href="https://medium.com/@thecadencecafe "
+                  target="_blank"
+                  className="nav-link  "
+                  rel="noreferrer"
+                >
+                  Blog
+                </a>
+              </li>
             </ul>
 
             <NavLink

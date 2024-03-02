@@ -9,6 +9,9 @@ class SiteSlide extends Component {
         url: "./ext1.jpg",
       },
       {
+        url: "./cadnewbg.jpeg",
+      },
+      {
         url: "./ext2.jpg",
       },
       {

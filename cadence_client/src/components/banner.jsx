@@ -6,17 +6,17 @@ class Banner extends Component {
   render() {
     const images = [
       {
-        url: "./cadfood7.jpeg",
-        caption1: "",
-        caption2: "A Journey of Excellence",
+        url: "./cadnewbg.jpeg",
+        caption1: "Unparalleled comfort and convenience",
+        caption2: "Explore our short-let apartments",
         caption3:
-          "A testament to a journey fueled by passion, creativity, and a deep love for providing unforgettable experiences.",
-        action: { title: "Join Us", url: "invest" },
+          "Book your stay today and unlock the door of comfort, flexibility, and personalized hospitality",
+        action: { title: "Book Now", url: "contact" },
       },
       {
         url: "./cadfood4.jpeg",
         caption1: "More than just a restaurant and bar",
-        caption2: "Ready for a delicious meal?",
+        caption2: "Ready for a delicious mealz",
         caption3: " Discover the finest cuisine in town, waiting just for you!",
         action: { title: "Order Now", url: "contact" },
       },
@@ -27,6 +27,14 @@ class Banner extends Component {
         caption3:
           "Investing in Cadence means joining a thriving business and becoming part of the Cadence family",
         action: { title: "Invest With Us", url: "invest" },
+      },
+      {
+        url: "./cadfood7.jpeg",
+        caption1: "",
+        caption2: "A Journey of Excellence",
+        caption3:
+          "A testament to a journey fueled by passion, creativity, and a deep love for providing unforgettable experiences.",
+        action: { title: "Join Us", url: "invest" },
       },
     ];
     return (
