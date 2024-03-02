@@ -53,6 +53,18 @@ const Investors = sequelize.define(
       type: DataTypes.STRING,
       allowNull: true
     },
+    BankName: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    AccountNumber: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    AccountName: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     NOKFullName: {
       type: DataTypes.STRING,
       allowNull: true

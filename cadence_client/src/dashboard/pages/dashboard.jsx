@@ -174,6 +174,24 @@ const Dashboard = ({ dashpage, BASEURL }) => {
         icon: "error",
         button: "Account Settings",
       });
+    } else if (
+      LoginUser.data.user.BankName == null ||
+      LoginUser.data.user.AccountName == null ||
+      LoginUser.data.user.AccountNumber == null
+    ) {
+      DPage = (
+        <Account
+          UserData={LoginUser}
+          BASEURL={BASEURL}
+          getMetrics={getMetrics}
+        />
+      );
+      showAlert({
+        title: "Banking Information",
+        text: "Please Enter your Bank Account Information to access the full functionality of this platform",
+        icon: "error",
+        button: "Account Settings",
+      });
     } else {
       switch (dashpage) {
         case "DashHome":

@@ -33,6 +33,15 @@ export default function Account(props) {
 
   const UserData = props.UserData.data.user;
 
+  if (!UserData.BankName) {
+    UserData.BankName = "";
+  }
+  if (!UserData.AccountNumber) {
+    UserData.AccountNumber = "";
+  }
+  if (!UserData.AccountName) {
+    UserData.AccountName = "";
+  }
   const [FullName, setFullName] = useState(UserData.FullName);
   const [Email, setEmail] = useState(UserData.Email);
   const [Phone, setPhone] = useState(UserData.Phone);
@@ -41,6 +50,10 @@ export default function Account(props) {
   const [address, setAddress] = useState(UserData.Address);
   const [city, setCity] = useState(UserData.City);
   const [state, setState] = useState(UserData.State);
+
+  const [BankName, setBankName] = useState(UserData.BankName);
+  const [AccountNumber, setAccountNumber] = useState(UserData.AccountNumber);
+  const [AccountName, setAccountName] = useState(UserData.AccountName);
 
   const [fullnameNOK, setFullnameNOK] = useState(UserData.NOKFullName);
   const [relationshipNOK, setRelationshipNOK] = useState(
@@ -63,6 +76,9 @@ export default function Account(props) {
       State: state,
       Phone: Phone,
       NOKFullName: fullnameNOK,
+      BankName: BankName,
+      AccountNumber: AccountNumber,
+      AccountName: AccountName,
       NOKRelationship: relationshipNOK,
       NOKPhone: phoneNOK,
       NOKEmail: emailNOK,
@@ -150,12 +166,66 @@ export default function Account(props) {
           <div
             className="pb-4 "
             style={{
-              border: "2px solid #ffc107",
+              border: "2px solid #000",
               overflow: "hidden",
               borderRadius: "5px 5px 0px 0px",
             }}
           >
-            <div className="bg-warning p-1 text-white text-center mb-3">
+            <div className="bg-dark p-1 text-white text-center mb-3">
+              <b>Bank Information</b>
+            </div>
+            <div className="pe-3 px-3">
+              <div className="row">
+                <div className="col-lg-3"></div>
+                <div className="col-lg-6">
+                  <div>
+                    <TextField
+                      label="Enter Bank Name"
+                      variant="outlined"
+                      fullWidth
+                      style={{ borderColor: "orange" }}
+                      margin="normal"
+                      value={BankName}
+                      onChange={(e) => setBankName(e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <TextField
+                      label="Enter Account Number"
+                      variant="outlined"
+                      fullWidth
+                      style={{ borderColor: "orange" }}
+                      margin="normal"
+                      value={AccountNumber}
+                      onChange={(e) => setAccountNumber(e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <TextField
+                      label="Enter Account Name"
+                      variant="outlined"
+                      fullWidth
+                      style={{ borderColor: "orange" }}
+                      margin="normal"
+                      value={AccountName}
+                      onChange={(e) => setAccountName(e.target.value)}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container bg-light   mt-4 " style={{ margin: "-1px" }}>
+          <div
+            className="pb-4 "
+            style={{
+              border: "2px solid #000",
+              overflow: "hidden",
+              borderRadius: "5px 5px 0px 0px",
+            }}
+          >
+            <div className="bg-dark p-1 text-white text-center mb-3">
               <b>Biodata</b>
             </div>
             <div className="pe-3 px-3">
@@ -277,15 +347,16 @@ export default function Account(props) {
             </div>
           </div>
         </div>
+
         <div className="container bg-light    " style={{ margin: "-1px" }}>
           <div
             className="pb-4 "
             style={{
-              border: "2px solid #ffc107",
+              border: "2px solid #000",
               overflow: "hidden",
             }}
           >
-            <div className="bg-warning p-1 text-white text-center mb-3">
+            <div className="bg-dark p-1 text-white text-center mb-3">
               <b>Next Of Kin</b>
             </div>
             <div className="pe-3 px-3">
@@ -361,14 +432,17 @@ export default function Account(props) {
         </div>
         <div className="container mb-5 mt-5 pb-5">
           <div className="row">
-            <div className="col-lg-3"></div>
-            <div className="col-lg-3"></div>
-            <div className="col-lg-3">
-              <button className="btn btn-success d-block w-100" type="submit">
+            <div className="col-lg-4"></div>
+
+            <div className="col-lg-4">
+              <button
+                className="btn btn-dark text-warning d-block w-100"
+                type="submit"
+                style={{ fontWeight: "700" }}
+              >
                 Submit Profile
               </button>
             </div>
-            <div className="col-lg-3"></div>
           </div>
         </div>
       </form>
