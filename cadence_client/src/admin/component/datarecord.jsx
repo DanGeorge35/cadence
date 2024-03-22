@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CircularProgress } from "@mui/material";
 import PropTypes from "prop-types";
-// import InvestmentDetails from "./InvestmentDetails";
+import DataDetails from "./DataDetails";
 
 DataRecord.propTypes = {
   UserData: PropTypes.shape({
@@ -39,7 +39,6 @@ export default function DataRecord(props) {
 
         const result = await response.json();
         console.log(result);
-        alert(result);
 
         setData(result.data);
       } catch (error) {
@@ -76,7 +75,7 @@ export default function DataRecord(props) {
         id="singleView"
       >
         {DataRecords ? (
-          <div>{DataRecords} </div>
+          <DataDetails data={DataRecords} />
         ) : (
           <div style={{ textAlign: "center", padding: "60px" }}>
             <CircularProgress color="inherit" />
