@@ -14,15 +14,16 @@ const AdminEndpoint = [
     handler: [AdminController.login]
   },
   {
-    path: `${ENDPOINT_URL}/:id`,
-    method: 'patch',
-    handler: [Authorization, AdminController.updateAdmin]
-  },
-  {
     path: `${ENDPOINT_URL}/datarecord`,
     method: 'get',
     handler: [AdminController.datarecord]
   },
+  {
+    path: `${ENDPOINT_URL}/:id`,
+    method: 'patch',
+    handler: [Authorization, AdminController.updateAdmin]
+  },
+
   {
     path: `${ENDPOINT_URL}/`,
     method: 'get',
