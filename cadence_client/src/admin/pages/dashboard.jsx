@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import DashHome from "../component/dashhome";
 import Investment from "../component/investment";
 import Transactions from "../component/transactions";
+import DataRecord from "../component/datarecord";
 
 import SingleInvestment from "../component/singleInvestement";
 import Account from "../component/account";
@@ -113,6 +114,15 @@ const Dashboard = ({ dashpage, BASEURL }) => {
         break;
       case "Transactions":
         DPage = <Transactions UserData={LoginAdmin} getMetrics={getMetrics} />;
+        break;
+      case "DataRecords":
+        DPage = (
+          <DataRecord
+            BASEURL={BASEURL}
+            UserData={LoginAdmin}
+            getMetrics={getMetrics}
+          />
+        );
         break;
 
       case "SingleInvestment":

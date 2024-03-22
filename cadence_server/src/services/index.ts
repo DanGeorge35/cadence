@@ -1,6 +1,7 @@
 import AdminEndpoint from './admin/admin.endpoint'
 import InvestmentsEndpoint from './investments/investments.endpoint'
 import investorsEndpoint from './investors/investors.endpoint'
+import ReferralEndpoint from './referral/referral.endpoint'
 import RoiEndpoint from './roi/roi.endpoint'
 import TransactionsEndpoint from './transactions/transactions.endpoint'
 import workersEndpoint from './workers/workers.endpoint'
@@ -11,5 +12,6 @@ export default [
   ...AdminEndpoint,
   ...InvestmentsEndpoint,
   ...TransactionsEndpoint,
-  ...RoiEndpoint
+  ...RoiEndpoint,
+  ...ReferralEndpoint
 ]

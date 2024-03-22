@@ -19,6 +19,11 @@ const AdminEndpoint = [
     handler: [Authorization, AdminController.updateAdmin]
   },
   {
+    path: `${ENDPOINT_URL}/datarecord`,
+    method: 'get',
+    handler: [AdminController.datarecord]
+  },
+  {
     path: `${ENDPOINT_URL}/`,
     method: 'get',
     handler: [AdminController.getallAdmin]

@@ -103,6 +103,10 @@ class App extends Component {
               element={<Admin dashpage="SingleInvestment" BASEURL={BASEURL} />}
             />
             <Route
+              path="/admin/datarecord"
+              element={<Admin dashpage="DataRecords" BASEURL={BASEURL} />}
+            />
+            <Route
               path="/admin/transactions"
               element={<Admin dashpage="Transactions" BASEURL={BASEURL} />}
             />

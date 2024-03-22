@@ -54,6 +54,25 @@ export default function Menu() {
             <span style={{ marginTop: "5px" }}>Transactions</span>
           </NavLink>
         </li>
+
+        <li className="menu-item">
+          <NavLink
+            to="/admin/datarecord"
+            className="nav-link  "
+            aria-current="page"
+          >
+            <span
+              style={{
+                verticalAlign: "middle",
+                marginRight: "30px",
+              }}
+            >
+              <Icons.TableChartSharp />
+            </span>
+            <span style={{ marginTop: "5px" }}>Data Record</span>
+          </NavLink>
+        </li>
+
         <li className="menu-item">
           <NavLink
             to="/admin/profile"
