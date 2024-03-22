@@ -605,3 +605,26 @@ a {
   border: 3px solid #fbca0e;
   border-radius: 10px;
 }
+
+.Tab .nav-link {
+  color: orange;
+  font-weight: 700;
+  font-size: large;
+  background-color: #ebebeb;
+  padding: 15px 30px !important;
+  margin-right: 10px;
+}
+
+.Tab > .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: orange;
+  background-color: #212529;
+  padding: 15px 30px !important;
+}
+
+.Tab .tab-content > .active {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
