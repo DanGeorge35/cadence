@@ -167,7 +167,7 @@ class AdminController {
       data.InvestmentsData = await sequelize.query('SELECT investors.FullName, investors.Phone,  investors.Email, investors.UserID,investments.Amount,investments.Duration,investments.Status,investors.BankName,investors.AccountNumber,investors.AccountName FROM investments INNER JOIN investors ON investments.investorId = investors.UserID', { type: QueryTypes.SELECT })
       data.InvestorsData = await sequelize.query('SELECT * FROM `investors` ', { type: QueryTypes.SELECT })
       data.ReferralData = await sequelize.query('SELECT * FROM `referrals` ', { type: QueryTypes.SELECT })
-      res.status(200).json({ success: true, data })
+      return res.status(200).json({ success: true, data })
     } catch (error: any) {
       const err = { success: false, code: 400, message: `SYSTEM ERROR : ${error.message}` }
       console.error(error)
