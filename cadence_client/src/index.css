@@ -628,3 +628,20 @@ a {
   border: 1px solid #ddd;
   padding: 10px;
 }
+
+.Tab .tab-content .tab-pane {
+  overflow-x: auto;
+}
+
+th,
+td {
+  padding: 8px 20px;
+  text-align: left;
+  border: 1px solid #ddd;
+  width: auto !important;
+}
+
+th {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+}
