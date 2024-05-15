@@ -42,23 +42,13 @@ class Home extends Component {
                 color: "rgb(251 202 14)",
               }}
             >
-              A Brief History of Cadence
+              Welcome to Cadence Apartments!
             </p>
             <label className="aboutContent">
-              Cadence is more than just a restaurant and bar; it&apos;s a
-              testament to a journey fueled by passion, creativity, and a deep
-              love for providing unforgettable experiences. Our story began when
-              Cadence took over an existing restaurant nestled on New Eleyele
-              Road in Ibadan. Recognizing the untapped potential of this space,
-              we embarked on a mission to transform it into something truly
-              extraordinary. We envisioned a place where people could come
-              together, savor exquisite cuisine, enjoy signature cocktails, and
-              create timeless memories. <br></br>
-              <br></br>However, what started as the acquisition and renovation
-              of an existing restaurant, quickly evolved into a multifaceted
-              venture. Cadence doesn&apos;t just operate as a restaurant,
-              lounge, and bar; we&apos;ve expanded our horizons to include
-              short-let apartments
+              At Cadence Apartments, we offer the perfect blend of luxury,
+              comfort, and convenience. Our exclusive apartments are
+              meticulously designed to provide you with an unparalleled
+              experience during your stay in Ibadan.
             </label>
             <br></br>
             <br></br>
@@ -132,10 +122,8 @@ class Home extends Component {
                 >
                   <InfoCard
                     img="grm.jpg"
-                    title="Gourmet Dining"
-                    content="Indulge in a culinary journey like no other. Our chefs have
-          crafted a menu that celebrates diverse flavors, using only the finest
-          ingredients"
+                    title="Luxurious Accommodation"
+                    content="Immerse yourself in the comfort of our tastefully furnished apartments, designed to meet the highest standards of elegance and sophistication with 24/7 electricity, high-speed Wi-Fi, fully equipped kitchens, and more, ensuring a seamless and enjoyable stay."
                   />
                 </div>
                 <div
@@ -144,9 +132,8 @@ class Home extends Component {
                 >
                   <InfoCard
                     img="grm1.jpg"
-                    title="Crafted Cocktails"
-                    content=" Our mixologists are ready to dazzle your taste buds with
-                  innovative cocktails that will elevate your dining experience."
+                    title="Concierge Services"
+                    content="Our dedicated team is available to assist you with any requests or inquiries throughout your stay including regular housekeeping services to maintain the cleanliness and tidiness of your apartment."
                   />
                 </div>
                 <div
@@ -155,10 +142,8 @@ class Home extends Component {
                 >
                   <InfoCard
                     img="grm2.jpg"
-                    title="Live Entertainment"
-                    content="Get ready for evenings filled with live music,
-                  comedy nights, and themed events that will keep you coming
-                  back for more."
+                    title="Event Hosting"
+                    content="Whether you're planning a birthday celebration, bridal shower, or corporate event, our apartments provide the perfect venue for your special occasions"
                   />
                 </div>
                 <div
@@ -167,9 +152,8 @@ class Home extends Component {
                 >
                   <InfoCard
                     img="ext1.jpg"
-                    title="Ambience"
-                    content="For those seeking a home away from home, our short-let apartments provide a touch of luxury and comfort.
-                    Our interiors are designed to create the perfect backdrop for your moments of joy and celebration."
+                    title="Safe and Secure"
+                    content="Rest assured knowing that your safety is our top priority. Our apartments are located in secure neighborhoods and equipped with security features for your peace of mind."
                   />
                 </div>
               </div>
