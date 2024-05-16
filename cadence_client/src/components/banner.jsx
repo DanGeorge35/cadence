@@ -15,10 +15,11 @@ class Banner extends Component {
       },
       {
         url: "./home1.jpg",
-        caption1: "More than just a restaurant and bar",
-        caption2: "Ready for a delicious meal",
-        caption3: " Discover the finest cuisine in town, waiting just for you!",
-        action: { title: "Order Now", url: "contact" },
+        caption1: "Experience Luxury, Embrace Comfort",
+        caption2: "Vibrant and luxurious apartments",
+        caption3:
+          "Immerse yourself in the comfort of our tastefully furnished apartments",
+        action: { title: "Contact Now", url: "contact" },
       },
       {
         url: "./home2.jpg",
