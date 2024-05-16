@@ -315,7 +315,6 @@ select option {
 
 .footer .container-fluid {
   background-color: #003c55f9;
-  padding-left: 150px;
 }
 .footer .col-lg-6 {
   padding-top: 50px;
@@ -360,7 +359,7 @@ select option {
 }
 
 .about-page {
-  background-image: url("../public/food3.jpeg");
+  background-image: url("../public/home1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;

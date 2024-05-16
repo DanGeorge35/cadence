@@ -41,18 +41,18 @@ function Contact() {
           <div className="container">
             <div className="pt-5  pe-3 px-3">
               <h1 className="pb-4 text-center fontFam4 pb-5 ">
-                Location for Food, Fun and Friends
+                Experience Luxury, Embrace Comfort
               </h1>
               <div className="row">
                 <div className="col-lg-3  fontFam0  ">
                   <img
                     className="d-lg-block d-none"
-                    src="./plate1.png"
+                    src="./shortlet.png"
                     style={{
                       width: "150%",
                       marginTop: "-20%",
                       marginLeft: "-20%",
-                      filter: "blur(2px)",
+                      filter: "blur(1px)",
                     }}
                   />
                 </div>
@@ -70,7 +70,7 @@ function Contact() {
                       <input
                         placeholder="Name"
                         type="text"
-                        className="form-control  "
+                        className="form-control   bg-white"
                         id="exampleInputEmail1"
                         value={fullname}
                         name="Full Name"
@@ -83,7 +83,7 @@ function Contact() {
                       <input
                         placeholder="Email Address"
                         type="email"
-                        className="form-control  "
+                        className="form-control  bg-white"
                         id="emailaddress"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -94,7 +94,7 @@ function Contact() {
                       <input
                         placeholder="Subject"
                         type="text"
-                        className="form-control"
+                        className="form-control  bg-white"
                         id="Subject"
                         value={Subject}
                         onChange={(e) => setSubject(e.target.value)}
@@ -104,7 +104,7 @@ function Contact() {
                     <div className="mb-3">
                       <textarea
                         placeholder="Enter your message"
-                        className="form-control"
+                        className="form-control  bg-white"
                         style={{ height: "200px", width: "100%" }}
                         id="message"
                         value={message}
@@ -120,12 +120,12 @@ function Contact() {
                 <div className="col-lg-3  fontFam0  ">
                   <img
                     className="d-lg-block d-none"
-                    src="./plate1.png"
+                    src="./shotlet1.png"
                     style={{
                       width: "150%",
                       marginTop: "-20%",
                       marginLeft: "-20%",
-                      filter: "blur(2px)",
+                      filter: "blur(1px)",
                     }}
                   />
                 </div>

@@ -6,16 +6,13 @@ class SiteSlide extends Component {
   render() {
     const images = [
       {
-        url: "./ext1.jpg",
-      },
-      {
         url: "./cadnewbg.jpeg",
       },
       {
-        url: "./ext2.jpg",
+        url: "./home1.jpg",
       },
       {
-        url: "./ext3.jpg",
+        url: "./home2.jpg",
       },
     ];
     return (

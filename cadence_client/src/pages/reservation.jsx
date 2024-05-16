@@ -41,11 +41,11 @@ class Reservation extends Component {
               <ol>
                 <li>
                   <b className="text-white">Book a Space:</b> <br></br> Looking
-                  to host a memorable event or simply dine with friends in a
+                  to host a memorable event or simply party with friends in a
                   vibrant and luxurious setting? Cadence allows you to reserve
-                  spaces within our prestigious restaurant and lounge. Whether
-                  it&apos;s a private event, a romantic evening, or a gathering
-                  with friends, our spaces offer the perfect backdrop to your
+                  spaces within our prestigious apartments. Whether it&apos;s a
+                  private event, a romantic evening, or a gathering with
+                  friends, our spaces offer the perfect backdrop to your
                   memorable moments.
                   <br></br>
                   <br></br>

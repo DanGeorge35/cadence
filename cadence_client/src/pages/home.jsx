@@ -52,7 +52,7 @@ class Home extends Component {
             </label>
             <br></br>
             <br></br>
-            <img src="food_banner2.png" style={{ width: "80%" }} />
+            <img src="house_banner2.png" style={{ width: "80%" }} />
           </div>
 
           <div className="about ext3">
