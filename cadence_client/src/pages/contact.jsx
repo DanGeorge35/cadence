@@ -52,7 +52,6 @@ function Contact() {
                       width: "150%",
                       marginTop: "-20%",
                       marginLeft: "-20%",
-                      filter: "blur(1px)",
                     }}
                   />
                 </div>
@@ -125,7 +124,6 @@ function Contact() {
                       width: "150%",
                       marginTop: "-20%",
                       marginLeft: "-20%",
-                      filter: "blur(2px)",
                     }}
                   />
                 </div>
