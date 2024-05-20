@@ -120,7 +120,7 @@ function Contact() {
                 <div className="col-lg-3  fontFam0  ">
                   <img
                     className="d-lg-block d-none"
-                    src="./plate1.png"
+                    src="./home2.jpg"
                     style={{
                       width: "150%",
                       marginTop: "-20%",
