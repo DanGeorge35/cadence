@@ -52,9 +52,6 @@ class Footer extends Component {
               <a className="footerLink " href="/home">
                 HOME
               </a>
-              <a className="footerLink " href="/about">
-                ABOUT
-              </a>
 
               <a className="footerLink " href="/reservation">
                 RESERVATION

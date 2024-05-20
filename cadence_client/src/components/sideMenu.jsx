@@ -37,11 +37,6 @@ class SideMenu extends Component {
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink to="/about" className="nav-link  " aria-current="page">
-                  About
-                </NavLink>
-              </li>
 
               <li className="nav-item">
                 <NavLink

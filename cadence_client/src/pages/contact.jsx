@@ -47,7 +47,7 @@ function Contact() {
                 <div className="col-lg-3  fontFam0  ">
                   <img
                     className="d-lg-block d-none"
-                    src="./shortlet.png"
+                    src="./home1.jpg"
                     style={{
                       width: "150%",
                       marginTop: "-20%",
@@ -120,12 +120,12 @@ function Contact() {
                 <div className="col-lg-3  fontFam0  ">
                   <img
                     className="d-lg-block d-none"
-                    src="./shotlet1.png"
+                    src="./plate1.png"
                     style={{
                       width: "150%",
                       marginTop: "-20%",
                       marginLeft: "-20%",
-                      filter: "blur(1px)",
+                      filter: "blur(2px)",
                     }}
                   />
                 </div>

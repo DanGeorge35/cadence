@@ -33,25 +33,7 @@ class Navs extends Component {
                     Home
                   </NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink
-                    to="/about"
-                    className="nav-link  "
-                    aria-current="page"
-                  >
-                    About
-                  </NavLink>
-                </li>
 
-                <li className="nav-item">
-                  <NavLink
-                    to="/contact"
-                    className="nav-link  "
-                    aria-current="page"
-                  >
-                    Contact Us
-                  </NavLink>
-                </li>
                 <li className="nav-item">
                   <NavLink
                     to="/reservation"
@@ -59,6 +41,15 @@ class Navs extends Component {
                     aria-current="page"
                   >
                     Reservation
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/contact"
+                    className="nav-link  "
+                    aria-current="page"
+                  >
+                    Contact Us
                   </NavLink>
                 </li>
                 <li className="nav-item">

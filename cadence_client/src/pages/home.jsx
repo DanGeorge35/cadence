@@ -51,38 +51,6 @@ class Home extends Component {
               experience during your stay in Ibadan.
             </label>
             <br></br>
-            <br></br>
-            <img src="house_banner2.png" style={{ width: "80%" }} />
-          </div>
-
-          <div className="about ext3">
-            <div className="  aboutInfo  pe-3 px-3">
-              <p
-                className=""
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "700",
-                  color: "rgb(251 202 14)",
-                }}
-              >
-                The Transformation
-              </p>
-              <label className="aboutContent text-white  pb-4    border-warning">
-                Our journey at Cadence has been defined by unwavering dedication
-                and a pursuit of excellence. From a meticulous renovation that
-                breathed elegance into every corner to the creation of an
-                outdoor bar space redefining leisure and entertainment, Cadence
-                is a symphony of sophistication.<br></br>
-                <br></br> But there&apos;s more to Cadence than meets the eye.
-                We&apos;ve expanded our horizons to include the concept of
-                short-let homes, adding a new dimension to our commitment to
-                provide exceptional experiences. This goes beyond just dining;
-                it&apos;s about indulgence, entertainment, and now, a touch of
-                luxury living.<br></br>
-                <br></br> Join us at Cadence, where every detail tells a story
-                of refinement, and every moment promises a unique experience.
-              </label>
-            </div>
           </div>
         </div>
 
