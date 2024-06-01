@@ -74,7 +74,7 @@ async function SendMail (mail: any): Promise<void> {
     secure: true, // Use secure connection (TLS/SSL)
     auth: {
       user: 'contact@cadencepub.com',
-      pass: 'contact001'
+      pass: 'contact001?'
     }
   })
 
