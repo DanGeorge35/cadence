@@ -89,7 +89,7 @@ async function SendMail (mail: any): Promise<void> {
       <br>
       <div>
     <div style="text-align: center; background-color: black;color:yellow;padding:5px;font-size:15px">
-      <b>Cadence:</b> Dine in Style, Sip with harmony
+      <b>Cadence:</b> Experience Luxury, Embrace Comfort
     </div>
   </div>`
 
