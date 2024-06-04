@@ -69,7 +69,7 @@ async function SendMailJS (templateID: string, templateParams: any): Promise<voi
 
 async function SendMail (mail: any): Promise<void> {
   const transporter = nodemailer.createTransport({
-    host: 'mail.codetoken.vip',
+    host: 'cadencepub.com',
     port: 465,
     secure: true, // Use secure connection (TLS/SSL)
     auth: {
