@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable @typescript-eslint/no-extraneous-class */
 /* eslint-disable-next-line @typescript-eslint/no-misused-promises */
-import fs from 'fs'
 import { getUIDfromDate, EncryptPassword, GenerateToken, CheckPassword } from '../../libs/utils/app.utility'
 import Auth from '../../models/auths.model'
 import Admin from '../../models/admin.model'
@@ -84,10 +83,7 @@ class AdminController {
         }
         return res.status(result.code).send(result)
       }
-      const dir = './public/admin'
-      if (!fs.existsSync(`.${dir}`)) {
-        fs.mkdirSync(`.${dir}`)
-      }
+
       const checkAdmData = { ...data }
       delete checkAdmData.Role
       delete checkAdmData.password
