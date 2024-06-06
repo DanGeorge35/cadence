@@ -23,7 +23,8 @@ const Investments = sequelize.define(
     },
     Status: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
+      defaultValue: 'Pending'
     }
   },
   {

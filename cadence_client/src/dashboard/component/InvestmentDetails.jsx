@@ -70,7 +70,6 @@ const FirstView = ({ data }) => {
 };
 
 const ROIEdit = (ROIData) => {
-  console.log(ROIData);
   const metrics = {
     TBheaders: [],
   };
@@ -101,7 +100,6 @@ const InvestmentDetails = ({ data }) => {
   const [paymentImage, setPaymentImage] = useState(null);
   const [isUploading, setIsUploading] = useState(false);
 
-  console.log("data", data);
   const handleFileInputChange = (event) => {
     const file = event.target.files[0];
     setPaymentImage(file);
@@ -143,7 +141,6 @@ const InvestmentDetails = ({ data }) => {
     formData.append("photo", paymentImage);
     formData.append("purpose", "Buy Investment");
 
-    console.log(formData);
     try {
       const response = await axios.post(
         `${data.BASEURL}api/v1/transactions`,
@@ -154,7 +151,7 @@ const InvestmentDetails = ({ data }) => {
           },
         }
       );
-      console.log("YES");
+
       console.log(response);
 
       showAlert({
