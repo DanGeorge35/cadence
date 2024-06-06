@@ -157,9 +157,9 @@ const Dashboard = ({ dashpage, BASEURL }) => {
     }
 
     if (
-      LoginUser.data.user.Gender == null ||
-      LoginUser.data.user.NOKFullName == null ||
-      LoginUser.data.user.NOKFullName == null
+      !LoginUser.data.user.Gender ||
+      !LoginUser.data.user.NOKFullName ||
+      !LoginUser.data.user.NOKFullName
     ) {
       DPage = (
         <Account
@@ -169,15 +169,15 @@ const Dashboard = ({ dashpage, BASEURL }) => {
         />
       );
       showAlert({
-        title: "Incomplete  Profile",
+        title: "Incomplete Profile",
         text: "Please complete your account profile to access the full functionality of this platform",
         icon: "error",
         button: "Account Settings",
       });
     } else if (
-      LoginUser.data.user.BankName == null ||
-      LoginUser.data.user.AccountName == null ||
-      LoginUser.data.user.AccountNumber == null
+      !LoginUser.data.user.BankName ||
+      !LoginUser.data.user.AccountName ||
+      !LoginUser.data.user.AccountNumber
     ) {
       DPage = (
         <Account

@@ -70,6 +70,7 @@ const FirstView = ({ data }) => {
 };
 
 const ROIEdit = (ROIData) => {
+  console.log(ROIData);
   const metrics = {
     TBheaders: [],
   };
@@ -100,6 +101,7 @@ const InvestmentDetails = ({ data }) => {
   const [paymentImage, setPaymentImage] = useState(null);
   const [isUploading, setIsUploading] = useState(false);
 
+  console.log("data", data);
   const handleFileInputChange = (event) => {
     const file = event.target.files[0];
     setPaymentImage(file);

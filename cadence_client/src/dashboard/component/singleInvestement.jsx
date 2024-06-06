@@ -57,6 +57,7 @@ export default function SingleInvestment(props) {
   const System = props.UserData.data.System;
   const metrics = props.getMetrics(InvestmentData.rows);
   console.log(System, metrics, UserData);
+  console.log("investmentData", investmentData);
 
   return (
     <div>
