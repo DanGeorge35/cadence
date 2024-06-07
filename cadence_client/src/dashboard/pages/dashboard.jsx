@@ -110,7 +110,7 @@ const Dashboard = ({ dashpage, BASEURL }) => {
     <div>
       <div>
         <p>
-          Minimum investment allowed is N250,000 and a maximum of N5,000,000 per
+          Minimum investment allowed is N100,000 and a maximum of N5,000,000 per
           individual.
         </p>
         Minimum investment duration is 1 year and the maximum investment
@@ -120,7 +120,7 @@ const Dashboard = ({ dashpage, BASEURL }) => {
         withdrawn within 7 days (terms and conditions apply).
         <br></br>
         <br></br>
-        Return on Investment (ROI) can only be withdrawn quarterly.
+        Return on Investment (ROI) can only be withdrawn monthly.
         <br></br>
         <br></br> Cadence presently provides a 50% annual return on investment
         (ROI), which may be subject to periodic review at the discretion of

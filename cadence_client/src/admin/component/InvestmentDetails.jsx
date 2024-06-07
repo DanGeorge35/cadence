@@ -36,7 +36,7 @@ const FirstView = ({ data }) => {
     bgStatus = "bg-warning";
   } else if (data.Status === "Awaiting Approval") {
     bgStatus = "bg-info";
-  } else if (data.Status === "Terminated") {
+  } else if (data.Status === "Disapproved") {
     bgStatus = "bg-danger";
   }
   return (
@@ -176,6 +176,66 @@ const InvestmentDetails = ({ data }) => {
     // Reset the form fields
   };
 
+  const handleRejectSubmission = async (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+    // Perform any form submission logic here, e.g., send data to a server
+    document.getElementById("approvebtn").disabled = "true";
+    const BASEURL = data.BASEURL;
+    //Loading
+    openBackdrop();
+    const formData = {
+      investmentId: data.id,
+    };
+
+    try {
+      const response = await axios.post(
+        `${BASEURL}api/v1/investments/reject`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${data.UserToken}`,
+          },
+        }
+      );
+
+      console.log(response);
+      closeBackdrop();
+      showAlert({
+        title: "Investment Rejected",
+        text: "Investment successfully Rejected",
+        icon: "success",
+        button: "Ok",
+      });
+      //set 2 seconds timeout and reload
+      setTimeout(() => window.location.reload(), 2000);
+    } catch (error) {
+      if (error.response) {
+        console.log(error.response.data);
+        showAlert({
+          title: "Error",
+          text: error.response.data.message,
+          icon: "error",
+          button: "Ok",
+        });
+        setTimeout(() => window.location.reload(), 1000);
+      } else {
+        console.error(error.message);
+        showAlert({
+          title: "Error",
+          text: error.message,
+          icon: "error",
+          button: "Ok",
+        });
+        setTimeout(() => window.location.reload(), 1000);
+      }
+    } finally {
+      closeBackdrop();
+    }
+
+    // Reset the form fields
+  };
+
   if (data === null) {
     return (
       <div>
@@ -256,7 +316,7 @@ const InvestmentDetails = ({ data }) => {
             </div>
             <div className="col-lg-4 text-center">
               <button
-                onClick={handleFormSubmission}
+                onClick={handleRejectSubmission}
                 className="btn btn-danger  p-4 text-white w-100 d-block"
               >
                 <Icons.CloseRounded style={{ fontSize: "30px" }} />
@@ -270,6 +330,12 @@ const InvestmentDetails = ({ data }) => {
       </div>
     );
   } else if (data.Status === "Pending") {
+    return (
+      <div>
+        <FirstView data={data} />
+      </div>
+    );
+  } else if (data.Status === "Disapproved") {
     return (
       <div>
         <FirstView data={data} />

@@ -9,6 +9,11 @@ const InvestmentsEndpoint = [
     handler: [Authorization, InvestmentsController.approveInvestment]
   },
   {
+    path: `${ENDPOINT_URL}/reject`,
+    method: 'post',
+    handler: [Authorization, InvestmentsController.rejectInvestment]
+  },
+  {
     path: `${ENDPOINT_URL}/`,
     method: 'post',
     handler: [Authorization, InvestmentsController.createInvestments]

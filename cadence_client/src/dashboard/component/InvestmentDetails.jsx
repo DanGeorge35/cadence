@@ -245,7 +245,7 @@ const InvestmentDetails = ({ data }) => {
             <div className="col-lg-6 text-center">
               <div>
                 <a
-                  href={"http://" + data.Transactions.photo}
+                  href={data.Transactions.photo}
                   target="_blank"
                   rel="noreferrer"
                   className="btn btn-info  w-100  text-white"

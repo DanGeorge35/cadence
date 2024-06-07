@@ -88,6 +88,45 @@ class InvestmentsController {
     }
   };
 
+  static async rejectInvestment (req: any, res: any, next: any): Promise<any> {
+    try {
+      const data = req.body
+      if (!data.investmentId) {
+        return res.status(400).send({
+          success: false,
+          message: 'Invalid Invetsment ID',
+          code: 400
+        })
+      }
+      const singleInvestments = await Investments.findOne({ where: { id: data.investmentId } })
+      if (singleInvestments === null) {
+        return res.status(400).send({
+          success: false,
+          message: 'Investment not found.',
+          code: 400
+        })
+      }
+      // Check if investment exists and is in pending state
+      if (singleInvestments?.dataValues.Status !== 'Awaiting Approval') {
+        return res.status(400).send({
+          success: false,
+          message: "This investment isn't not on Awaiting Approval.",
+          code: 400
+        })
+      }
+
+      const dinvestments = await singleInvestments.update({ Status: 'Disapproved' })
+
+      return res.status(201).json({ success: true, data: dinvestments })
+    } catch (error: any) {
+      return res.status(400).send({
+        success: false,
+        message: error.message,
+        code: 400
+      })
+    }
+  };
+
   /**
  * Create Investments
  *
