@@ -1,9 +1,9 @@
 import React from "react";
 import ChartView from "../component/chart";
 import PropTypes from "prop-types";
-import LinearProgress from "@mui/material/LinearProgress";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+// import LinearProgress from "@mui/material/LinearProgress";
+// import Typography from "@mui/material/Typography";
+// import Box from "@mui/material/Box";
 
 export default function DashHome(props) {
   const UserData = props.UserData.data.user;
@@ -42,8 +42,8 @@ export default function DashHome(props) {
     ],
   };
 
-  const percentage =
-    (parseFloat(System.totalActiveAmount) / 100) * parseFloat(System.targetAmt);
+  // const percentage =
+  //   (parseFloat(System.totalActiveAmount) / 100) * parseFloat(System.targetAmt);
 
   return (
     <div>
@@ -58,7 +58,7 @@ export default function DashHome(props) {
           </span>
         </div>
       </div>
-      <div
+      {/* <div
         className="container  p-3 "
         style={{ minHeight: "", backgroundColor: "#e8c2075e" }}
       >
@@ -79,7 +79,7 @@ export default function DashHome(props) {
             sx={{ marginTop: 1 }}
           />
         </Box>
-      </div>
+      </div> */}
       <div className="container bg-light " style={{ minHeight: "" }}>
         <div className="row ">
           <div className="col-lg-3 p-3">

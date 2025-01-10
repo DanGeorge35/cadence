@@ -122,16 +122,16 @@ const Dashboard = ({ dashpage, BASEURL }) => {
         <br></br>
         Return on Investment (ROI) can only be withdrawn monthly.
         <br></br>
-        <br></br> Cadence presently provides a 50% annual return on investment
+        <br></br> Cadence presently provides a 60% annual return on investment
         (ROI), which may be subject to periodic review at the discretion of
         Cadence.<br></br>
         <br></br>
-        Opportunity to invest with Cadence ceases upon reaching our investment
-        cap. However, potential investors who miss out on investing with Cadence
-        may join the waiting list.<br></br>
+        Opportunity to invest with Cadence ceases upon reaching a specific
+        investment goal. However, potential investors who miss out on investing
+        with Cadence may join the waiting list.<br></br>
         <br></br> Existing investors looking to exit before their investment
         term expires will have the chance to sell and transfer their investment
-        to any interested investor on the waiting list
+        to any interested investor on the waiting list.
       </div>
       <br></br>
       <br></br>

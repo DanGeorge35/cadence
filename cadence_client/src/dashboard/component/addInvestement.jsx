@@ -50,10 +50,10 @@ export default function AddInvestment(props) {
 
   const handleFormSubmission = async (e) => {
     e.preventDefault();
-    if (amount < 250000) {
+    if (amount < 100000) {
       showAlert({
         title: "Invalid Amount",
-        text: "Amount should be 500,000 or greater",
+        text: "Amount should be 100,000 or greater",
         icon: "error",
         button: "Ok",
       });
