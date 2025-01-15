@@ -248,9 +248,8 @@ select option {
   border-radius: 100px 0px 0px 100px;
 }
 .each-slide-child {
-  background-color: #00000076;
-  padding-top: 150px;
-  height: 100%;
+  /* padding-top: 150px; */
+  /* height: 100%; */
 }
 
 .each-slide-child .Slidetop {

@@ -68,14 +68,14 @@ class SideMenu extends Component {
               </li>
             </ul>
 
-            <NavLink
+            {/* <NavLink
               to="/signin"
               aria-current="page"
               className="btn text-warning  mt-3 px-4 pe-4 py-3 d-flex "
               style={{ minWidth: "150px", backgroundColor: "#000" }}
             >
               Sign In
-            </NavLink>
+            </NavLink> */}
 
             <NavLink
               to="/invest"

@@ -11,10 +11,10 @@ import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
 import UserLogoutPage from "./pages/logout";
 import AdminLogoutPage from "./admin/pages/logout";
-import SignIn from "./dashboard/pages/signin";
-import SignUp from "./dashboard/pages/signup";
-import Registered from "./dashboard/pages/registered";
-import Dashboard from "./dashboard/pages/dashboard";
+// import SignIn from "./dashboard/pages/signin";
+// import SignUp from "./dashboard/pages/signup";
+// import Registered from "./dashboard/pages/registered";
+// import Dashboard from "./dashboard/pages/dashboard";
 import Admin from "./admin/pages/dashboard";
 import AdminSignIn from "./admin/pages/signin";
 
@@ -42,16 +42,16 @@ class App extends Component {
             <Route path="/invest" element={<Investment BASEURL={BASEURL} />} />
             <Route path="/privacy" element={<Privacy BASEURL={BASEURL} />} />
             <Route path="/terms" element={<Terms BASEURL={BASEURL} />} />
-
+            {/*
             <Route path="/signin" element={<SignIn BASEURL={BASEURL} />} />
-            <Route path="/signup" element={<SignUp BASEURL={BASEURL} />} />
-            <Route
+            <Route path="/signup" element={<SignUp BASEURL={BASEURL} />} /> */}
+            {/* <Route
               path="/registered"
               element={<Registered BASEURL={BASEURL} />}
-            />
+            /> */}
 
             {/* DASHBOARD */}
-            <Route
+            {/* <Route
               path="/account"
               element={<Dashboard dashpage="DashHome" BASEURL={BASEURL} />}
             />
@@ -80,7 +80,7 @@ class App extends Component {
             <Route
               path="/account/profile"
               element={<Dashboard dashpage="profile" BASEURL={BASEURL} />}
-            />
+            /> */}
             {/* ADMIN */}
             <Route
               path="/admin/signin"
