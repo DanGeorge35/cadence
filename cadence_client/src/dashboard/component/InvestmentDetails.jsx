@@ -308,13 +308,13 @@ const InvestmentDetails = ({ data }) => {
                     <tr>
                       <td>Account Name</td>
                       <td>
-                        <b> CADENCE CAFE</b>
+                        <b> CADENCE CAFE LTD. </b>
                       </td>
                     </tr>
                     <tr>
                       <td>Account Number</td>
                       <td>
-                        <b>5356651057</b>
+                        <b>5324284485</b>
                       </td>
                     </tr>
                   </tbody>

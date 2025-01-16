@@ -64,14 +64,14 @@ class Navs extends Component {
                 </li>
               </ul>
             </div>
-            {/* <NavLink
+            <NavLink
               to="/signin"
               aria-current="page"
               className="btn btn-outline-warning  px-4 pe-4 py-2  d-flex  d-md-none d-none  d-lg-block"
               style={{ minWidth: "150px" }}
             >
               Sign In
-            </NavLink> */}
+            </NavLink>
             <NavLink
               to="/invest"
               aria-current="page"

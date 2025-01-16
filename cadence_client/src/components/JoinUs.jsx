@@ -96,17 +96,17 @@ class JoinUs extends Component {
                   Let&apos;s build Cadence together!
                 </div>
                 <div className="py-4">
-                  <button
-                    className="btn btn-warning py-2 fontFam4"
+                  <a
+                    href="/signup"
+                    className="btn btn-warning   py-2 fontFam4 "
                     style={{
                       minWidth: "200px",
                       fontSize: "17px",
                       fontWeight: "700",
                     }}
-                    onClick={this.toggleModal}
                   >
                     Invest Now &gt;&gt;
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
