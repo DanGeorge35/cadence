@@ -1,11 +1,43 @@
 import React, { Component } from "react";
+import { Modal } from "@mui/material";
 
 class JoinUs extends Component {
+  state = {
+    showModal: false,
+  };
+
+  toggleModal = () => {
+    this.setState((prevState) => ({ showModal: !prevState.showModal }));
+  };
+
+  modelContent = () => (
+    <div>
+      <h4 className="fw-bold mt-2" style={{ color: "#333" }}>
+        Coming Soon!
+      </h4>
+      <div className="modal-body text-muted mt-3">
+        <p>
+          We&apos;re currently preparing this feature. Stay tuned for updates!
+        </p>
+      </div>
+      <div className="modal-footer text-center mt-4 d-block">
+        <button
+          className="btn btn-warning close-modal-btn"
+          style={{ borderRadius: "50px", padding: "10px 30px", border: "none" }}
+          onClick={this.toggleModal}
+        >
+          Got It!
+        </button>
+      </div>
+    </div>
+  );
+
   render() {
+    const { showModal } = this.state;
+
     return (
-      <div className=" text-white" style={{ backgroundColor: "#001119f9" }}>
+      <div className="text-white" style={{ backgroundColor: "#001119f9" }}>
         <div
-          className="  "
           style={{
             backgroundImage: "url(fam2.jpg)",
             backgroundPosition: "center",
@@ -16,61 +48,52 @@ class JoinUs extends Component {
         >
           <div style={{ height: "150px", backgroundColor: "#0000006e" }}></div>
         </div>
-        <div className="container pt-4 pb-3 ">
-          <div className="pt-lg-5 pt-1 pb-5 pe-3 px-3  ">
-            <div className="row  ">
-              <div className="col-lg-6">
-                <h1 className="pb-3  text-primary-color">
-                  Unlock Consistent Earnings with Cadence Apartment Investments
+        <div className="container pt-4 pb-3">
+          <div className="pt-lg-5 pt-1 pb-5 pe-3 px-3">
+            <div className="row">
+              <div className="col-lg-8 offset-lg-2">
+                <h1 className="pb-3 text-primary-color text-center">
+                  Invest with Cadence
                 </h1>
                 <div
                   className="fontFam3"
                   style={{ fontSize: "20px", fontWeight: "400" }}
                 >
-                  We are excited to share an exclusive opportunity with you to
-                  become part of the Cadence family and consistently earn
-                  revenue through property investments.
+                  Looking for a reliable way to grow your income? Cadence offers
+                  you the opportunity to earn consistent returns through
+                  property investments.
                   <br />
                   <br />
-                  Imagine owning a shortlet apartment like ours and enjoying
-                  steady returns from regular bookings. At Cadence, we can guide
-                  you through setting up your own shortlet apartment for FREE.
-                  Alternatively, if you&apos;re not ready to invest in setting
-                  up your own apartment, you can invest with Cadence and earn 5%
-                  monthly returns on your investment.
+                  With Cadence, you don&apos;t need to own a shortlet apartment
+                  to enjoy steady income. By investing with us, you&apos;ll earn
+                  <b>5% monthly returns</b> on your investment, plus exclusive
+                  benefits like <b>up to 15% discounts on bookings</b> and{" "}
+                  <b>2.5% referral commissions</b> when you refer others.
                   <br />
                   <br />
-                  Our apartments enjoy 15 to 25 nights booked every month,
-                  ensuring our investors earn consistently from our bookings. As
-                  a Cadence investor, you will also benefit from up to a 20%
-                  discount on your bookings, enhancing your stay even more.
-                  Additionally, we offer a 5% referral commission when you refer
-                  friends and family to invest with us.
+                  Our properties are consistently booked for 20 to 28 nights
+                  every month, making certain reliable income for our investors.
+                  And if you&apos;re interested in owning your own shortlet
+                  apartment, we&apos;ll guide you through the setup process
+                  <b>absolutely free</b>.
                   <br />
                   <br />
-                </div>
-              </div>
-              <div className="col-lg-6 ">
-                <div
-                  className="fontFam3"
-                  style={{ fontSize: "20px", fontWeight: "400" }}
-                >
-                  We are thrilled to announce that we have secured more
-                  properties for our new apartments and are expanding to various
-                  parts of the country. Your investment with Cadence not only
-                  promises attractive returns but also contributes to building
-                  and expanding a brand that delivers exceptional experiences.
+                  We&apos;re excited to announce our expansion into new
+                  locations, giving you even more opportunities to grow with
+                  Cadence. Your investment with us is safe, rewarding, and
+                  contributes to the growth of a trusted brand.
                   <br />
                   <br />
-                  Rest assured, we prioritize prompt payment of ROI, ensuring
-                  your investment is both secure and rewarding.
+                  Don&apos;t wait—take the first step towards financial freedom
+                  today! For inquiries, contact us at
+                  <b>
+                    <a href="mailto:admin@cadencepub.com">
+                      admin@cadencepub.com.
+                    </a>
+                  </b>
                   <br />
                   <br />
-                  Join us in this exciting journey and help us build the Cadence
-                  brand. For more details, please feel free to email us :
-                  invest@cadencepub.com or call 09018009811 <br />
-                  <br />
-                  We look forward to welcoming you as a valued investor
+                  Let&apos;s build Cadence together!
                 </div>
                 <div className="py-4">
                   <a
@@ -82,7 +105,7 @@ class JoinUs extends Component {
                       fontWeight: "700",
                     }}
                   >
-                    Register Now &gt;&gt;
+                    Invest Now &gt;&gt;
                   </a>
                 </div>
               </div>
@@ -90,7 +113,6 @@ class JoinUs extends Component {
           </div>
         </div>
         <div
-          className="  "
           style={{
             backgroundImage: "url(fam2.jpg)",
             backgroundPosition: "center",
@@ -101,6 +123,30 @@ class JoinUs extends Component {
         >
           <div style={{ height: "150px", backgroundColor: "#0000006e" }}></div>
         </div>
+        <Modal open={showModal} onClose={this.toggleModal}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100vh",
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "white",
+                padding: "20px",
+                borderRadius: "10px",
+                maxWidth: "400px",
+                width: "90%",
+                boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+                textAlign: "center",
+              }}
+            >
+              {this.modelContent()}
+            </div>
+          </div>
+        </Modal>
       </div>
     );
   }

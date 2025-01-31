@@ -36,27 +36,25 @@ function Contact() {
           <h1>CONTACT US</h1>
         </div>
       </div>
-      <div>
-        <div className="container">
-          <div className="container">
-            <div className="pt-5  pe-3 px-3">
+      <div className="w3-black">
+        <div
+          className=""
+          style={{
+            backgroundImage: `url(./home1.jpg)`,
+            backgroundPosition: "center",
+          }}
+        >
+          <div
+            className="pt-5  pe-3 px-3 w3-display-container"
+            style={{ minHeight: "100vh", backgroundColor: "#000000db" }}
+          >
+            <div className="w3-display-middle" style={{ width: "100vw" }}>
               <h1 className="pb-4 text-center fontFam4 pb-5 ">
                 Experience Luxury, Embrace Comfort
               </h1>
               <div className="row">
-                <div className="col-lg-3  fontFam0  ">
-                  <img
-                    className="d-lg-block d-none"
-                    src="./home1.jpg"
-                    style={{
-                      width: "150%",
-                      marginTop: "-20%",
-                      marginLeft: "-20%",
-                    }}
-                  />
-                </div>
                 <div
-                  className="col-lg-6 p-4 pt-5"
+                  className="col-lg-6 p-4 pt-5 offset-lg-3"
                   style={{
                     backgroundColor: "#00000047",
                     borderRadius: "10px",
@@ -116,19 +114,8 @@ function Contact() {
                     </button>
                   </form>
                 </div>
-                <div className="col-lg-3  fontFam0  ">
-                  <img
-                    className="d-lg-block d-none"
-                    src="./home2.jpg"
-                    style={{
-                      width: "150%",
-                      marginTop: "-20%",
-                      marginLeft: "-20%",
-                    }}
-                  />
-                </div>
+                <div className="col-lg-3  fontFam0  "></div>
               </div>
-              <p style={{ paddingTop: "50px" }}></p>
             </div>
           </div>
         </div>
