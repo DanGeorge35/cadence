@@ -13,8 +13,8 @@ import UserLogoutPage from "./pages/logout";
 import AdminLogoutPage from "./admin/pages/logout";
 import SignIn from "./dashboard/pages/signin";
 import SignUp from "./dashboard/pages/signup";
-import Registered from "./dashboard/pages/registered";
 import Dashboard from "./dashboard/pages/dashboard";
+import Registered from "./dashboard/pages/registered";
 import Admin from "./admin/pages/dashboard";
 import AdminSignIn from "./admin/pages/signin";
 
@@ -44,7 +44,7 @@ class App extends Component {
             <Route path="/terms" element={<Terms BASEURL={BASEURL} />} />
 
             <Route path="/signin" element={<SignIn BASEURL={BASEURL} />} />
-            <Route path="/signup" element={<SignUp BASEURL={BASEURL} />} />
+            <Route path="/private/signup" element={<SignUp BASEURL={BASEURL} />} />
             <Route
               path="/registered"
               element={<Registered BASEURL={BASEURL} />}

@@ -97,7 +97,8 @@ class JoinUs extends Component {
                 </div>
                 <div className="py-4">
                   <a
-                    href="/signup"
+                    // href="/signup"
+                    onClick={this.toggleModal}
                     className="btn btn-warning   py-2 fontFam4 "
                     style={{
                       minWidth: "200px",

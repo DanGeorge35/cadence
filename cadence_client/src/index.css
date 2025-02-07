@@ -212,8 +212,8 @@ select option {
   left: 0;
   right: 0;
   bottom: 0;
-  filter: blur(15px); /* Adjust the blur radius as needed */
-  z-index: -1; /* Place the blurred element behind the text */
+  filter: blur(15px); 
+  z-index: -1; 
 }
 
 .SideContent .nav-link {
@@ -226,7 +226,6 @@ select option {
   height: 15px;
   filter: brightness(0) invert(1);
 }
-
 .react-slideshow-container .nav svg:hover {
   filter: brightness(0) invert(0) !important;
 }
@@ -246,10 +245,6 @@ select option {
 
 .react-slideshow-container .default-nav:last-of-type {
   border-radius: 100px 0px 0px 100px;
-}
-.each-slide-child {
-  /* padding-top: 150px; */
-  /* height: 100%; */
 }
 
 .each-slide-child .Slidetop {

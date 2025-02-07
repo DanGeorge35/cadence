@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Login from "../component/login";
-import { Navigate, NavLink } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 class SignIn extends Component {
@@ -31,7 +31,7 @@ class SignIn extends Component {
                   <div className=" registerForm">
                     <Login BASEURL={this.props.BASEURL} />
                     <div className="text-center  pt-4">
-                      <span>Dont have an account?</span>
+                      {/* <span>Dont have an account?</span>
                       <br />
                       <span className="animate__animated  animate__fadeIn animate__infinite">
                         <NavLink
@@ -42,7 +42,7 @@ class SignIn extends Component {
                         >
                           &lt;&lt; Register Your Investment Account &lt;&lt;
                         </NavLink>
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 </div>
