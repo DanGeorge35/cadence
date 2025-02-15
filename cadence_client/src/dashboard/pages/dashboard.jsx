@@ -15,6 +15,7 @@ import Navs from "../component/navs";
 import SideMenu from "../component/sideMenu";
 import Menu from "../component/menu";
 import Modal from "../component/modal";
+import PasswordSetting from "../component/password";
 
 const Dashboard = ({ dashpage, BASEURL }) => {
   const [isSideMenuOpen, setSideMenuOpen] = useState(false);
@@ -234,6 +235,15 @@ const Dashboard = ({ dashpage, BASEURL }) => {
         case "profile":
           DPage = (
             <Account
+              UserData={LoginUser}
+              BASEURL={BASEURL}
+              getMetrics={getMetrics}
+            />
+          );
+          break;
+        case "password":
+          DPage = (
+            <PasswordSetting
               UserData={LoginUser}
               BASEURL={BASEURL}
               getMetrics={getMetrics}

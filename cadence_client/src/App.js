@@ -25,7 +25,7 @@ class App extends Component {
 
   render() {
     let BASEURL = "https://cadencepub.com/production/";
-    // BASEURL = "http://localhost:5000/development/";
+    BASEURL = "http://localhost:5000/development/";
     return (
       <div>
         <Router>
@@ -80,6 +80,10 @@ class App extends Component {
             <Route
               path="/account/profile"
               element={<Dashboard dashpage="profile" BASEURL={BASEURL} />}
+            />
+              <Route
+              path="/account/password"
+              element={<Dashboard dashpage="password" BASEURL={BASEURL} />}
             />
             {/* ADMIN */}
             <Route

@@ -4,6 +4,11 @@ import { Authorization } from '../../libs/utils/app.utility'
 const ENDPOINT_URL = '/api/v1/investors'
 const InvestorsEndpoint = [
   {
+    path: `${ENDPOINT_URL}/changepassword`,
+    method: 'patch',
+    handler: [Authorization, InvestorsController.changePassword]
+  },
+  {
     path: `${ENDPOINT_URL}/`,
     method: 'post',
     handler: [InvestorsController.createInvestors]

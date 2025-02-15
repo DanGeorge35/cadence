@@ -14,6 +14,42 @@ import sequelize from '../../config/db'
 import { QueryTypes } from 'sequelize'
 
 class InvestorsController {
+  static async changePassword (req: any, res: any): Promise<any> {
+    try {
+      const { oldPassword, password, newPassword } = req.body
+      if (!oldPassword || !password || !newPassword) {
+        return res
+          .status(400)
+          .json({ message: 'oldPassword and password are required' })
+      }
+
+      const email = req.user.data.Email
+
+      const account: any = await Auth.findOne({ where: { Email: email, UserType: 'Investor' } })
+
+      const validPass = await CheckPassword(oldPassword, account.PasswordHash)
+      if (!validPass) {
+        const result: any = {
+          message: 'Incorret Password!',
+          code: 400
+        }
+        return res.status(result.code).json(result)
+      }
+      account.PasswordHash = await EncryptPassword(password)
+      account.RefreshToken = account.PasswordHash
+
+      await account.update()
+
+      return res.status(200).json({ success: true, data: null, message: 'Password information updated' })
+    } catch (error: any) {
+      const result: any = {
+        message: 'Error login in: ' + error.message,
+        code: 400
+      }
+      res.status(result.code).json(result)
+    }
+  }
+
   static async login (req: any, res: any): Promise<any> {
     try {
       let token

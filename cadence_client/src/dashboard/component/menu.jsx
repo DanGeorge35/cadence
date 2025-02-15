@@ -73,6 +73,24 @@ export default function Menu() {
         </li>
 
         <li className="menu-item">
+          <NavLink
+            to="/account/password"
+            className="nav-link "
+            aria-current="page"
+          >
+            <span
+              style={{
+                verticalAlign: "middle",
+                marginRight: "30px",
+              }}
+            >
+              <Icons.Key />
+            </span>
+            <span style={{ marginTop: "5px" }}>Password Settings</span>
+          </NavLink>
+        </li>
+
+        <li className="menu-item">
           <a href="/logout" className="nav-link  " aria-current="page">
             <span
               style={{
